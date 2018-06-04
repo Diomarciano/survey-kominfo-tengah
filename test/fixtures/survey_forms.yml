@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  side_id: 
+  alamat: MyString
+  kelurahan: MyString
+  kecamatan: MyString
+  kabupaten: MyString
+  provinsi: MyString
+  lattide: 1.5
+  longitude: 1.5
+  sumber_listrik: MyString
+  jam_operasional: 2018-06-03 12:34:28
+  id_pelanggan_listrik: 
+  kapasitas: 
+  jenis_koneksi: MyString
+  bandwidt_tersedia: 
+  jenis_koneksi_1: MyString
+  nama_operator_seluler: MyString
+  kualitas_layanan: MyString
+  jumlah_komputer: 
+  perangkat_pendukung_lainnya: MyString
+  nama_penanggung_jawab_lokasi_1: MyString
+  kontak_penanggung_jawab_lokasi_1: 
+  nama_penanggung_jawab_lokasi_2: MyString
+  kontak_penanggung_jawab_lokasi_2: 
+  transportasi_menuju_lokasi: MyString
+  gambaran_menuju_lokasi: MyText
+  kualitas_akses_internet: MyString
+
+two:
+  side_id: 
+  alamat: MyString
+  kelurahan: MyString
+  kecamatan: MyString
+  kabupaten: MyString
+  provinsi: MyString
+  lattide: 1.5
+  longitude: 1.5
+  sumber_listrik: MyString
+  jam_operasional: 2018-06-03 12:34:28
+  id_pelanggan_listrik: 
+  kapasitas: 
+  jenis_koneksi: MyString
+  bandwidt_tersedia: 
+  jenis_koneksi_1: MyString
+  nama_operator_seluler: MyString
+  kualitas_layanan: MyString
+  jumlah_komputer: 
+  perangkat_pendukung_lainnya: MyString
+  nama_penanggung_jawab_lokasi_1: MyString
+  kontak_penanggung_jawab_lokasi_1: 
+  nama_penanggung_jawab_lokasi_2: MyString
+  kontak_penanggung_jawab_lokasi_2: 
+  transportasi_menuju_lokasi: MyString
+  gambaran_menuju_lokasi: MyText
+  kualitas_akses_internet: MyString

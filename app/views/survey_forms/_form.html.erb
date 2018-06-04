@@ -1,0 +1,318 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+<%= form_for(@survey_form) do |f| %>
+  <% if @survey_form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@survey_form.errors.count, "error") %> prohibited this survey_form from being saved:</h2>
+
+      <ul>
+      <% @survey_form.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="container">
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#tab1" data-toggle="tab"></a></li>
+      <li><a href="#tab2" data-toggle="tab"></a></li>
+    </ul>
+      <div class="tab-content">
+          <div class="tab-pane active" id="tab1">
+          <center><h1 class="display-4">Form Survey</h1></center>
+          <hr >
+
+          <div class="form-group">
+            <%= f.label :side_id, "Site ID" %><br>
+            <%= f.text_field :side_id, class: "form-control", placeholder: "" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :alamat %><br>
+            <%= f.text_field :alamat, class: "form-control", placeholder: "Alamat" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :kelurahan %><br>
+            <%= f.select :kelurahan, options_for_select([
+                              "Desa Paking","Desa Mentarang Baru","Desa Buntulia Tengah", "Desa Buntulia Utara", "Desa Hulawa","Jl. Setulang","Desa Long Loreh","Rambangaru","Bidipraing","Umamanu","Lewa Paku","Kamanggih","Kadumbul","Hambawutang","Tawui","Rindi","Pintu Mas","Alila Selatan","Alila Timur","Lawahing","Salakan","Baka","Saiyong","Tompudau","Ambelang","Manggalai","Alakasing","Molingkapoto Selatan","Ponelo","Labuan Bajo","Golo Ronggot","Orong", "Ranggu", "Nangalili", "Tentang", "Nantal", "Pontianak", "Nggorang", "Cunca Wulang"]),
+                              {}, class:'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :kecamatan %><br>
+            <%= f.select :kecamatan, options_for_select([
+                              "Mentarang","Malinau Selatan Hilir","Malinau Selatan", "Haharu", "Lewa Tidas","Lewa","Kahaungu Eti","Pandawai","Ngadu Ngala","Pinupahar","Rindi","Alor Barat Daya","Alor Barat Laut","Kabola","Tinangkung","Peling Tengah","Kwandang","Ponelo Kepulauan","Komodo","Welak","Kuwus","Lembor Selatan","Ndoso","Boleng","Mbeliling","Buntulia","Dengilo","Duhiaada","Patilanggio","Popayato Barat","Popayato","Randangan", "Buer", "Moyo Utara", "Lenangguar", "Alas", "Taliwang", "Brang Ene", "Brang Rea"]),
+                              {}, class:'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :kabupaten %><br>
+            <%= f.select :kabupaten, options_for_select([
+                              "Malinau","Sumba Timur","Alor", "Banggai Kepulauan", "Gorontalo Utara","Manggarai Barat","Pohuwato","Sumbawa","Sumbawa Barat","Malinau","Timor Tengah Utara","Belu","Sambas","Bengkayang","Morowali Utara","Sabu Raijua","Konawe Kepulauan","Nagekeo","Sigi","Ende","Sumba Tengah","Tojo Una-Una","Lembata","Banggai Laut","Malaka","Donggala","Tolitoli","Rote Ndao","Konawe","Ketapang","Sanggau","Kayong Utara", "Melawi", "Kapuas Hulu", "Landak", "Mahakam Ulu", "Hulu Sungai Utara", "Sumbawa Barat", "Bima", "Timor Tengah Utara"]),
+                              {}, class:'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :provinsi %><br>
+            <%= f.select :provinsi, options_for_select([
+                              "Nusa Tenggara Timur","Nusa Tenggara Barat","Kalimantan Selatan", "Kalimantan Timur", "Kalimantan Barat","Sulawesi Tenggara","Sulawesi Tengah","Kalimantan Utara","Gorontalo"]),
+                              {}, class:'form-control' %>
+          </div>
+
+          <hr >
+          <center><h2>Koordinat</h2></center>
+          <hr>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <%= f.label :lattide %><br>
+                <%= f.text_field :lattide, class: "form-control", placeholder: "-6.238270" %>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <%= f.label :longitude %><br>
+                  <%= f.text_field :longitude, class: "form-control", placeholder: "106.975573" %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr >
+          <center><h2>Ketersediaan Listrik</h2></center>
+          <hr>
+          
+          <div class="form-group">
+            <%= f.label :sumber_listrik %><br>
+            <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">Jika Ada</button><br /><br />
+            <div id="demo" class="collapse">
+              <form action="">
+                <input type="radio" name="survey_form[sumber_listrik]" id="survey_form_sumber_listrik" value="pln"> PLN
+                <input type="radio" name="survey_form[sumber_listrik]" id="survey_form_sumber_listrik" value="solarsel"> SolarSel
+                <input type="radio" name="survey_form[sumber_listrik]" id="survey_form_sumber_listrik" value="genset"> Genset
+              </form>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :lainnya_listrik, "Sumber Listrik Lainnya" %><br />
+            <%= f.text_field :lainnya_listrik, class: "form-control", placeholder: "ex: Batu Bara" %>
+          </div> 
+         
+          <div class="form-group">
+            <%= f.label :jam_operasional %><br>
+            <%= f.time_field :jam_operasional, class: "form-control", placeholder: "02:20 PM" %>
+
+          <div class="form-group">
+            <%= f.label :id_pelanggan_listrik %><br>
+            <%= f.text_field :id_pelanggan_listrik, class: "form-control", placeholder: "ex: 232111074358" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :kapasitas, "Kapasitas (Watt)" %><br>
+            <%= f.text_field :kapasitas, class: "form-control", placeholder: "ex: 900" %>
+          </div>
+
+          <hr >
+          <center><h2>Ketersediaan Akses Internet Eksisting</h2></center>
+          <hr>
+
+          <div class="form-group">
+            <%= f.label :jenis_koneksi %><br>
+            <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo1">Jika Ada</button><br /><br />
+            <div id="demo1" class="collapse">
+              <input type="radio" name="survey_form[jenis_koneksi]" id="survey_form_jenis_koneksi" value="vsat">VSAT
+              <input type="radio" name="survey_form[jenis_koneksi]" id="survey_form_jenis_koneksi" value="radiolink">RadioLink
+              <input type="radio" name="survey_form[jenis_koneksi]" id="survey_form_jenis_koneksi" value="fiberoptik">FiberOptik
+
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :lainnya_internet, "Koneksi Internet Lainnya" %><br>
+            <%= f.text_field :lainnya_internet, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :kualitas_akses_internet %><br>
+            <%= f.text_field :kualitas_akses_internet, class: "form-control", placeholder: "Baik" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :bandwidt_tersedia %><br>
+            <%= f.text_field :bandwidt_tersedia, class: "form-control" %>
+          </div>
+
+           <hr >
+          <center><h2>Ketersediaan Akses Jaringan Selular (GSM)</h2></center>
+          <hr>
+
+          <div class="form-group">
+            <%= f.label :jenis_koneksi_1, "Jenis Koneksi" %><br>
+            <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo2">Jika Ada</button><br /><br />
+            <div id="demo2" class="collapse">
+              <input type="radio" name="survey_form[jenis_koneksi_1]" id="survey_form_jenis_koneksi_1" value="4g">4G
+              <input type="radio" name="survey_form[jenis_koneksi_1]" id="survey_form_jenis_koneksi_1" value="3g">3G
+              <input type="radio" name="survey_form[jenis_koneksi_1]" id="survey_form_jenis_koneksi_1" value="2g">2G
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :nama_operator_seluler %><br>
+            <%= f.text_field :nama_operator_seluler, class: "form-control", placeholder: "ex: Telkomsel" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :kualitas_layanan %><br>
+            <%= f.text_field :kualitas_layanan, class: "form-control", placeholder: "Baik" %>
+          </div>
+
+           <hr >
+          <center><h2>Ketersediaan Perangkat<h2></center>
+          <hr>
+
+          <div class="form-group">
+            <%= f.label :jumlah_komputer, "Jumlah Komputer/PC" %><br>
+            <%= f.text_field :jumlah_komputer, class: "form-control", type:"number" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :perangkat_pendukung_lainnya %><br>
+            <%= f.text_field :perangkat_pendukung_lainnya, class: "form-control" %>
+          </div>
+
+          <hr >
+          <center><h2>Penanggung Jawab Lokasi<h2></center>
+          <hr>
+
+          <div class="form-group">
+            <%= f.label :nama_penanggung_jawab_lokasi_1 %><br>
+            <%= f.text_field :nama_penanggung_jawab_lokasi_1, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :kontak_penanggung_jawab_lokasi_1 %><br>
+            <%= f.text_field :kontak_penanggung_jawab_lokasi_1, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :nama_penanggung_jawab_lokasi_2 %><br>
+            <%= f.text_field :nama_penanggung_jawab_lokasi_2, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :kontak_penanggung_jawab_lokasi_2 %><br>
+            <%= f.text_field :kontak_penanggung_jawab_lokasi_2, class: "form-control" %>
+          </div>
+
+          <hr >
+          <center><h2>Transportasi Menuju Lokasi<h2></center>
+          <hr>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <%= f.label :transportasi_menuju_lokasi %><br/>
+                <%= radio_button_tag(:transportasi_menuju_lokasi, "transportasi_menuju_lokasi") %>
+                <%= label_tag(:transportasi_menuju_lokasi, "Darat") %><br />
+                <%= radio_button_tag(:transportasi_menuju_lokasi, "transportasi_menuju_lokasi") %>
+                <%= label_tag(:transportasi_menuju_lokasi, "Laut") %><br />
+                <%= radio_button_tag(:transportasi_menuju_lokasi, "transportasi_menuju_lokasi") %>
+                <%= label_tag(:transportasi_menuju_lokasi, "Udara") %>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <%= f.label :keterangan_menuju_lokasi %><br>
+                  <%= f.text_area :keterangan_menuju_lokasi, class: "form-control" %>
+                </div>
+              </div>
+            </div>
+          </div>  
+          </div>
+          <div class="form-group">
+            <%= f.label :gambaran_menuju_lokasi %><br>
+            <%= f.text_area :gambaran_menuju_lokasi, class: "form-control" %>
+          </div>
+                <a class="btn btn-secondary btnNext" >Selanjutnya</a>
+          </div>
+
+          <div class="tab-pane" id="tab2">
+          <center><h2>Dokumentasi<h2></center>
+          <hr>
+
+            <div class="form-group">
+              <%= f.label :"image_gedung", "Photo: Site/Gedung" %>
+              <%= f.file_field :image_gedung, class: "form-control" %>
+              <div id="target1"></div>
+            </div>
+
+             <div class="form-group">
+              <%= f.label :"image_rencana_tempat_perangkat", "Photo: Rencana Tempat Perangkat" %>
+              <%= f.file_field :image_rencana_tempat_perangkat, class: "form-control" %>
+              <div id="target1"></div>
+            </div>
+
+             <div class="form-group">
+              <%= f.label :"image_genset", "Photo: KWh Mwte/Genset/Solar Cell" %>
+              <%= f.file_field :image_genset, class: "form-control" %>
+              <div id="target"></div>
+            </div>
+
+            <hr >
+            <center><h2>Foto Panoramic<h2></center>
+            <hr>
+
+            <div class="form-group">
+              <%= f.label :"image_lingkungan_depan", "Photo Lingkungan Depan" %>
+              <%= f.file_field :image_lingkungan_depan, class: "form-control" %>
+              <div id="target"></div>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :"image_lingkungan_belakang", "Photo Lingkungan Belakang" %>
+              <%= f.file_field :image_lingkungan_belakang, class: "form-control" %>
+              <div id="target"></div>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :"image_lingkungan_kiri", "Photo Lingkungan Sebelah Kiri" %>
+              <%= f.file_field :image_lingkungan_kiri, class: "form-control" %>
+              <div id="target"></div>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :"image_lingkungan_kanan", "Photo Lingkungan Sebelah Kanan" %>
+              <%= f.file_field :image_lingkungan_kanan, class: "form-control" %>
+              <div id="target"></div>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :"image_akses_ke_site", "Photo Akses ke Site" %>
+              <%= f.file_field :image_akses_ke_site, class: "form-control" %>
+              <div id="target"></div>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :"image_akses_ke_site_1", "Photo Akses ke Site" %>
+              <%= f.file_field :image_akses_ke_site_1, class: "form-control"%>
+              <div id="target"></div>
+            </div>
+
+            <center>
+              <div class="actions">
+              <a class="btn btn-secondary btnPrevious" >Kembali</a>
+                <%= f.submit "Create Survey", class: "btn btn-secondary" %>
+              </div>
+            </center>
+              
+            
+<% end %>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$('select').select2({width: "100%"});
+</script>
+
+<script type="text/javascript">
+   $('.btnNext').click(function(){
+  $('.nav-tabs > .active').next('li').find('a').trigger('click');
+});
+
+  $('.btnPrevious').click(function(){
+  $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+});
+</script>

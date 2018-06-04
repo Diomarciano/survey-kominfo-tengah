@@ -1,0 +1,77 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Survey Forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Side</th>
+      <th>Alamat</th>
+      <th>Kelurahan</th>
+      <th>Kecamatan</th>
+      <th>Kabupaten</th>
+      <th>Provinsi</th>
+      <th>Lattide</th>
+      <th>Longitude</th>
+      <th>Sumber listrik</th>
+      <th>Jam operasional</th>
+      <th>Id pelanggan listrik</th>
+      <th>Kapasitas</th>
+      <th>Jenis koneksi</th>
+      <th>Bandwidt tersedia</th>
+      <th>Jenis koneksi 1</th>
+      <th>Nama operator seluler</th>
+      <th>Kualitas layanan</th>
+      <th>Jumlah komputer</th>
+      <th>Perangkat pendukung lainnya</th>
+      <th>Nama penanggung jawab lokasi 1</th>
+      <th>Kontak penanggung jawab lokasi 1</th>
+      <th>Nama penanggung jawab lokasi 2</th>
+      <th>Kontak penanggung jawab lokasi 2</th>
+      <th>Transportasi menuju lokasi</th>
+      <th>Gambaran menuju lokasi</th>
+      <th>Kualitas akses internet</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @survey_forms.each do |survey_form| %>
+      <tr>
+        <td><%= survey_form.side_id %></td>
+        <td><%= survey_form.alamat %></td>
+        <td><%= survey_form.kelurahan %></td>
+        <td><%= survey_form.kecamatan %></td>
+        <td><%= survey_form.kabupaten %></td>
+        <td><%= survey_form.provinsi %></td>
+        <td><%= survey_form.lattide %></td>
+        <td><%= survey_form.longitude %></td>
+        <td><%= survey_form.sumber_listrik %></td>
+        <td><%= survey_form.jam_operasional %></td>
+        <td><%= survey_form.id_pelanggan_listrik %></td>
+        <td><%= survey_form.kapasitas %></td>
+        <td><%= survey_form.jenis_koneksi %></td>
+        <td><%= survey_form.bandwidt_tersedia %></td>
+        <td><%= survey_form.jenis_koneksi_1 %></td>
+        <td><%= survey_form.nama_operator_seluler %></td>
+        <td><%= survey_form.kualitas_layanan %></td>
+        <td><%= survey_form.jumlah_komputer %></td>
+        <td><%= survey_form.perangkat_pendukung_lainnya %></td>
+        <td><%= survey_form.nama_penanggung_jawab_lokasi_1 %></td>
+        <td><%= survey_form.kontak_penanggung_jawab_lokasi_1 %></td>
+        <td><%= survey_form.nama_penanggung_jawab_lokasi_2 %></td>
+        <td><%= survey_form.kontak_penanggung_jawab_lokasi_2 %></td>
+        <td><%= survey_form.transportasi_menuju_lokasi %></td>
+        <td><%= survey_form.gambaran_menuju_lokasi %></td>
+        <td><%= survey_form.kualitas_akses_internet %></td>
+        <td><%= link_to 'Show', survey_form %></td>
+        <td><%= link_to 'Edit', edit_survey_form_path(survey_form) %></td>
+        <td><%= link_to 'Destroy', survey_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Survey form', new_survey_form_path %>
