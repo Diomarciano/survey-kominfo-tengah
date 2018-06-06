@@ -17,10 +17,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'material-sass'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
-
+gem 'aws-sdk', '~> 2.3'
 
 
 group :production do

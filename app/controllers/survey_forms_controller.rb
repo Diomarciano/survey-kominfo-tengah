@@ -72,6 +72,6 @@ class SurveyFormsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def survey_form_params
-      params.require(:survey_form).permit(:side_id, :alamat, :kelurahan, :kecamatan, :kabupaten, :provinsi, :lattide, :longitude, :sumber_listrik, :jam_operasional, :id_pelanggan_listrik, :kapasitas, :jenis_koneksi, :bandwidt_tersedia, :jenis_koneksi_1, :nama_operator_seluler, :kualitas_layanan, :jumlah_komputer, :perangkat_pendukung_lainnya, :nama_penanggung_jawab_lokasi_1, :kontak_penanggung_jawab_lokasi_1, :nama_penanggung_jawab_lokasi_2, :kontak_penanggung_jawab_lokasi_2, :transportasi_menuju_lokasi, :gambaran_menuju_lokasi, :kualitas_akses_internet)
+      params.require(:survey_form).permit(:side_id, :alamat, :kelurahan, :kecamatan, :kabupaten, :provinsi, :lattide, :longitude, :jam_operasional, :id_pelanggan_listrik, :kapasitas, :jenis_koneksi, :bandwidt_tersedia, :jenis_koneksi_1, :nama_operator_seluler, :kualitas_layanan, :jumlah_komputer, :perangkat_pendukung_lainnya, :nama_penanggung_jawab_lokasi_1, :kontak_penanggung_jawab_lokasi_1, :nama_penanggung_jawab_lokasi_2, :kontak_penanggung_jawab_lokasi_2, :transportasi_menuju_lokasi, :gambaran_menuju_lokasi, :kualitas_akses_internet, sumber_listrik:[])
     end
 end
