@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :survey_forms
+  devise_for :users
+  
   root :to => "pages#index"
+
+  resources :survey_forms
 end

@@ -10,3 +10,10 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( survey_forms.scss )
+Rails.application.config.assets.precompile += %w( style.css.scss)
+Rails.application.config.assets.precompile += %w( aplikasi.css )
+Rails.application.config.assets.precompile += %w( bootstrap.js )
+Rails.application.config.assets.precompile += %w( survey_form.js )
+Rails.application.config.assets.precompile += %w( form.css.scss )
+
+

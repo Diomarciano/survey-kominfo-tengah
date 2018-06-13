@@ -1,6 +1,6 @@
 class SurveyFormsController < ApplicationController
   before_action :set_survey_form, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /survey_forms
   # GET /survey_forms.json
   def index

@@ -1,0 +1,362 @@
+ <%= render 'layouts/navbar' %>
+
+<div class="container-fluid">
+ <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h5><i class="fa fa-flag-o red"></i><strong>Pemetaan Internet Wilayah Barat</strong></h5>
+                <div class="panel-actions">
+                  <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+                  <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                  <a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+                </div>
+              </div>
+        <div class="panel-body">
+            <div class= "col-md-12">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
+                  <b><p>Top 5</p></b>
+                  <canvas id="canvas1" height="230" width="230" style="margin: 15px 10px 10px -13px"></canvas>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-8">
+                  <b><p class="">Provinsi</p></b>
+                  <br />
+                      <div class="tile_info">
+                          <a href="jawa_barat.html"><p><i class="fa fa-square green"></i> Jawa Barat </p></a>
+                          <a href="jawa_barat.html"><p><i class="fa fa-square orange"></i> Jawa Tengah </p></a>
+                          <p><i class="fa fa-square purple"></i> Jawa Timur </p>
+                          <p><i class="fa fa-square yellow"></i> Banten </p>
+                          <p><i class="fa fa-square red"></i> Sumatra Barat </p>
+                        </div> 
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-4">
+                  <b><p>(%)</p></b>
+                  <br />
+                    <p>10%</p>
+                    <p>10%</p>
+                    <p>15%</p>
+                    <p>30%</p>
+                    <p>23%</p>
+                  </div>
+            </div>
+        </div>
+            </div>
+        </div>
+
+          <div class="col-lg-6 col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h5><i class="fa fa-flag-o red"></i><strong>Pemetaan Internet Wilayah Tengah</strong></h5>
+                <div class="panel-actions">
+                  <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+                  <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                  <a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                 <div class= "col-md-12">
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
+                        <b><p>Top 5</p></b>
+                        <canvas id="canvas2" height="230" width="230" style="margin: 15px 10px 10px -13px"></canvas>
+                  </div>
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-10">
+                          <b><p>Provinsi</p></b>
+                            <br />
+                            <div class="tile_info">
+                           <a href="ntt.html"><p><i class="fa fa-square blue"></i> Nusa Tenggara Timur</p></a>
+
+                           <p><i class="fa fa-square green"></i> Kalimantan Utara </p>
+                           <p><i class="fa fa-square brown"></i> Sulawesi Tengah </p>
+                           <p><i class="fa fa-square green"></i> Kalimantan Utara </p>
+                           <p><i class="fa fa-square aero"></i> Gorontalo </p>
+                           <p><i class="fa fa-square red"></i> Nusa Tenggara Barat </p>
+                        </div>    
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
+                          <b><p>(%)</p></b>
+                          <br />
+                          
+                          <p>30%</p>
+                          <p>10%</p>
+                          <p>20%</p>
+                          <p>15%</p>
+                          <p>30%</p>
+                          <p>35%</p>
+                        </div>    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     <div class="row">
+           <div class="col-lg-6 col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h5><i class="fa fa-flag-o red"></i><strong>Grafik Wilayah Barat</strong></h5>
+                <div class="panel-actions">
+                  <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+                  <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                  <a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                  
+                        <canvas height="300px;" id="grafikBatang"></canvas>                        
+                       
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h5><i class="fa fa-flag-o red"></i><strong>Grafik Wilayah Tengah</strong></h5>
+                <div class="panel-actions">
+                  <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+                  <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                  <a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+                </div>
+              </div>
+              <div class="panel-body">
+                  
+                        <!--<canvas height="300px;" id="grafikBatang2"></canvas>  -->
+
+
+                        <canvas id="speedChart" height="300"></canvas>
+                      
+                       
+            </div>
+          </div>
+        </div>
+
+      </div>
+        <!-- statics end -->
+ </div>          
+
+ 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+
+  <!-- Doughnut Chart -->
+    <script>
+      $(document).ready(function(){
+        var options = {
+          legend: false,
+          responsive: false
+        };
+
+        new Chart(document.getElementById("canvas1"), {
+          type: 'doughnut',
+          tooltipFillColor: "rgba(51, 51, 51, 0.55)",
+          data: {
+            labels: [
+              "Jawa Barat",
+              "Jawa Tengah",
+              "Jawa Timur",
+              "Banten",
+              "Sumatra Barat"
+            ],
+            datasets: [{
+              data: [15, 20, 30, 10, 30],
+              backgroundColor: [
+                "#1ABB9C",
+                "#FF8C00",
+                "#9B59B6",
+                "#FFFF00",
+                "#E74C3C"
+              ],
+              hoverBackgroundColor: [
+                "#1ABB9C",
+                "#FF8C00",
+                "#9B59B6",
+                "#FFFF00",
+                "#E74C3C"
+              ]
+            }]
+          },
+          options: options
+        });
+      });
+    </script>
+    <!-- /Doughnut Chart -->
+
+    <!-- Doughnut Chart -->
+    <script>
+      $(document).ready(function(){
+        var options = {
+          legend: false,
+          responsive: false
+        };
+
+        new Chart(document.getElementById("canvas2"), {
+          type: 'doughnut',
+          tooltipFillColor: "rgba(51, 51, 51, 0.55)",
+          data: {
+            labels: [
+              "Nusa Tenggara Timur",
+              "Kalimantan Utara",
+              "Sulawesi Tengah",
+              "Gorontalo",
+              "Nusa Tenggara Barat"
+            ],
+            datasets: [{
+              data: [15, 20, 30, 10, 30],
+              backgroundColor: [
+                "#000000",
+                "#1ABB9C",
+                "#A0522D",
+                "#9CC2CB",
+                "#E74C3C"
+              ],
+              hoverBackgroundColor: [
+                "#000000",
+                "#1ABB9C",
+                "#A0522D",
+                "#9CC2CB",
+                "#E74C3C"
+              ]
+            }]
+          },
+          options: options
+        });
+      });
+    </script>
+    <!-- /Doughnut Chart -->
+
+    <script>
+var ctx = document.getElementById("grafikBatang").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["0", "Jawa Barat", "Jawa Tengah", "Jawa Timur", "Banten", "Sumatra Barat"],
+        datasets: [{
+            label: '# Speed Internet (Mbps)',
+            data: [0, 30, 25, 23, 15, 5 ],
+            backgroundColor: [
+                'rgba(128, 128, 128, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+<script>
+var ctx = document.getElementById("grafikBatang2").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["0", "Nusa Tenggara Timur", "Kalimantan Utara", "Sulawesi Tengah", "Kalimantan Utara", "Gorontalo", "Nusa Tenggara Barat"],
+        datasets: [{
+            label: 'Speed Internet (Mbps)',
+            data: [0, 20, 15, 5, 8, 5, 3],
+            backgroundColor: [
+               
+                'rgb(113, 249, 249)',
+                
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(75, 192, 192, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script> 
+
+<script>
+var speedCanvas = document.getElementById("speedChart");
+
+Chart.defaults.global.defaultFontFamily = "Lato";
+Chart.defaults.global.defaultFontSize = 18;
+
+var dataFirst = {
+    label: "Car A - Speed (mph)",
+    data: [0, 59, 75, 20, 20, 55, 40],
+    lineTension: 0.3,
+    fill: false,
+    borderColor: 'red',
+    backgroundColor: 'transparent',
+    pointBorderColor: 'red',
+    pointBackgroundColor: 'lightgreen',
+    pointRadius: 5,
+    pointHoverRadius: 15,
+    pointHitRadius: 30,
+    pointBorderWidth: 2,
+    pointStyle: 'rect'
+  };
+
+var dataSecond = {
+    label: "Car B - Speed (mph)",
+    data: [20, 15, 60, 60, 65, 30, 70],
+    lineTension: 0.3,
+    fill: false,
+    borderColor: 'purple',
+    backgroundColor: 'transparent',
+    pointBorderColor: 'purple',
+    pointBackgroundColor: 'lightgreen',
+    pointRadius: 5,
+    pointHoverRadius: 15,
+    pointHitRadius: 30,
+    pointBorderWidth: 2
+  };
+
+var speedData = {
+  labels: ["0s", "10s", "20s", "30s", "40s", "50s", "60s"],
+  datasets: [dataFirst, dataSecond]
+};
+
+var chartOptions = {
+  legend: {
+    display: true,
+    position: 'top',
+    labels: {
+      boxWidth: 80,
+      fontColor: 'black'
+    }
+  }
+};
+
+var lineChart = new Chart(speedCanvas, {
+  type: 'line',
+  data: speedData,
+  options: chartOptions
+});
+</script>
