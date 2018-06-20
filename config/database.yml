@@ -24,14 +24,14 @@ default: &default
 development:
   <<: *default
   database: survey_kominfo_development
-  username: maulana
+  username: denis
   password: 123456
 
 
 test:
   <<: *default
   database: survey_kominfo_test
-  username: maulana
+  username: denis
   password: 123456
 
 
@@ -39,5 +39,5 @@ test:
 production:
   <<: *default
   database: survey_kominfo_production
-  username: maulana
+  username: denis
   password: 123456

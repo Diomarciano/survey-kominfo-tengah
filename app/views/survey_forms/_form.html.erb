@@ -1,4 +1,3 @@
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
 
 <%= form_for(@survey_form) do |f| %>
   <% if @survey_form.errors.any? %>
@@ -16,11 +15,8 @@
   <style>
     .jumbotron {
         border: 1px solid black;
-
         background-color: white;
     }
-
-    
   </style>
 
 <div class="container">
@@ -47,7 +43,7 @@
 
             <%= f.label :kelurahan %><br>
             <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[kelurahan]" id="survey_form_kelurahan">
-              <option></option>
+              <option disabled selected>Select One</option>
               <option>Desa Paking</option>
               <option>Desa Mentarang Baru</option>
               <option>Desa Buntulia Tengah</option>
@@ -60,37 +56,106 @@
           <div class="form-group">
             <%= f.label :kecamatan %><br>
             <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[kecamatan]" id="survey_form_kecamatan">
-              <option></option>
+              <option disabled selected>Select One</option>
               <option>Mentarang</option>
-              <option>Malinau Selatan Hili</option>
+              <option>Malinau Selatan Hilir</option>
               <option>Malinau Selatan</option>
               <option>Haharu</option>
               <option>Lewa Tidas</option>
               <option>Kahaungu Eti</option>
               <option>Pandawai</option>
               <option>Ngadu Ngala</option>
+              <option>PinuPahar</option>
+              <option>Rindi</option>
+              <option>Alor Barat Daya</option>
+              <option>Alor Barat Laut</option>
+              <option>Kabola</option>
+              <option>Tinangkung</option>
+              <option>Peling Tengah</option>
+              <option>Kwandang</option>
+              <option>Ponelo Kepulauan</option>
+              <option>Komodo</option>
+              <option>Welak</option>
+              <option>Kuwus</option>
+              <option>Lembor Selatan</option>
+              <option>Ndoso</option>
+              <option>Boleng</option>
+              <option>Mbeliling</option>
+              <option>Buntulia</option>
+              <option>Dengilo</option>
+              <option>Duhiadaa</option>
+              <option>Patilanggio</option>
+              <option>Popayato Barat</option>
+              <option>Popayato</option>
+              <option>Randangan</option>
+              <option>Buer</option>
+              <option>Moyo Utara</option>
+              <option>Lenangguar </option>
+              <option>Alas</option>
+              <option>Taliwang</option>
+              <option>Brang Ene</option>
+              <option>Jereweh</option>
+              <option>Sekongkang</option>
+              <option>Seteluk</option>
+              <option>Pota Tano</option>
+              <option>Taliwang</option>
+              <option>Sungai Boh</option>
+              <option>Kayan Selatan</option>
+              <option>Sungai Tubu</option>
+              <option>Timor Tengah Utara</option>
+              <option>Biboki Tanpah</option>
+              <option>Biboki Feotleu</option>
+              <option>Biboki Utara</option>
+              <option>Biboki Selatan</option>
             </select>
           </div>
           <div class="form-group">
             <%= f.label :kabupaten %><br>
             <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[kabupaten]" id="survey_form_kabupaten">
-              <option></option>
+              <option disabled selected>Select One</option>
               <option>Malinau</option>
               <option>Sumba Timur</option>
               <option>Alor</option>
               <option>Banggai Kepulauan</option>
               <option>Gorontalo Utara</option>
-              <option>Kahaungu Eti</option>
               <option>Manggarai Barat</option>
               <option>Pohuwato</option>
               <option>Sumbawa</option>
               <option>Sumbawa Barat</option>
+              <option>Sumba Tengah</option>
+              <option>Timor Tengah Utara</option>
+              <option>Belu</option>
+              <option>Sambas</option>
+              <option>Bengkayang</option>
+              <option>Morowali Utara</option>
+              <option>Sabu Raijua</option>
+              <option>Konawe Kepulauaan</option>
+              <option>Nagekeo</option>
+              <option>Sigi</option>
+              <option>Ende</option>
+              <option>Tojo Una-una</option>
+              <option>Lembata</option>
+              <option>Banggai Laut</option>
+              <option>Malaka</option>
+              <option>Donggala</option>
+              <option>Tolitoli</option>
+              <option>Rote Ndao</option>
+              <option>Konawe</option>
+              <option>Ketapang</option>
+              <option>Sanggau</option>
+              <option>Kayong Utara</option>
+              <option>Melawi</option>
+              <option>Kapuas Hulu</option>
+              <option>Landak</option>
+              <option>Mahakam Ulu</option>
+              <option>Hulu Sungai Utara</option>
+              <option>Bima</option>
             </select>
           </div>
           <div class="form-group">
             <%= f.label :provinsi %><br>
             <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[provinsi]" id="survey_form_provinsi">
-              <option></option>
+              <option disabled selected>Select One</option>
               <option>Nusa Tenggara Timur</option>
               <option>Nusa Tenggara Barat</option>
               <option>Kalimantan Selatan</option>
@@ -152,7 +217,7 @@
              
               <div class="form-group">
                 <%= f.label :jam_operasional %><br>
-                <%= f.time_field :jam_operasional, class: "form-control", placeholder: "02:20 PM" %>
+                <%= f.text_field :jam_operasional, class: "form-control", placeholder: "24 JAM" %>
 
               <div class="form-group">
                 <%= f.label :id_pelanggan_listrik %><br>
@@ -163,7 +228,6 @@
                 <%= f.text_field :kapasitas, class: "form-control", placeholder: "ex: 900" %>
               </div>
             </div>
-            
           </div>
           
           <hr >
@@ -201,8 +265,8 @@
                 <%= f.text_field :kualitas_akses_internet, class: "form-control", placeholder: "Baik" %>
               </div>
               <div class="form-group">
-                <%= f.label :bandwidt_tersedia %><br>
-                <%= f.text_field :bandwidt_tersedia, class: "form-control" %>
+                <%= f.label :bandwidt_tersedia, "Bandwidt Tersedia (MBPS)" %><br>
+                <%= f.text_field :bandwidt_tersedia, class: "form-control", type: 'number', placeholder: "10" %>
               </div>
 
             </div>
@@ -250,7 +314,7 @@
           
 
            <hr >
-          <center><h2>Ketersediaan Perangkat<h2></center>
+          <center><h2>Ketersediaan Perangkat</h2></center>
           <hr>
 
           <div class="form-group">
@@ -263,7 +327,7 @@
           </div>
 
           <hr >
-          <center><h2>Penanggung Jawab Lokasi<h2></center>
+          <center><h2>Penanggung Jawab Lokasi</h2></center>
           <hr>
 
           <div class="form-group">
@@ -272,7 +336,7 @@
           </div>
           <div class="form-group">
             <%= f.label :kontak_penanggung_jawab_lokasi_1 %><br>
-            <%= f.text_field :kontak_penanggung_jawab_lokasi_1, class: "form-control" %>
+            <%= f.text_field :kontak_penanggung_jawab_lokasi_1, class: "form-control", type: 'number' %>
           </div>
           <div class="form-group">
             <%= f.label :nama_penanggung_jawab_lokasi_2 %><br>
@@ -280,11 +344,11 @@
           </div>
           <div class="form-group">
             <%= f.label :kontak_penanggung_jawab_lokasi_2 %><br>
-            <%= f.text_field :kontak_penanggung_jawab_lokasi_2, class: "form-control" %>
+            <%= f.text_field :kontak_penanggung_jawab_lokasi_2, class: "form-control", type: 'number' %>
           </div>
 
           <hr >
-          <center><h2>Transportasi Menuju Lokasi<h2></center>
+          <center><h2>Transportasi Menuju Lokasi</h2></center>
           <hr>
 
           <div class="form-group">
@@ -315,7 +379,7 @@
           </div>
 
           <div class="tab-pane" id="tab2">
-          <center><h2>Dokumentasi<h2></center>
+          <center><h2>Dokumentasi</h2></center>
           <hr>
 
             <div class="form-group">
@@ -337,7 +401,7 @@
             </div>
 
             <hr >
-            <center><h2>Foto Panoramic<h2></center>
+            <center><h2>Foto Panoramic</h2></center>
             <hr>
 
             <div class="form-group">
@@ -375,6 +439,41 @@
               <%= f.file_field :image_akses_ke_site_1, class: "form-control"%>
               <div id="target"></div>
             </div>
+
+            <hr >
+            <center><h2>Photo Tambahan</h2></center>
+            <hr>
+
+            <div class="form-group">
+              <%= f.label :"tambahan_image_1" %>
+              <%= f.file_field :tambahan_image_1, class: "form-control" %>
+              <div id="target"></div>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :"tambahan_image_2" %>
+              <%= f.file_field :tambahan_image_2, class: "form-control" %>
+              <div id="target"></div>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :"tambahan_image_3" %>
+              <%= f.file_field :tambahan_image_3, class: "form-control" %>
+              <div id="target"></div>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :"tambahan_image_4" %>
+              <%= f.file_field :tambahan_image_5, class: "form-control" %>
+              <div id="target"></div>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :"tambahan_image_5" %>
+              <%= f.file_field :tambahan_image_6, class: "form-control" %>
+              <div id="target"></div>
+            </div>
+            
             <center>
               <div class="row">
                 <div class="col-xs-6 center">
@@ -386,11 +485,13 @@
                   </div>
                 </div>
               </div>
-            </center>              
-            
+            </center>   
+    </div>           
 <% end %>
-    </div>
+    
   </div>
+</div>
+</div>
 </div>
 
 <script type="text/javascript">

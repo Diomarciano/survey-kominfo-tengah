@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180609141329) do
+ActiveRecord::Schema.define(version: 20180617173155) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20180609141329) do
     t.float    "lattide"
     t.float    "longitude"
     t.string   "sumber_listrik"
-    t.datetime "jam_operasional"
     t.string   "id_pelanggan_listrik"
     t.string   "kapasitas"
     t.string   "jenis_koneksi"
@@ -84,6 +83,27 @@ ActiveRecord::Schema.define(version: 20180609141329) do
     t.string   "image_akses_ke_site_1_content_type"
     t.integer  "image_akses_ke_site_1_file_size"
     t.datetime "image_akses_ke_site_1_updated_at"
+    t.string   "tambahan_image_1_file_name"
+    t.string   "tambahan_image_1_content_type"
+    t.integer  "tambahan_image_1_file_size"
+    t.datetime "tambahan_image_1_updated_at"
+    t.string   "tambahan_image_2_file_name"
+    t.string   "tambahan_image_2_content_type"
+    t.integer  "tambahan_image_2_file_size"
+    t.datetime "tambahan_image_2_updated_at"
+    t.string   "tambahan_image_3_file_name"
+    t.string   "tambahan_image_3_content_type"
+    t.integer  "tambahan_image_3_file_size"
+    t.datetime "tambahan_image_3_updated_at"
+    t.string   "tambahan_image_4_file_name"
+    t.string   "tambahan_image_4_content_type"
+    t.integer  "tambahan_image_4_file_size"
+    t.datetime "tambahan_image_4_updated_at"
+    t.string   "tambahan_image_5_file_name"
+    t.string   "tambahan_image_5_content_type"
+    t.integer  "tambahan_image_5_file_size"
+    t.datetime "tambahan_image_5_updated_at"
+    t.string   "jam_operasional"
   end
 
   create_table "users", force: :cascade do |t|

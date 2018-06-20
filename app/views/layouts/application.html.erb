@@ -7,15 +7,16 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	  <title>SurveyKominfo</title>
 	   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag  'application','data-turbolinks-track'=> true %>
-  <%= javascript_include_tag 'bootstrap' %>>
+    <%= javascript_include_tag  'application','data-turbolinks-track'=> true %>
+    <%= javascript_include_tag 'bootstrap' %>
 	  <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "survey_forms" %>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
 
 </head>
 <body>
-
-
     <div class="mdk-drawer-layout js-mdk-drawer-layout" data-fullbleed data-push data-responsive-width="992px" data-has-scrolling-region>
 
       <div class="mdk-drawer-layout__content">
@@ -49,7 +50,7 @@
       <!-- // END drawer -->
     </div>
 
-    
+    <br /><br />
   <%= yield %>  
        
 <%= render 'layouts/footer' %>

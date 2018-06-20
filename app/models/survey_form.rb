@@ -32,4 +32,18 @@ class SurveyForm < ActiveRecord::Base
   	validates_attachment_content_type :image_akses_ke_site_1, content_type: /\Aimage\/.*\z/
 
 
+
+   def self.search(search)
+      where("lower(kabupaten) LIKE ? OR lower(kecamatan) LIKE ? OR lower(provinsi) LIKE ?", "%#{search.downcase}%", "%#{search.downcase}%", "%#{search.downcase}%") 
+    end
+
+    def self.to_csv(options = {})
+      CSV.generate(options) do |csv|
+        csv << column_names
+        all.each do |survey_form|
+          csv << survey_form.attributes.values_at(*column_names)
+        end
+      end
+    end
+   
 end

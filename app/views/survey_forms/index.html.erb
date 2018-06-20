@@ -1,77 +1,140 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Survey Forms</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Side</th>
-      <th>Alamat</th>
-      <th>Kelurahan</th>
-      <th>Kecamatan</th>
-      <th>Kabupaten</th>
-      <th>Provinsi</th>
-      <th>Lattide</th>
-      <th>Longitude</th>
-      <th>Sumber listrik</th>
-      <th>Jam operasional</th>
-      <th>Id pelanggan listrik</th>
-      <th>Kapasitas</th>
-      <th>Jenis koneksi</th>
-      <th>Bandwidt tersedia</th>
-      <th>Jenis koneksi 1</th>
-      <th>Nama operator seluler</th>
-      <th>Kualitas layanan</th>
-      <th>Jumlah komputer</th>
-      <th>Perangkat pendukung lainnya</th>
-      <th>Nama penanggung jawab lokasi 1</th>
-      <th>Kontak penanggung jawab lokasi 1</th>
-      <th>Nama penanggung jawab lokasi 2</th>
-      <th>Kontak penanggung jawab lokasi 2</th>
-      <th>Transportasi menuju lokasi</th>
-      <th>Gambaran menuju lokasi</th>
-      <th>Kualitas akses internet</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @survey_forms.each do |survey_form| %>
-      <tr>
-        <td><%= survey_form.side_id %></td>
-        <td><%= survey_form.alamat %></td>
-        <td><%= survey_form.kelurahan %></td>
-        <td><%= survey_form.kecamatan %></td>
-        <td><%= survey_form.kabupaten %></td>
-        <td><%= survey_form.provinsi %></td>
-        <td><%= survey_form.lattide %></td>
-        <td><%= survey_form.longitude %></td>
-        <td><%= survey_form.sumber_listrik %></td>
-        <td><%= survey_form.jam_operasional %></td>
-        <td><%= survey_form.id_pelanggan_listrik %></td>
-        <td><%= survey_form.kapasitas %></td>
-        <td><%= survey_form.jenis_koneksi %></td>
-        <td><%= survey_form.bandwidt_tersedia %></td>
-        <td><%= survey_form.jenis_koneksi_1 %></td>
-        <td><%= survey_form.nama_operator_seluler %></td>
-        <td><%= survey_form.kualitas_layanan %></td>
-        <td><%= survey_form.jumlah_komputer %></td>
-        <td><%= survey_form.perangkat_pendukung_lainnya %></td>
-        <td><%= survey_form.nama_penanggung_jawab_lokasi_1 %></td>
-        <td><%= survey_form.kontak_penanggung_jawab_lokasi_1 %></td>
-        <td><%= survey_form.nama_penanggung_jawab_lokasi_2 %></td>
-        <td><%= survey_form.kontak_penanggung_jawab_lokasi_2 %></td>
-        <td><%= survey_form.transportasi_menuju_lokasi %></td>
-        <td><%= survey_form.gambaran_menuju_lokasi %></td>
-        <td><%= survey_form.kualitas_akses_internet %></td>
-        <td><%= link_to 'Show', survey_form %></td>
-        <td><%= link_to 'Edit', edit_survey_form_path(survey_form) %></td>
-        <td><%= link_to 'Destroy', survey_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<center><h1>Data Survey Wilayah Tengah</h1></center>
+<br />
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_tag survey_forms_path, :method => 'get' do %>
+      <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="search" id="search">
+              <option disabled selected>Pilih Kabupaten</option>
+              <option>Malinau</option>
+              <option>Sumba Timur</option>
+              <option>Alor</option>
+              <option>Banggai Kepulauan</option>
+              <option>Gorontalo Utara</option>
+              <option>Manggarai Barat</option>
+              <option>Pohuwato</option>
+              <option>Sumbawa</option>
+              <option>Sumbawa Barat</option>
+              <option>Sumba Tengah</option>
+              <option>Timor Tengah Utara</option>
+              <option>Belu</option>
+              <option>Sambas</option>
+              <option>Bengkayang</option>
+              <option>Morowali Utara</option>
+              <option>Sabu Raijua</option>
+              <option>Konawe Kepulauaan</option>
+              <option>Nagekeo</option>
+              <option>Sigi</option>
+              <option>Ende</option>
+              <option>Tojo Una-una</option>
+              <option>Lembata</option>
+              <option>Banggai Laut</option>
+              <option>Malaka</option>
+              <option>Donggala</option>
+              <option>Tolitoli</option>
+              <option>Rote Ndao</option>
+              <option>Konawe</option>
+              <option>Ketapang</option>
+              <option>Sanggau</option>
+              <option>Kayong Utara</option>
+              <option>Melawi</option>
+              <option>Kapuas Hulu</option>
+              <option>Landak</option>
+              <option>Mahakam Ulu</option>
+              <option>Hulu Sungai Utara</option>
+              <option>Bima</option>
+      </select>
+      <br /><br />
+      <center><%= submit_tag "Search", class: "btn btn-success"%></center>
     <% end %>
-  </tbody>
-</table>
+  </div>
+  <br /><br />
+ 
+<div class="container-fluid">
+<div class="col-md-12">
+  <p>
+    Download Data:<br />
+    <%= link_to "Format CSV ", survey_forms_path(format: "csv") %> |
+    <%= link_to "Format Excel", survey_forms_path(format: "xls") %>
+  </p>
+  <div class="table-responsive" id="survey_forms">          
+    <table class="table table-hover" border="1">
+      <thead>
+        <tr>
+          <th >Side ID</th>
+          <th >Alamat</th>
+          <th >Kelurahan</th>
+          <th>Kecamatan</th>
+          <th>Kabupaten</th>
+          <th>Provinsi</th>
+          <th>Lattide</th>
+          <th>Longitude</th>
+          <th>Sumber listrik</th>
+          <th>Jam operasional</th>
+          <th>Id pelanggan listrik</th>
+          <th>Kapasitas</th>
+          <th>Jenis koneksi</th>
+          <th>Koneksi Internet Lainnya</th>
+          <th>Kualitas akses internet</th>
+          <th>Bandwidt tersedia</th>
+          <th>Jenis koneksi 1</th>
+          <th>Nama operator seluler</th>
+          <th>Kualitas layanan</th>
+          <th>Jumlah komputer</th>
+          <th>Perangkat pendukung lainnya</th>
+          <th>Nama penanggung jawab lokasi 1</th>
+          <th>Kontak penanggung jawab lokasi 1</th>
+          <th>Nama penanggung jawab lokasi 2</th>
+          <th>Kontak penanggung jawab lokasi 2</th>
+          <th>Transportasi menuju lokasi</th>
+          <th>Gambaran menuju lokasi</th>
+          <th colspan="3"><center>Action</center></th>
+        </tr>
+      </thead>
 
+      <tbody>
+        <% @survey_forms.each do |survey_form| %>
+          <tr>
+            <td><%= survey_form.side_id %></td>
+            <td><%= survey_form.alamat %></td>
+            <td><%= survey_form.kelurahan %></td>
+            <td><%= survey_form.kecamatan %></td>
+            <td><%= survey_form.kabupaten %></td>
+            <td><%= survey_form.provinsi %></td>
+            <td><%= survey_form.lattide %></td>
+            <td><%= survey_form.longitude %></td>
+            <td><%= survey_form.sumber_listrik %></td>
+            <td><%= survey_form.jam_operasional %></td>
+            <td><%= survey_form.id_pelanggan_listrik %></td>
+            <td><%= survey_form.kapasitas %></td>
+            <td><%= survey_form.jenis_koneksi %></td>
+            <td><%= survey_form.lainnya_internet %></td>
+            <td><%= survey_form.kualitas_akses_internet %></td>
+            <td><%= survey_form.bandwidt_tersedia %></td>
+            <td><%= survey_form.jenis_koneksi_1 %></td>
+            <td><%= survey_form.nama_operator_seluler %></td>
+            <td><%= survey_form.kualitas_layanan %></td>
+            <td><%= survey_form.jumlah_komputer %></td>
+            <td><%= survey_form.perangkat_pendukung_lainnya %></td>
+            <td><%= survey_form.nama_penanggung_jawab_lokasi_1 %></td>
+            <td><%= survey_form.kontak_penanggung_jawab_lokasi_1 %></td>
+            <td><%= survey_form.nama_penanggung_jawab_lokasi_2 %></td>
+            <td><%= survey_form.kontak_penanggung_jawab_lokasi_2 %></td>
+            <td><%= survey_form.transportasi_menuju_lokasi %></td>
+            <td><%= survey_form.gambaran_menuju_lokasi %></td>
+            <td><%= link_to 'Show', survey_form %></td>
+            <td><%= link_to 'Edit', edit_survey_form_path(survey_form) %></td>
+            <td><%= link_to 'Destroy', survey_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
 <br>
 
 <%= link_to 'New Survey form', new_survey_form_path %>
+<script type="text/javascript">
+$('select').select2({width: "100%"});
+</script>

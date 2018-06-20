@@ -1,138 +1,71 @@
  <%= render 'layouts/navbar' %>
 
 <div class="container-fluid">
- <div class="row">
+  <div class="row">
         <div class="col-lg-6 col-md-6">
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h5><i class="fa fa-flag-o red"></i><strong>Pemetaan Internet Wilayah Barat</strong></h5>
-                <div class="panel-actions">
-                  <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
-                  <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
-                </div>
-              </div>
-        <div class="panel-body">
-            <div class= "col-md-12">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
-                  <b><p>Top 5</p></b>
-                  <canvas id="canvas1" height="230" width="230" style="margin: 15px 10px 10px -13px"></canvas>
-                </div>
-                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-8">
-                  <b><p class="">Provinsi</p></b>
-                  <br />
-                      <div class="tile_info">
-                          <a href="jawa_barat.html"><p><i class="fa fa-square green"></i> Jawa Barat </p></a>
-                          <a href="jawa_barat.html"><p><i class="fa fa-square orange"></i> Jawa Tengah </p></a>
-                          <p><i class="fa fa-square purple"></i> Jawa Timur </p>
-                          <p><i class="fa fa-square yellow"></i> Banten </p>
-                          <p><i class="fa fa-square red"></i> Sumatra Barat </p>
-                        </div> 
-                </div>
-                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-4">
-                  <b><p>(%)</p></b>
-                  <br />
-                    <p>10%</p>
-                    <p>10%</p>
-                    <p>15%</p>
-                    <p>30%</p>
-                    <p>23%</p>
-                  </div>
-            </div>
-        </div>
-            </div>
-        </div>
-
-          <div class="col-lg-6 col-md-6">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h5><i class="fa fa-flag-o red"></i><strong>Pemetaan Internet Wilayah Tengah</strong></h5>
-                <div class="panel-actions">
-                  <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
-                  <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
-                </div>
               </div>
               <div class="panel-body">
-                 <div class= "col-md-12">
+                <div class= "col-md-12">
                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
-                        <b><p>Top 5</p></b>
-                        <canvas id="canvas2" height="230" width="230" style="margin: 15px 10px 10px -13px"></canvas>
+                    <%= pie_chart SurveyForm.group(:provinsi).count %>
                   </div>
-                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-10">
-                          <b><p>Provinsi</p></b>
-                            <br />
-                            <div class="tile_info">
-                           <a href="ntt.html"><p><i class="fa fa-square blue"></i> Nusa Tenggara Timur</p></a>
-
-                           <p><i class="fa fa-square green"></i> Kalimantan Utara </p>
-                           <p><i class="fa fa-square brown"></i> Sulawesi Tengah </p>
-                           <p><i class="fa fa-square green"></i> Kalimantan Utara </p>
-                           <p><i class="fa fa-square aero"></i> Gorontalo </p>
-                           <p><i class="fa fa-square red"></i> Nusa Tenggara Barat </p>
-                        </div>    
-                        </div>
-                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
-                          <b><p>(%)</p></b>
-                          <br />
-                          
-                          <p>30%</p>
-                          <p>10%</p>
-                          <p>20%</p>
-                          <p>15%</p>
-                          <p>30%</p>
-                          <p>35%</p>
-                        </div>    
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-     <div class="row">
-           <div class="col-lg-6 col-md-6">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h5><i class="fa fa-flag-o red"></i><strong>Grafik Wilayah Barat</strong></h5>
-                <div class="panel-actions">
-                  <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
-                  <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
                 </div>
               </div>
-              <div class="panel-body">
-                  
-                        <canvas height="300px;" id="grafikBatang"></canvas>                        
-                       
             </div>
-          </div>
         </div>
 
         <div class="col-lg-6 col-md-6">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h5><i class="fa fa-flag-o red"></i><strong>Grafik Wilayah Tengah</strong></h5>
-                <div class="panel-actions">
-                  <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
-                  <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h5><i class="fa fa-flag-o red"></i><strong>Pemetaan Internet Wilayah Tengah</strong></h5>  
+            </div>
+            <div class="panel-body">
+              <div class= "col-md-12">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
+                  <%= pie_chart SurveyForm.group(:provinsi).count %>
                 </div>
               </div>
-              <div class="panel-body">
-                  
-                        <!--<canvas height="300px;" id="grafikBatang2"></canvas>  -->
-
-
-                        <canvas id="speedChart" height="300"></canvas>
-                      
-                       
+            </div>
+          </div>
+        </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-lg-6 col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h5><i class="fa fa-flag-o red"></i><strong>Pemetaan Internet Wilayah Barat</strong></h5>  
+            </div>
+            <div class="panel-body">
+              <div class= "col-md-12">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
+                  <%= column_chart SurveyForm.group_by_day_of_week(:created_at, format: "%a").count %>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-      </div>
+    <div class="col-lg-6 col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h5><i class="fa fa-flag-o red"></i><strong>Pemetaan Internet Wilayah Barat</strong></h5>  
+            </div>
+            <div class="panel-body">
+              <div class= "col-md-12">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
+                  <%= column_chart SurveyForm.group_by_day_of_week(:created_at, format: "%a").count %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
         <!-- statics end -->
- </div>          
+</div>          
 
  
  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>

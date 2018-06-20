@@ -5,6 +5,17 @@ class SurveyFormsController < ApplicationController
   # GET /survey_forms.json
   def index
     @survey_forms = SurveyForm.all
+    if params[:search]
+      @survey_forms = SurveyForm.search(params[:search]).order("id ASC").page(params[:page]).per_page(20)
+    else
+      @survey_forms = SurveyForm.all.order('id ASC').page(params[:page]).per_page(20)
+    end
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @survey_forms.to_csv }
+      format.xls { send_data @survey_forms.to_csv(col_sep: "\t") }
+    end
   end
 
   # GET /survey_forms/1
@@ -25,12 +36,9 @@ class SurveyFormsController < ApplicationController
   # POST /survey_forms.json
   def create
     @survey_form = SurveyForm.new(survey_form_params)
-
-
+    
     respond_to do |format|
-          @side_id = "00001-#{Time.now.to_i}"
       if @survey_form.save
-
         format.html { redirect_to @survey_form, notice: 'Survey form was successfully created.' }
         format.json { render :show, status: :created, location: @survey_form }
       else
@@ -72,6 +80,6 @@ class SurveyFormsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def survey_form_params
-      params.require(:survey_form).permit(:side_id, :alamat, :kelurahan, :kecamatan, :kabupaten, :provinsi, :lattide, :longitude, :jam_operasional, :id_pelanggan_listrik, :kapasitas, :jenis_koneksi, :bandwidt_tersedia, :jenis_koneksi_1, :nama_operator_seluler, :kualitas_layanan, :jumlah_komputer, :perangkat_pendukung_lainnya, :nama_penanggung_jawab_lokasi_1, :kontak_penanggung_jawab_lokasi_1, :nama_penanggung_jawab_lokasi_2, :kontak_penanggung_jawab_lokasi_2, :transportasi_menuju_lokasi, :gambaran_menuju_lokasi, :kualitas_akses_internet, sumber_listrik:[])
+      params.require(:survey_form).permit(:side_id, :alamat, :kelurahan, :kecamatan, :kabupaten, :provinsi, :lattide, :longitude, :jam_operasional, :id_pelanggan_listrik, :kapasitas, :jenis_koneksi, :lainnya_internet, :bandwidt_tersedia, :jenis_koneksi_1, :nama_operator_seluler, :kualitas_layanan, :jumlah_komputer, :perangkat_pendukung_lainnya, :nama_penanggung_jawab_lokasi_1, :kontak_penanggung_jawab_lokasi_1, :nama_penanggung_jawab_lokasi_2, :kontak_penanggung_jawab_lokasi_2, :transportasi_menuju_lokasi, :gambaran_menuju_lokasi, :kualitas_akses_internet, sumber_listrik:[])
     end
 end
