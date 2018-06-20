@@ -1,0 +1,34 @@
+/* line 1, /home/denis/survey_kominfo/app/assets/stylesheets/survey_forms.scss */
+label {
+  color: black;
+  font-weight: bold;
+}
+
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+/* line 8, /home/denis/survey_kominfo/app/assets/stylesheets/survey_forms.scss */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Zebra striping */
+/* line 13, /home/denis/survey_kominfo/app/assets/stylesheets/survey_forms.scss */
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+/* line 16, /home/denis/survey_kominfo/app/assets/stylesheets/survey_forms.scss */
+th {
+  background: #333;
+  color: white;
+  font-weight: bold;
+}
+
+/* line 21, /home/denis/survey_kominfo/app/assets/stylesheets/survey_forms.scss */
+td, th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
