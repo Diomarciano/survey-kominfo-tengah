@@ -1,6 +1,7 @@
 class SurveyFormsController < ApplicationController
   before_action :set_survey_form, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  
   # GET /survey_forms
   # GET /survey_forms.json
   def index
@@ -39,7 +40,7 @@ class SurveyFormsController < ApplicationController
     
     respond_to do |format|
       if @survey_form.save
-        format.html { redirect_to @survey_form, notice: 'Survey form was successfully created.' }
+        format.html { redirect_to survey_forms_path, notice: 'Survey form was successfully created.' }
         format.json { render :show, status: :created, location: @survey_form }
       else
         format.html { render :new }
@@ -53,7 +54,7 @@ class SurveyFormsController < ApplicationController
   def update
     respond_to do |format|
       if @survey_form.update(survey_form_params)
-        format.html { redirect_to @survey_form, notice: 'Survey form was successfully updated.' }
+        format.html { redirect_to survey_forms_path, notice: 'Survey form was successfully updated.' }
         format.json { render :show, status: :ok, location: @survey_form }
       else
         format.html { render :edit }
@@ -80,6 +81,6 @@ class SurveyFormsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def survey_form_params
-      params.require(:survey_form).permit(:side_id, :alamat, :kelurahan, :kecamatan, :kabupaten, :provinsi, :lattide, :longitude, :jam_operasional, :id_pelanggan_listrik, :kapasitas, :jenis_koneksi, :lainnya_internet, :bandwidt_tersedia, :jenis_koneksi_1, :nama_operator_seluler, :kualitas_layanan, :jumlah_komputer, :perangkat_pendukung_lainnya, :nama_penanggung_jawab_lokasi_1, :kontak_penanggung_jawab_lokasi_1, :nama_penanggung_jawab_lokasi_2, :kontak_penanggung_jawab_lokasi_2, :transportasi_menuju_lokasi, :gambaran_menuju_lokasi, :kualitas_akses_internet, sumber_listrik:[])
+      params.require(:survey_form).permit(:side_id, :alamat, :kelurahan, :kecamatan, :kabupaten, :provinsi, :lattide, :longitude, :jam_operasional, :id_pelanggan_listrik, :kapasitas, :jenis_koneksi, :lainnya_internet, :bandwidt_tersedia, :jenis_koneksi_1, :nama_operator_seluler, :kualitas_layanan, :jumlah_komputer, :perangkat_pendukung_lainnya, :nama_penanggung_jawab_lokasi_1, :kontak_penanggung_jawab_lokasi_1, :nama_penanggung_jawab_lokasi_2, :kontak_penanggung_jawab_lokasi_2, :catatan_tambahan,:gambaran_menuju_lokasi, :nama_site_id, :surveyor, :project, :perangkat_lainnya,:kualitas_akses_internet, sumber_listrik:[], transportasi_menuju_lokasi:[])
     end
 end

@@ -1,0 +1,159 @@
+<p id="notice"><%= notice %></p>
+
+<center><h1>Data Survey Wilayah Barat</h1></center>
+
+    <div class="col-md-6 col-md-offset-3">
+    <%= form_tag form_barats_path, :method => 'get' do %>
+      <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="search" id="search">
+              <option disabled selected>Pilih Kabupaten</option>
+              <option>Malinau</option>
+              <option>Sumba Timur</option>
+              <option>Alor</option>
+              <option>Banggai Kepulauan</option>
+              <option>Gorontalo Utara</option>
+              <option>Manggarai Barat</option>
+              <option>Pohuwato</option>
+              <option>Sumbawa</option>
+              <option>Sumbawa Barat</option>
+              <option>Sumba Tengah</option>
+              <option>Timor Tengah Utara</option>
+              <option>Belu</option>
+              <option>Sambas</option>
+              <option>Bengkayang</option>
+              <option>Morowali Utara</option>
+              <option>Sabu Raijua</option>
+              <option>Konawe Kepulauaan</option>
+              <option>Nagekeo</option>
+              <option>Sigi</option>
+              <option>Ende</option>
+              <option>Tojo Una-una</option>
+              <option>Lembata</option>
+              <option>Banggai Laut</option>
+              <option>Malaka</option>
+              <option>Donggala</option>
+              <option>Tolitoli</option>
+              <option>Rote Ndao</option>
+              <option>Konawe</option>
+              <option>Ketapang</option>
+              <option>Sanggau</option>
+              <option>Kayong Utara</option>
+              <option>Melawi</option>
+              <option>Kapuas Hulu</option>
+              <option>Landak</option>
+              <option>Mahakam Ulu</option>
+              <option>Hulu Sungai Utara</option>
+              <option>Bima</option>
+      </select>
+      <br /><br />
+      <center><%= submit_tag "Search", class: "btn btn-success"%></center>
+    <% end %>
+  </div>
+  <br /><br />
+
+<div class="container-fluid">
+<div class="col-md-12">
+  <p>
+    Download Data:<br />
+
+    <%= link_to "Format CSV ", survey_forms_path(format: "csv") %> |
+    <%= link_to "Format Excel", survey_forms_path(format: "xls") %>
+    <button onclick="myFunction()">Print this page</button>
+
+  </p>
+    <div class="table-responsive-vertical" id="form_barats">          
+      <table class="table table-bordered table-striped table-hover table-mc-light-blue">
+        <thead>
+          <tr>
+            <th>Side ID</th>
+            <th>Nama Side</th>
+            <th >Alamat</th>
+            <th >Kelurahan</th>
+            <th>Kecamatan</th>
+            <th>Kabupaten</th>
+            <th>Provinsi</th>
+            <th>Surveyor</th>
+            <th>Project</th>
+            <th>Lattide</th>
+            <th>Longitude</th>
+            <th>Sumber listrik</th>
+            <th>Jam operasional</th>
+            <th>Id pelanggan listrik</th>
+            <th>Kapasitas</th>
+            <th>Jenis koneksi</th>
+            <th>Koneksi Internet Lainnya</th>
+            <th>Kualitas akses internet</th>
+            <th>Bandwidt tersedia</th>
+            <th>Jenis koneksi 1</th>
+            <th>Nama operator seluler</th>
+            <th>Kualitas layanan</th>
+            <th>Jumlah komputer</th>
+            <th>Perangkat pendukung</th>
+            <th>Lainnya</th>
+            <th>Nama penanggung jawab lokasi 1</th>
+            <th>Kontak penanggung jawab lokasi 1</th>
+            <th>Nama penanggung jawab lokasi 2</th>
+            <th>Kontak penanggung jawab lokasi 2</th>
+            <th>Transportasi menuju lokasi</th>
+            <th>Gambaran menuju lokasi</th>
+            <th>Catatan Tambahan</th>
+            <th colspan="3"><center>Action</center></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @form_barats.each do |form_barat| %>
+            <tr>
+              <td><%= form_barat.side_id %></td>
+              <td data-title="Nama Side"><%= form_barat.nama_site_id %></td>
+              <td data-title="Provinsi"><%= form_barat.provinsi %></td>
+              <td data-title="Kota/Kabupaten"><%= form_barat.kabupaten %></td>
+              <td data-title="Kecamatan"><%= form_barat.kecamatan %></td>
+              <td data-title="Kelurahan"><%= form_barat.kelurahan %></td>
+              <td data-title="Alamat"><%= form_barat.alamat %></td>
+              <td data-title="Site ID"><%= form_barat.surveyor %></td>
+              <td data-title="Site ID"><%= form_barat.project %></td>
+              <td data-title="Site ID"><%= form_barat.lattide %></td>
+              <td data-title="Site ID"><%= form_barat.longitude %></td>
+              <td data-title="Site ID"><%= form_barat.sumber_listrik %></td>
+              <td data-title="Site ID"><%= form_barat.jam_operasional %></td>
+              <td data-title="Site ID"><%= form_barat.id_pelanggan_listrik %></td>
+              <td data-title="Site ID"><%= form_barat.kapasitas %></td>
+              <td data-title="Site ID"><%= form_barat.jenis_koneksi %></td>
+              <td data-title="Site ID"><%= form_barat.lainnya_internet %></td>
+              <td data-title="Site ID"><%= form_barat.kualitas_akses_internet %></td>
+              <td data-title="Site ID"><%= form_barat.bandwidt_tersedia %></td>
+              <td data-title="Site ID"><%= form_barat.jenis_koneksi_1 %></td>
+              <td data-title="Site ID"><%= form_barat.nama_operator_seluler %></td>
+              <td data-title="Site ID"><%= form_barat.kualitas_layanan %></td>
+              <td data-title="Site ID"><%= form_barat.jumlah_komputer %></td>
+              <td data-title="Site ID"><%= form_barat.perangkat_pendukung_lainnya %></td>
+              <td data-title="Site ID"><%= form_barat.perangkat_lainnya %></td>
+              <td data-title="Site ID"><%= form_barat.nama_penanggung_jawab_lokasi_1 %></td>
+              <td data-title="Site ID"><%= form_barat.kontak_penanggung_jawab_lokasi_1 %></td>
+              <td data-title="Site ID"><%= form_barat.nama_penanggung_jawab_lokasi_2 %></td>
+              <td data-title="Site ID"><%= form_barat.kontak_penanggung_jawab_lokasi_2 %></td>
+              <td data-title="Site ID"><%= form_barat.transportasi_menuju_lokasi %></td>
+              <td data-title="Site ID"><%= form_barat.gambaran_menuju_lokasi %></td>
+              <td data-title="Catatan Tambahan"><%= form_barat.catatan_tambahan %></td>
+              <td><%= link_to 'Show', form_barat %></td>
+              <td><%= link_to 'Edit', edit_form_barat_path(form_barat) %></td>
+              <td><%= link_to 'Destroy', form_barat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+</div>
+</div>
+<br>
+
+<%= link_to 'New Survey form', new_survey_form_path %>
+<script type="text/javascript">
+$('select').select2({width: "100%"});
+</script>
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>

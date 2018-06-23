@@ -62,11 +62,14 @@
       <thead>
         <tr>
           <th >Side ID</th>
+          <th>Nama Side</th>
           <th >Alamat</th>
           <th >Kelurahan</th>
           <th>Kecamatan</th>
           <th>Kabupaten</th>
           <th>Provinsi</th>
+          <th>Surveyor</th>
+          <th>Project</th>
           <th>Lattide</th>
           <th>Longitude</th>
           <th>Sumber listrik</th>
@@ -81,13 +84,15 @@
           <th>Nama operator seluler</th>
           <th>Kualitas layanan</th>
           <th>Jumlah komputer</th>
-          <th>Perangkat pendukung lainnya</th>
+          <th>Perangkat pendukung</th>
+          <th>Lainnya</th>
           <th>Nama penanggung jawab lokasi 1</th>
           <th>Kontak penanggung jawab lokasi 1</th>
           <th>Nama penanggung jawab lokasi 2</th>
           <th>Kontak penanggung jawab lokasi 2</th>
           <th>Transportasi menuju lokasi</th>
           <th>Gambaran menuju lokasi</th>
+          <th>Catatan Tambahan</th>
           <th colspan="3"><center>Action</center></th>
         </tr>
       </thead>
@@ -96,11 +101,14 @@
         <% @survey_forms.each do |survey_form| %>
           <tr>
             <td><%= survey_form.side_id %></td>
+            <td><%= survey_form.nama_site_id %></td>
             <td><%= survey_form.alamat %></td>
             <td><%= survey_form.kelurahan %></td>
             <td><%= survey_form.kecamatan %></td>
             <td><%= survey_form.kabupaten %></td>
             <td><%= survey_form.provinsi %></td>
+            <td><%= survey_form.surveyor %></td>
+            <td><%= survey_form.project %></td>
             <td><%= survey_form.lattide %></td>
             <td><%= survey_form.longitude %></td>
             <td><%= survey_form.sumber_listrik %></td>
@@ -116,12 +124,14 @@
             <td><%= survey_form.kualitas_layanan %></td>
             <td><%= survey_form.jumlah_komputer %></td>
             <td><%= survey_form.perangkat_pendukung_lainnya %></td>
+            <td><%= survey_form.perangkat_lainnya %></td>
             <td><%= survey_form.nama_penanggung_jawab_lokasi_1 %></td>
             <td><%= survey_form.kontak_penanggung_jawab_lokasi_1 %></td>
             <td><%= survey_form.nama_penanggung_jawab_lokasi_2 %></td>
             <td><%= survey_form.kontak_penanggung_jawab_lokasi_2 %></td>
             <td><%= survey_form.transportasi_menuju_lokasi %></td>
             <td><%= survey_form.gambaran_menuju_lokasi %></td>
+            <td><%= survey_form.catatan_tambahan %></td>
             <td><%= link_to 'Show', survey_form %></td>
             <td><%= link_to 'Edit', edit_survey_form_path(survey_form) %></td>
             <td><%= link_to 'Destroy', survey_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>

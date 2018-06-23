@@ -1,11 +1,11 @@
 
-<%= form_for(@survey_form) do |f| %>
-  <% if @survey_form.errors.any? %>
+<%= form_for(@form_barat) do |f| %>
+  <% if @form_barat.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@survey_form.errors.count, "error") %> prohibited this survey_form from being saved:</h2>
+      <h2><%= pluralize(@form_barat.errors.count, "error") %> prohibited this form_barat from being saved:</h2>
 
       <ul>
-      <% @survey_form.errors.full_messages.each do |message| %>
+      <% @form_barat.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -42,67 +42,49 @@
 
           <div class="form-group">
             <%= f.label :provinsi %><br>
-            <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[provinsi]" id="survey_form_provinsi">
+            <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="form_barat[provinsi]" id="form_barat_provinsi">
               <option disabled selected>Select One</option>
-              <option>Nusa Tenggara Timur</option>
-              <option>Nusa Tenggara Barat</option>
-              <option>Kalimantan Selatan</option>
-              <option>Kalimantan Timur</option>
-              <option>Kalimantan Barat</option>
-              <option>Sulawesi Tenggara</option>
-              <option>Sulawesi Tengah</option>
-              <option>Kalimantan Utara</option>
-              <option>Gorontalo</option>
+              <option>Aceh</option>
+              <option>Sumatera Utara</option>
+              <option>Riau</option>
+              <option>Kepulauan Riau</option>
+              <option>Sumatera Barat</option>
+              <option>Bengkulu</option>
+              <option>Sumatera Selatan</option>
+              <option>Lampung</option>
+              <option>Banten</option>
+              <option>Jawa Timur</option>
             </select>
           </div>
 
           <div class="form-group">
             <%= f.label :kabupaten %><br>
-            <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[kabupaten]" id="survey_form_kabupaten">
+            <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="form_barat[kabupaten]" id="form_barat_kabupaten">
               <option disabled selected>Select One</option>
-              <option>Malinau</option>
-              <option>Sumba Timur</option>
-              <option>Alor</option>
-              <option>Banggai Kepulauan</option>
-              <option>Gorontalo Utara</option>
-              <option>Manggarai Barat</option>
-              <option>Pohuwato</option>
-              <option>Sumbawa</option>
-              <option>Sumbawa Barat</option>
-              <option>Sumba Tengah</option>
-              <option>Timor Tengah Utara</option>
-              <option>Belu</option>
-              <option>Sambas</option>
-              <option>Bengkayang</option>
-              <option>Morowali Utara</option>
-              <option>Sabu Raijua</option>
-              <option>Konawe Kepulauaan</option>
-              <option>Nagekeo</option>
-              <option>Sigi</option>
-              <option>Ende</option>
-              <option>Tojo Una-una</option>
-              <option>Lembata</option>
-              <option>Banggai Laut</option>
-              <option>Malaka</option>
-              <option>Donggala</option>
-              <option>Tolitoli</option>
-              <option>Rote Ndao</option>
-              <option>Konawe</option>
-              <option>Ketapang</option>
-              <option>Sanggau</option>
-              <option>Kayong Utara</option>
-              <option>Melawi</option>
-              <option>Kapuas Hulu</option>
-              <option>Landak</option>
-              <option>Mahakam Ulu</option>
-              <option>Hulu Sungai Utara</option>
-              <option>Bima</option>
+              <option>Aceh Besar</option>
+              <option>Aceh Singkil</option>
+              <option>Nias</option>
+              <option>Nias Selatan</option>
+              <option>Kepulauan Meranti</option>
+              <option>Natuna</option>
+              <option>Bintan</option>
+              <option>Pasaman Barat</option>
+              <option>Solok Selatan</option>
+              <option>Bengkulu Utara</option>
+              <option>Seluma</option>
+              <option>Musi Rawas</option>
+              <option>Musi Rawas Utara</option>
+              <option>Pesisir Barat</option>
+              <option>Lebak</option>
+              <option>Pandeglang</option>
+              <option>Bondowoso</option>
             </select>
           </div>
           
+
           <div class="form-group">
             <%= f.label :kecamatan %><br>
-            <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[kecamatan]" id="survey_form_kecamatan">
+            <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="form_barat[kecamatan]" id="form_barat_kecamatan">
               <option disabled selected>Select One</option>
               <option>Mentarang</option>
               <option>Malinau Selatan Hilir</option>
@@ -156,18 +138,10 @@
               <option>Biboki Selatan</option>
             </select>
           </div>
-          
+
           <div class="form-group">
             <%= f.label :kelurahan %><br>
-            <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[kelurahan]" id="survey_form_kelurahan">
-              <option disabled selected>Select One</option>
-              <option>Desa Paking</option>
-              <option>Desa Mentarang Baru</option>
-              <option>Desa Buntulia Tengah</option>
-              <option>Desa Buntulia Utara</option>
-              <option>Desa Hulawa</option>
-              <option>Jl. Setulang</option>
-            </select>
+            <%= f.text_field :kelurahan, class: "form-control", placeholder: "Kelurahan" %>
           </div>
 
           <div class="form-group">
@@ -224,13 +198,13 @@
             <br /><br />
             <div id="form-input">
               <%= label_tag 'sumber_listrik_PLN', 'PLN' %>
-              <%= check_box_tag 'survey_form[sumber_listrik][]', 'PLN', checked('PLN'), id: 'sumber_listrik_PLN' %> &nbsp;&nbsp;
+              <%= check_box_tag 'form_barat[sumber_listrik][]', 'PLN', checked2('PLN'), id: 'sumber_listrik_PLN' %> &nbsp;&nbsp;
 
               <%= label_tag 'sumber_listrik_SolarSel', 'SolarSel' %>
-              <%= check_box_tag 'survey_form[sumber_listrik][]', 'SolarSel', checked('SolarSel'), id: 'sumber_listrik_SolarSel' %>&nbsp;&nbsp;
+              <%= check_box_tag 'form_barat[sumber_listrik][]', 'SolarSel', checked2('SolarSel'), id: 'sumber_listrik_SolarSel' %>&nbsp;&nbsp;
 
               <%= label_tag 'sumber_listrik_Genset', 'Genset' %>
-              <%= check_box_tag 'survey_form[sumber_listrik][]', 'Genset', checked('Genset'), id: 'sumber_listrik_Genset' %>
+              <%= check_box_tag 'form_barat[sumber_listrik][]', 'Genset', checked2('Genset'), id: 'sumber_listrik_Genset' %>
               <div class="form-group">
                 <%= f.label :lainnya_listrik, "Sumber Listrik Lainnya" %><br />
                 <%= f.text_field :lainnya_listrik, class: "form-control", placeholder: "ex: Batu Bara" %>
@@ -267,13 +241,13 @@
 
             <div id="form-internet">
               <label class="radio-inline">
-                <b><input type="radio" name="survey_form[jenis_koneksi]" id="survey_form_jenis_koneksi" value="vsat">VSAT</b>
+                <b><input type="radio" name="form_barat[jenis_koneksi]" id="form_barat_jenis_koneksi" value="vsat">VSAT</b>
               </label>
               <label class="radio-inline">
-                <b><input type="radio" name="survey_form[jenis_koneksi]" id="survey_form_jenis_koneksi" value="radiolink">RadioLink</b>
+                <b><input type="radio" name="form_barat[jenis_koneksi]" id="form_barat_jenis_koneksi" value="radiolink">RadioLink</b>
               </label>
               <label class="radio-inline">
-                <b><input type="radio" name="survey_form[jenis_koneksi]" id="survey_form_jenis_koneksi" value="fiberoptik">FiberOptik</b>
+                <b><input type="radio" name="form_barat[jenis_koneksi]" id="form_barat_jenis_koneksi" value="fiberoptik">FiberOptik</b>
               </label>
               <br /><br />
 
@@ -283,7 +257,7 @@
               </div>
               <div class="form-group">
                 <%= f.label :kualitas_akses_internet %><br>
-                <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[kualitas_akses_internet]" id="survey_form_kualitas_akses_internet">
+                <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="form_barat[kualitas_akses_internet]" id="form_barat_kualitas_akses_internet">
                   <option disabled selected>Select One</option>
                   <option>Sangat Lambat</option>
                   <option>Lambat</option>
@@ -316,19 +290,19 @@
 
             <div id="form-jaringan">
               <label class="radio-inline">
-                <b><input type="radio" name="survey_form[jenis_koneksi_1]" id="survey_form_jenis_koneksi_1" value="4g">4G</b>
+                <b><input type="radio" name="form_barat[jenis_koneksi_1]" id="form_barat_jenis_koneksi_1" value="4g">4G</b>
               </label>
               <label class="radio-inline">
-                <b><input type="radio" name="survey_form[jenis_koneksi_1]" id="survey_form_jenis_koneksi_1" value="3g">3G</b>
+                <b><input type="radio" name="form_barat[jenis_koneksi_1]" id="form_barat_jenis_koneksi_1" value="3g">3G</b>
               </label>
               <label class="radio-inline">
-                <b><input type="radio" name="survey_form[jenis_koneksi_1]" id="survey_form_jenis_koneksi_1" value="2g">2G</b>
+                <b><input type="radio" name="form_barat[jenis_koneksi_1]" id="form_barat_jenis_koneksi_1" value="2g">2G</b>
               </label>
               <br /><br />
 
               <div class="form-group">
                 <%= f.label :nama_operator_seluler %><br>
-                <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[nama_operator_seluler]" id="survey_form_nama_operator_seluler">
+                <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="form_barat[nama_operator_seluler]" id="form_barat_nama_operator_seluler">
                   <option disabled selected>Select One</option>
                   <option>Telkomsel</option>
                   <option>XL</option>
@@ -341,7 +315,7 @@
               </div>
               <div class="form-group">
                 <%= f.label :kualitas_layanan %><br>
-                <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[kualitas_layanan]" id="survey_form_kualitas_layanan">
+                <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="form_barat[kualitas_layanan]" id="form_barat_kualitas_layanan">
                   <option disabled selected>Select One</option>
                   <option>Sangat Lambat</option>
                   <option>Lambat</option>
@@ -350,6 +324,7 @@
                 </select>
               </div>
             </div>
+
           </div>
 
            <hr >
@@ -364,7 +339,7 @@
             <div class="row">
               <div class="col-lg-6 col-md-6 col-xs-6">
                 <%= f.label :perangkat_pendukung_lainnya, "Perangkat Pendukung" %><br>
-                <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[perangkat_pendukung_lainnya]" id="survey_form_perangkat_pendukung_lainnya">
+                <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="form_barat[perangkat_pendukung_lainnya]" id="form_barat_perangkat_pendukung_lainnya">
                   <option disabled selected>Select One</option>
                   <option>UPS</option>
                   <option>Modem</option>
@@ -411,13 +386,13 @@
                 <%= label_tag :transportasi_menuju_lokasi, 'Transportasi Menuju Lokasi' %> <br />
 
                 <%= label_tag 'transportasi_menuju_lokasi_Darat', 'Darat' %>
-                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Darat', checked1('Darat'), id: 'transportasi_menuju_lokasi_Darat' %> &nbsp;&nbsp;
+                <%= check_box_tag 'form_barat[transportasi_menuju_lokasi][]', 'Darat', checked3('Darat'), id: 'transportasi_menuju_lokasi_Darat' %> &nbsp;&nbsp;
 
                 <%= label_tag 'transportasi_menuju_lokasi_Laut', 'Laut' %>
-                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Laut', checked1('Laut'), id: 'transportasi_menuju_lokasi_Laut' %>&nbsp;&nbsp;
+                <%= check_box_tag 'form_barat[transportasi_menuju_lokasi][]', 'Laut', checked3('Laut'), id: 'transportasi_menuju_lokasi_Laut' %>&nbsp;&nbsp;
 
                 <%= label_tag 'transportasi_menuju_lokasi_Udara', 'Udara' %>
-                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Udara', checked1('Udara'), id: 'transportasi_menuju_lokasi_udara' %>
+                <%= check_box_tag 'form_barat[transportasi_menuju_lokasi][]', 'Udara', checked3('Udara'), id: 'transportasi_menuju_lokasi_udara' %>
               </div>
               <div class="col-lg-6 col-md-6 col-xs-6">
                 <div class="form-group">
@@ -441,25 +416,25 @@
 
             <div class="form-group">
               <%= f.label :"photo_sketsa", "Photo: Sketsa/Layout" %>
-              <%= f.file_field :photo_sketsa, class: "form-control",:required => true %>
+              <%= f.file_field :photo_sketsa, class: "form-control", :required => true %>
               <div id="target1"></div>
             </div>
 
             <div class="form-group">
               <%= f.label :"image_gedung", "Photo: Site/Gedung" %>
-              <%= f.file_field :image_gedung, class: "form-control",:required => true %>
+              <%= f.file_field :image_gedung, class: "form-control", :required => true %>
               <div id="target1"></div>
             </div>
 
              <div class="form-group">
               <%= f.label :"image_rencana_tempat_perangkat", "Photo: Rencana Tempat Perangkat" %>
-              <%= f.file_field :image_rencana_tempat_perangkat, class: "form-control",:required => true %>
+              <%= f.file_field :image_rencana_tempat_perangkat, class: "form-control", :required => true %>
               <div id="target1"></div>
             </div>
 
              <div class="form-group">
               <%= f.label :"image_genset", "Photo: KWh Mwte/Genset/Solar Cell" %>
-              <%= f.file_field :image_genset, class: "form-control",:required => true %>
+              <%= f.file_field :image_genset, class: "form-control", :required => true %>
               <div id="target"></div>
             </div>
 
@@ -469,49 +444,49 @@
 
             <div class="form-group">
               <%= f.label :"image_lingkungan_depan", "Photo Lingkungan Depan" %>
-              <%= f.file_field :image_lingkungan_depan, class: "form-control",:required => true %>
+              <%= f.file_field :image_lingkungan_depan, class: "form-control", :required => true %>
               <div id="target"></div>
             </div>
 
             <div class="form-group">
               <%= f.label :"image_lingkungan_belakang", "Photo Lingkungan Belakang" %>
-              <%= f.file_field :image_lingkungan_belakang, class: "form-control",:required => true %>
+              <%= f.file_field :image_lingkungan_belakang, class: "form-control", :required => true %>
               <div id="target"></div>
             </div>
 
             <div class="form-group">
               <%= f.label :"image_lingkungan_kiri", "Photo Lingkungan Sebelah Kiri" %>
-              <%= f.file_field :image_lingkungan_kiri, class: "form-control",:required => true %>
+              <%= f.file_field :image_lingkungan_kiri, class: "form-control", :required => true %>
               <div id="target"></div>
             </div>
 
             <div class="form-group">
               <%= f.label :"image_lingkungan_kanan", "Photo Lingkungan Sebelah Kanan" %>
-              <%= f.file_field :image_lingkungan_kanan, class: "form-control",:required => true %>
+              <%= f.file_field :image_lingkungan_kanan, class: "form-control", :required => true %>
               <div id="target"></div>
             </div>
 
             <div class="form-group">
               <%= f.label :"image_akses_ke_site", "Photo Akses ke Site" %>
-              <%= f.file_field :image_akses_ke_site, class: "form-control",:required => true %>
+              <%= f.file_field :image_akses_ke_site, class: "form-control", :required => true %>
               <div id="target"></div>
             </div>
 
             <div class="form-group">
               <%= f.label :"image_akses_ke_site_1", "Photo Akses ke Site" %>
-              <%= f.file_field :image_akses_ke_site_1, class: "form-control",:required => true%>
+              <%= f.file_field :image_akses_ke_site_1, class: "form-control", :required => true%>
               <div id="target"></div>
             </div>
 
             <div class="form-group">
               <%= f.label :"image_geotagging", "Perangkat Geotagging" %>
-              <%= f.file_field :image_geotagging, class: "form-control",:required => true %>
+              <%= f.file_field :image_geotagging, class: "form-control", :required => true %>
               <div id="target"></div>
             </div>
 
             <div class="form-group">
               <%= f.label :"image_surveyor", "Photo Surveyor di Lokasi" %>
-              <%= f.file_field :image_surveyor, class: "form-control",:required => true %>
+              <%= f.file_field :image_surveyor, class: "form-control", :required => true %>
               <div id="target"></div>
             </div>
 
@@ -533,13 +508,13 @@
 
             <div class="form-group">
               <%= f.label :"tambahan_image_3", "Tambahan Photo 2" %>
-              <%= f.file_field :tambahan_image_4, class: "form-control" %>
+              <%= f.file_field :tambahan_image_3, class: "form-control" %>
               <div id="target"></div>
             </div>
 
             <div class="form-group">
               <%= f.label :catatan_tambahan %>
-              <%= f.text_area :catatan_tambahan, class: "form-control", rows: 5,:required => true %>
+              <%= f.text_area :catatan_tambahan, class: "form-control", rows: 5 %>
             </div>
             
             <center>
