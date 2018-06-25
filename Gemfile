@@ -20,7 +20,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass', '~> 3.3.7'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
-gem 'aws-sdk', '~> 2.3'
+gem 'aws-sdk-rails'
 gem 'will_paginate-bootstrap'
 
 gem 'chartkick'
