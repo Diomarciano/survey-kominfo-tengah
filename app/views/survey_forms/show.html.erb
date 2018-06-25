@@ -1,154 +1,118 @@
+ 
+ <style>
+  body {
+      background-color: #ccffff;
+  }
+
+  img {
+    cursor: zoom-in;
+}
+  </style>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Side:</strong>
-  <%= @survey_form.side_id %>
-</p>
+<center><h1>Data Image</h1></center>
 
-<p>
-  <strong>Nama_Side:</strong>
-  <%= @survey_form.nama_site_id %>
-</p>
+<div class="container-fluid">
+  <div class="col-md-12">
+    <div class="table-responsive">
+      <table class="table" width="100%">
+        <tr>
+          <th width="50%">Side:</th>
+          <td width="50%"><%= @survey_form.side_id %></td>
+        </tr>
 
-<p>
-  <strong>Alamat:</strong>
-  <%= @survey_form.alamat %>
-</p>
+        <tr>
+          <th>Nama_Side:</th>
+          <td><%= @survey_form.nama_site_id %></td>
+        </tr>
 
-<p>
-  <strong>Kelurahan:</strong>
-  <%= @survey_form.kelurahan %>
-</p>
+        <tr>
+          <th>Provinsi:</th>
+          <td><%= @survey_form.provinsi %></td>
+        </tr>
+        <tr>
+          <th>Photo Sketsa/Layout</th>
+          <td><a href="#"><%= image_tag @survey_form.photo_sketsa.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Gedung</th>
+          <td><a href="#"><%= image_tag @survey_form.image_gedung.url, style: "width:35%;",class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Rencana Tempat Perangkat</th>
+          <td><a href="#"><%= image_tag @survey_form.image_rencana_tempat_perangkat.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Lingkungan Depan</th>
+          <td><a href="#"><%= image_tag @survey_form.image_lingkungan_depan.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Lingkungan Belakang</th>
+          <td><a href="#"><%= image_tag @survey_form.image_lingkungan_belakang.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Lingkungan Kiri</th>
+          <td><a href="#"><%= image_tag @survey_form.image_lingkungan_kiri.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Lingkungan Kanan</th>
+          <td><a href="#"><%= image_tag @survey_form.image_lingkungan_kanan.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Akses ke Site 1</th>
+          <td><a href="#"><%= image_tag @survey_form.image_akses_ke_site.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Akses ke Site 2</th>
+          <td><a href="#"><%= image_tag @survey_form.image_akses_ke_site_1.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
 
-<p>
-  <strong>Kecamatan:</strong>
-  <%= @survey_form.kecamatan %>
-</p>
+        <tr>
+          <th>Photo Geotagging</th>
+          <td><a href="#"><%= image_tag @survey_form.image_geotagging.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Surveyor</th>
+          <td><a href="#"><%= image_tag @survey_form.image_surveyor.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Tambahan 1</th>
+          <td><a href="#"><%= image_tag @survey_form.image_tambahan_photo_1.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Tambahan 2</th>
+          <td><a href="#"><%= image_tag @survey_form.image_tambahan_photo_2.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Tambahan 3 </th>
+          <td><a href="#"><%= image_tag @survey_form.image_tambahan_photo_3.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
 
-<p>
-  <strong>Kabupaten:</strong>
-  <%= @survey_form.kabupaten %>
-</p>
+         <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" class="enlargeImageModalSource" style="width: 100%">
+                </div>
+              </div>
+            </div>
+          </div>
 
-<p>
-  <strong>Provinsi:</strong>
-  <%= @survey_form.provinsi %>
-</p>
-
-<p>
-  <strong>surveyor:</strong>
-  <%= @survey_form.surveyor %>
-</p>
-
-<p>
-  <strong>project:</strong>
-  <%= @survey_form.project %>
-</p>
-
-<p>
-  <strong>Lattide:</strong>
-  <%= @survey_form.lattide %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @survey_form.longitude %>
-</p>
-
-<p>
-  <strong>Sumber listrik:</strong>
-  <%= @survey_form.sumber_listrik %>
-</p>
-
-<p>
-  <strong>Jam operasional:</strong>
-  <%= @survey_form.jam_operasional %>
-</p>
-
-<p>
-  <strong>Id pelanggan listrik:</strong>
-  <%= @survey_form.id_pelanggan_listrik %>
-</p>
-
-<p>
-  <strong>Kapasitas:</strong>
-  <%= @survey_form.kapasitas %>
-</p>
-
-<p>
-  <strong>Jenis koneksi:</strong>
-  <%= @survey_form.jenis_koneksi %>
-</p>
-
-<p>
-  <strong>Bandwidt tersedia:</strong>
-  <%= @survey_form.bandwidt_tersedia %>
-</p>
-
-<p>
-  <strong>Jenis koneksi 1:</strong>
-  <%= @survey_form.jenis_koneksi_1 %>
-</p>
-
-<p>
-  <strong>Nama operator seluler:</strong>
-  <%= @survey_form.nama_operator_seluler %>
-</p>
-
-<p>
-  <strong>Kualitas layanan:</strong>
-  <%= @survey_form.kualitas_layanan %>
-</p>
-
-<p>
-  <strong>Jumlah komputer:</strong>
-  <%= @survey_form.jumlah_komputer %>
-</p>
-
-<p>
-  <strong>Perangkat pendukung lainnya:</strong>
-  <%= @survey_form.perangkat_pendukung_lainnya %>
-</p>
-
-<p>
-  <strong>perangkat_lainnya:</strong>
-  <%= @survey_form.perangkat_lainnya %>
-</p>
-
-<p>
-  <strong>Nama penanggung jawab lokasi 1:</strong>
-  <%= @survey_form.nama_penanggung_jawab_lokasi_1 %>
-</p>
-
-<p>
-  <strong>Kontak penanggung jawab lokasi 1:</strong>
-  <%= @survey_form.kontak_penanggung_jawab_lokasi_1 %>
-</p>
-
-<p>
-  <strong>Nama penanggung jawab lokasi 2:</strong>
-  <%= @survey_form.nama_penanggung_jawab_lokasi_2 %>
-</p>
-
-<p>
-  <strong>Kontak penanggung jawab lokasi 2:</strong>
-  <%= @survey_form.kontak_penanggung_jawab_lokasi_2 %>
-</p>
-
-<p>
-  <strong>Transportasi menuju lokasi:</strong>
-  <%= @survey_form.transportasi_menuju_lokasi %>
-</p>
-
-<p>
-  <strong>Gambaran menuju lokasi:</strong>
-  <%= @survey_form.gambaran_menuju_lokasi %>
-</p>
-
-<p>
-  <strong>Kualitas akses internet:</strong>
-  <%= @survey_form.kualitas_akses_internet %>
-</p>
-
+      </table>
+    </div>
+  </div>
+</div>
 <%= link_to 'Edit', edit_survey_form_path(@survey_form) %> |
 <%= link_to 'Back', survey_forms_path %>
+<script>
+  $(function() {
+        $('img').on('click', function() {
+        $('.enlargeImageModalSource').attr('src', $(this).attr('src'));
+        $('#enlargeImageModal').modal('show');
+      });
+  });
+</script>

@@ -17,6 +17,9 @@
         border: 1px solid black;
         background-color: white;
     }
+    body {
+      background-color: #ccffff;
+    }
   </style>
 
 <div class="container">
@@ -442,25 +445,25 @@
             <div class="form-group">
               <%= f.label :"photo_sketsa", "Photo: Sketsa/Layout" %>
               <%= f.file_field :photo_sketsa, class: "form-control",:required => true %>
-              <div id="target1"></div>
+              
             </div>
 
             <div class="form-group">
               <%= f.label :"image_gedung", "Photo: Site/Gedung" %>
               <%= f.file_field :image_gedung, class: "form-control",:required => true %>
-              <div id="target1"></div>
+              
             </div>
 
              <div class="form-group">
               <%= f.label :"image_rencana_tempat_perangkat", "Photo: Rencana Tempat Perangkat" %>
               <%= f.file_field :image_rencana_tempat_perangkat, class: "form-control",:required => true %>
-              <div id="target1"></div>
+              
             </div>
 
              <div class="form-group">
               <%= f.label :"image_genset", "Photo: KWh Mwte/Genset/Solar Cell" %>
               <%= f.file_field :image_genset, class: "form-control",:required => true %>
-              <div id="target"></div>
+              
             </div>
 
             <hr >
@@ -470,13 +473,13 @@
             <div class="form-group">
               <%= f.label :"image_lingkungan_depan", "Photo Lingkungan Depan" %>
               <%= f.file_field :image_lingkungan_depan, class: "form-control",:required => true %>
-              <div id="target"></div>
+              
             </div>
 
             <div class="form-group">
               <%= f.label :"image_lingkungan_belakang", "Photo Lingkungan Belakang" %>
               <%= f.file_field :image_lingkungan_belakang, class: "form-control",:required => true %>
-              <div id="target"></div>
+              
             </div>
 
             <div class="form-group">
@@ -521,19 +524,19 @@
 
             <div class="form-group">
               <%= f.label :"tambahan_image_1", "Tambahan Photo 1" %>
-              <%= f.file_field :tambahan_image_1, class: "form-control" %>
+              <%= f.file_field :image_tambahan_photo_1, class: "form-control" %>
               <div id="target"></div>
             </div>
 
             <div class="form-group">
               <%= f.label :"tambahan_image_2", "Tambahan Photo 2" %>
-              <%= f.file_field :tambahan_image_2, class: "form-control" %>
+              <%= f.file_field :image_tambahan_photo_2, class: "form-control" %>
               <div id="target"></div>
             </div>
 
             <div class="form-group">
               <%= f.label :"tambahan_image_3", "Tambahan Photo 2" %>
-              <%= f.file_field :tambahan_image_4, class: "form-control" %>
+              <%= f.file_field :image_tambahan_photo_3, class: "form-control" %>
               <div id="target"></div>
             </div>
 

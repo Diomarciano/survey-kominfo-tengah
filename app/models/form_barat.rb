@@ -54,11 +54,11 @@ class FormBarat < ActiveRecord::Base
     validates_attachment_content_type :image_tambahan_photo_3, content_type: /\Aimage\/.*\z/
 
 
-    validates :alamat, :kelurahan, :kecamatan, :kabupaten, :provinsi, :lattide, :longitude, :jumlah_komputer, :perangkat_pendukung_lainnya, :nama_penanggung_jawab_lokasi_1, :kontak_penanggung_jawab_lokasi_1, :nama_penanggung_jawab_lokasi_2, :kontak_penanggung_jawab_lokasi_2, :catatan_tambahan,:gambaran_menuju_lokasi, :surveyor, :project, :perangkat_lainnya, :transportasi_menuju_lokasi, presence: true
+    validates :alamat, :kabupaten, :provinsi, :lattide, :longitude, :jumlah_komputer, :perangkat_pendukung_lainnya, :nama_penanggung_jawab_lokasi_1, :kontak_penanggung_jawab_lokasi_1, :nama_penanggung_jawab_lokasi_2, :kontak_penanggung_jawab_lokasi_2, :catatan_tambahan,:gambaran_menuju_lokasi, :surveyor, :project, :transportasi_menuju_lokasi, presence: true
 
 
     def self.search(search)
-      where("lower(kabupaten) LIKE ? OR lower(kecamatan) LIKE ? OR lower(provinsi) LIKE ?", "%#{search.downcase}%", "%#{search.downcase}%", "%#{search.downcase}%") 
+      where("lower(kabupaten) LIKE ? OR lower(provinsi) LIKE ?", "%#{search.downcase}%", "%#{search.downcase}%") 
     end
 
     def self.to_csv(options = {})

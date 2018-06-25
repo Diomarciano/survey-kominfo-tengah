@@ -17,6 +17,9 @@
         border: 1px solid black;
         background-color: white;
     }
+    body {
+      background-color: #ffe6e6;
+    }
   </style>
 
 <div class="container">
@@ -79,69 +82,6 @@
               <option>Pandeglang</option>
               <option>Bondowoso</option>
             </select>
-          </div>
-          
-
-          <div class="form-group">
-            <%= f.label :kecamatan %><br>
-            <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="form_barat[kecamatan]" id="form_barat_kecamatan">
-              <option disabled selected>Select One</option>
-              <option>Mentarang</option>
-              <option>Malinau Selatan Hilir</option>
-              <option>Malinau Selatan</option>
-              <option>Haharu</option>
-              <option>Lewa Tidas</option>
-              <option>Kahaungu Eti</option>
-              <option>Pandawai</option>
-              <option>Ngadu Ngala</option>
-              <option>PinuPahar</option>
-              <option>Rindi</option>
-              <option>Alor Barat Daya</option>
-              <option>Alor Barat Laut</option>
-              <option>Kabola</option>
-              <option>Tinangkung</option>
-              <option>Peling Tengah</option>
-              <option>Kwandang</option>
-              <option>Ponelo Kepulauan</option>
-              <option>Komodo</option>
-              <option>Welak</option>
-              <option>Kuwus</option>
-              <option>Lembor Selatan</option>
-              <option>Ndoso</option>
-              <option>Boleng</option>
-              <option>Mbeliling</option>
-              <option>Buntulia</option>
-              <option>Dengilo</option>
-              <option>Duhiadaa</option>
-              <option>Patilanggio</option>
-              <option>Popayato Barat</option>
-              <option>Popayato</option>
-              <option>Randangan</option>
-              <option>Buer</option>
-              <option>Moyo Utara</option>
-              <option>Lenangguar </option>
-              <option>Alas</option>
-              <option>Taliwang</option>
-              <option>Brang Ene</option>
-              <option>Jereweh</option>
-              <option>Sekongkang</option>
-              <option>Seteluk</option>
-              <option>Pota Tano</option>
-              <option>Taliwang</option>
-              <option>Sungai Boh</option>
-              <option>Kayan Selatan</option>
-              <option>Sungai Tubu</option>
-              <option>Timor Tengah Utara</option>
-              <option>Biboki Tanpah</option>
-              <option>Biboki Feotleu</option>
-              <option>Biboki Utara</option>
-              <option>Biboki Selatan</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <%= f.label :kelurahan %><br>
-            <%= f.text_field :kelurahan, class: "form-control", placeholder: "Kelurahan" %>
           </div>
 
           <div class="form-group">
@@ -496,19 +436,19 @@
 
             <div class="form-group">
               <%= f.label :"tambahan_image_1", "Tambahan Photo 1" %>
-              <%= f.file_field :tambahan_image_1, class: "form-control" %>
+              <%= f.file_field :image_tambahan_photo_1, class: "form-control" %>
               <div id="target"></div>
             </div>
 
             <div class="form-group">
               <%= f.label :"tambahan_image_2", "Tambahan Photo 2" %>
-              <%= f.file_field :tambahan_image_2, class: "form-control" %>
+              <%= f.file_field :image_tambahan_photo_2, class: "form-control" %>
               <div id="target"></div>
             </div>
 
             <div class="form-group">
               <%= f.label :"tambahan_image_3", "Tambahan Photo 2" %>
-              <%= f.file_field :tambahan_image_3, class: "form-control" %>
+              <%= f.file_field :image_tambahan_photo_3, class: "form-control" %>
               <div id="target"></div>
             </div>
 

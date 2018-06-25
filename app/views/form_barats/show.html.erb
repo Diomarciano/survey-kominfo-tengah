@@ -1,9 +1,118 @@
+ 
+ <style>
+  body {
+      background-color: #ccffff;
+  }
+
+  img {
+    cursor: zoom-in;
+}
+  </style>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Side:</strong>
-  <%= @form_barat.side_id %>
-</p>
+<center><h1>Data Image</h1></center>
 
+<div class="container-fluid">
+  <div class="col-md-12">
+    <div class="table-responsive">
+      <table class="table" width="100%">
+        <tr>
+          <th width="50%">Side:</th>
+          <td width="50%"><%= @form_barat.side_id %></td>
+        </tr>
+
+        <tr>
+          <th>Nama_Side:</th>
+          <td><%= @form_barat.nama_site_id %></td>
+        </tr>
+
+        <tr>
+          <th>Provinsi:</th>
+          <td><%= @form_barat.provinsi %></td>
+        </tr>
+        <tr>
+          <th>Photo Sketsa/Layout</th>
+          <td><a href="#"><%= image_tag @form_barat.photo_sketsa.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Gedung</th>
+          <td><a href="#"><%= image_tag @form_barat.image_gedung.url, style: "width:35%;",class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Rencana Tempat Perangkat</th>
+          <td><a href="#"><%= image_tag @form_barat.image_rencana_tempat_perangkat.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Lingkungan Depan</th>
+          <td><a href="#"><%= image_tag @form_barat.image_lingkungan_depan.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Lingkungan Belakang</th>
+          <td><a href="#"><%= image_tag @form_barat.image_lingkungan_belakang.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Lingkungan Kiri</th>
+          <td><a href="#"><%= image_tag @form_barat.image_lingkungan_kiri.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Lingkungan Kanan</th>
+          <td><a href="#"><%= image_tag @form_barat.image_lingkungan_kanan.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Akses ke Site 1</th>
+          <td><a href="#"><%= image_tag @form_barat.image_akses_ke_site.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Akses ke Site 2</th>
+          <td><a href="#"><%= image_tag @form_barat.image_akses_ke_site_1.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+
+        <tr>
+          <th>Photo Geotagging</th>
+          <td><a href="#"><%= image_tag @form_barat.image_geotagging.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Surveyor</th>
+          <td><a href="#"><%= image_tag @form_barat.image_surveyor.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Tambahan 1</th>
+          <td><a href="#"><%= image_tag @form_barat.image_tambahan_photo_1.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Tambahan 2</th>
+          <td><a href="#"><%= image_tag @form_barat.image_tambahan_photo_2.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+        <tr>
+          <th>Photo Tambahan 3 </th>
+          <td><a href="#"><%= image_tag @form_barat.image_tambahan_photo_3.url, style: "width:35%;", class:"img-responsive" %></a></td>
+        </tr>
+
+         <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" class="enlargeImageModalSource" style="width: 100%">
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </table>
+    </div>
+  </div>
+</div>
 <%= link_to 'Edit', edit_form_barat_path(@form_barat) %> |
 <%= link_to 'Back', form_barats_path %>
+<script>
+  $(function() {
+        $('img').on('click', function() {
+        $('.enlargeImageModalSource').attr('src', $(this).attr('src'));
+        $('#enlargeImageModal').modal('show');
+      });
+  });
+</script>
