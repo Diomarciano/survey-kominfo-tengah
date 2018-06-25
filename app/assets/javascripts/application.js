@@ -18,8 +18,3 @@
 
 //= require Chart.bundle
 //= require chartkick
-
-
-$(document).ready(function() {
-  $('.dropdown-toggle').dropdown();
-});
