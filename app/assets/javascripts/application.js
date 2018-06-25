@@ -14,6 +14,7 @@
 //= require jquery_ujs
 
 //= require bootstrap-sprockets
+//= require bootstrap
 
 //= require Chart.bundle
 //= require chartkick
@@ -22,5 +23,3 @@
 $(document).ready(function() {
   $('.dropdown-toggle').dropdown();
 });
-});
-
