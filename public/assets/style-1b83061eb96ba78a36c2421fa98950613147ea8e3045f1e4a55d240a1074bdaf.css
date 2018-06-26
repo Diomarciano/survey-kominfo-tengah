@@ -1,0 +1,222 @@
+/* line 1, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+body {
+  background-color: #FFF;
+  font-family: 'Roboto Slab', serif;
+}
+
+/* line 6, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+.container {
+  margin: 0px auto;
+}
+
+/*--------------------START NAVBAR-----------------------*/
+/* line 12, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+.navbar-default {
+  background-color: #1a2732 !important;
+  border-bottom: 3px solid #FFF !important;
+  font-family: Verdana, Geneva, sans-serif;
+  padding: 0px 10px;
+}
+
+/* line 18, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+.navbar-default .navbar-brand {
+  color: #00a0df !important;
+  padding: 10px;
+  font: Verdana, Geneva, sans-serif;
+  font-size: 2em;
+}
+
+/* line 24, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+.glyphicon-cutlery {
+  left: -9px;
+  top: 7px;
+}
+
+/* line 29, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+.navbar-default .navbar-nav > li > a {
+  color: #fff !important;
+  font-size: 14px;
+}
+
+/* line 34, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: none !important;
+  text-decoration: underline;
+}
+
+/* line 39, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+a.navbar-brand span {
+  color: #fed189;
+}
+
+/* line 42, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+.navbar-default .navbar-toggle {
+  border-color: #000 !important;
+  background-color: #000;
+}
+
+/* line 46, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: none !important;
+}
+
+/* line 50, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #FFF !important;
+}
+
+/* line 55, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+.nav-itemButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+/* line 62, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+.button-smaller {
+  color: #fff;
+  height: 27px;
+  line-height: 25px;
+  font-size: 16px;
+  padding: 0 10px;
+  background-color: #000;
+  border: 1px solid;
+  border-color: #fff;
+}
+
+/* line 73, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+.button-smaller:hover {
+  background-color: grey;
+  color: #fff;
+}
+
+/*--------------------END NAVBAR-----------------------*/
+/*    --------------------------------------------------
+  :: Login Section
+  -------------------------------------------------- */
+/* line 84, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+#login {
+  padding-top: 50px;
+}
+
+/* line 87, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+#login .form-wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 91, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+#login h1 {
+  color: #1fa67b;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+/* line 98, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+#login .form-group {
+  margin-bottom: 25px;
+}
+
+/* line 101, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+#login .checkbox {
+  margin-bottom: 20px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* line 110, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+#login .checkbox.show:before {
+  content: '\e013';
+  color: #1fa67b;
+  font-size: 17px;
+  margin: 1px 0 0 3px;
+  position: absolute;
+  pointer-events: none;
+  font-family: 'Glyphicons Halflings';
+}
+
+/* line 119, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+#login .checkbox .character-checkbox {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* line 128, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+#login .checkbox .label {
+  color: #6d6d6d;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+/* line 133, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+#login .btn.btn-custom {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* line 137, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+#login .forget {
+  font-size: 13px;
+  text-align: center;
+  display: block;
+}
+
+/*    --------------------------------------------------
+  :: Inputs & Buttons
+  -------------------------------------------------- */
+/* line 146, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+.form-control {
+  color: #212121;
+}
+
+/* line 149, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+.btn-custom {
+  color: #fff;
+  background-color: #1fa67b;
+}
+
+/* line 153, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+.btn-custom:hover,
+.btn-custom:focus {
+  color: #fff;
+}
+
+/*    --------------------------------------------------
+    :: Footer
+  -------------------------------------------------- */
+/* line 161, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+footer {
+  color: #6d6d6d;
+  font-size: 20px;
+  text-align: center;
+  background-color: #1a2732;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* line 171, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+footer p {
+  margin-bottom: 0;
+}
+
+/* line 174, /home/denis/survey_kominfo/app/assets/stylesheets/style.css.scss */
+footer a {
+  color: #fff;
+}
