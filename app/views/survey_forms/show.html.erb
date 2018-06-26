@@ -6,7 +6,11 @@
 
   img {
     cursor: zoom-in;
-}
+  }
+  @media print {
+    .no_print { 
+        display: none; 
+  }
   </style>
 
 <p id="notice"><%= notice %></p>
@@ -117,4 +121,9 @@
         $('#enlargeImageModal').modal('show');
       });
   });
+</script>
+<script>
+function myFunction() {
+    window.print();
+}
 </script>
