@@ -15,5 +15,6 @@ Rails.application.config.assets.precompile += %w( aplikasi.css )
 Rails.application.config.assets.precompile += %w( bootstrap.js )
 Rails.application.config.assets.precompile += %w( survey_form.js )
 Rails.application.config.assets.precompile += %w( form.css.scss )
+Rails.application.config.assets.precompile += %w( Chart.bundle.js )
 
 
