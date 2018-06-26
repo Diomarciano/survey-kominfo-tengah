@@ -7,6 +7,10 @@
   img {
     cursor: zoom-in;
 }
+@media print {
+    .no_print { 
+        display: none; 
+    }
   </style>
 
 <p id="notice"><%= notice %></p>
@@ -14,7 +18,12 @@
 <center><h1>Data Image</h1></center>
 
 <div class="container-fluid">
+
   <div class="col-md-12">
+  <p class="no_print">Download Data:<br />
+    <button class="btn btn-sm btn-danger" onclick="myFunction()">Print PDF</button>
+  </p>
+    <br/>
     <div class="table-responsive">
       <table class="table" width="100%">
         <tr>
@@ -115,4 +124,10 @@
         $('#enlargeImageModal').modal('show');
       });
   });
+</script>
+
+<script>
+function myFunction() {
+    window.print();
+}
 </script>
