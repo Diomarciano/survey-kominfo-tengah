@@ -182,10 +182,10 @@
             <div id="form-internet">
               <label class="radio-inline">
                 <b><input type="radio" name="form_barat[jenis_koneksi]" id="form_barat_jenis_koneksi" value="vsat">VSAT</b>
-              </label>
+              </label><br />
               <label class="radio-inline">
                 <b><input type="radio" name="form_barat[jenis_koneksi]" id="form_barat_jenis_koneksi" value="radiolink">RadioLink</b>
-              </label>
+              </label><br />
               <label class="radio-inline">
                 <b><input type="radio" name="form_barat[jenis_koneksi]" id="form_barat_jenis_koneksi" value="fiberoptik">FiberOptik</b>
               </label>
@@ -325,13 +325,13 @@
               <div class="col-lg-6 col-md-6 col-xs-6">
                 <%= label_tag :transportasi_menuju_lokasi, 'Transportasi Menuju Lokasi' %> <br />
 
-                <%= label_tag 'transportasi_menuju_lokasi_Darat', 'Darat' %>
-                <%= check_box_tag 'form_barat[transportasi_menuju_lokasi][]', 'Darat', checked3('Darat'), id: 'transportasi_menuju_lokasi_Darat' %> &nbsp;&nbsp;
+                <%= label_tag 'transportasi_menuju_lokasi_Darat', 'Darat' %>&nbsp;&nbsp;
+                <%= check_box_tag 'form_barat[transportasi_menuju_lokasi][]', 'Darat', checked3('Darat'), id: 'transportasi_menuju_lokasi_Darat' %><br />
 
-                <%= label_tag 'transportasi_menuju_lokasi_Laut', 'Laut' %>
-                <%= check_box_tag 'form_barat[transportasi_menuju_lokasi][]', 'Laut', checked3('Laut'), id: 'transportasi_menuju_lokasi_Laut' %>&nbsp;&nbsp;
+                <%= label_tag 'transportasi_menuju_lokasi_Laut', 'Laut' %>&nbsp;&nbsp;&nbsp;&nbsp;
+                <%= check_box_tag 'form_barat[transportasi_menuju_lokasi][]', 'Laut', checked3('Laut'), id: 'transportasi_menuju_lokasi_Laut' %><br />
 
-                <%= label_tag 'transportasi_menuju_lokasi_Udara', 'Udara' %>
+                <%= label_tag 'transportasi_menuju_lokasi_Udara', 'Udara' %>&nbsp;&nbsp;
                 <%= check_box_tag 'form_barat[transportasi_menuju_lokasi][]', 'Udara', checked3('Udara'), id: 'transportasi_menuju_lokasi_udara' %>
               </div>
               <div class="col-lg-6 col-md-6 col-xs-6">
