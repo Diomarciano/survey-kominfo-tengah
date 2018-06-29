@@ -1,8 +1,10 @@
 
-<%= form_for(@survey_form) do |f| %>
+<%= form_for@survey_form, html: { :multipart => true } do |f| %>
   <% if @survey_form.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@survey_form.errors.count, "error") %> prohibited this survey_form from being saved:</h2>
+    <div class="alert alert-danger alert-dismissable">
+          <a href="#" class="close" data-dismiss = "alert" aria-label="close">x</a> 
+      <h2><%= pluralize(@survey_form.errors.count, "error") %> Failed saved:</h2>
 
       <ul>
       <% @survey_form.errors.full_messages.each do |message| %>
@@ -10,7 +12,9 @@
       <% end %>
       </ul>
     </div>
+    </div>
   <% end %>
+
 
   <style>
     .jumbotron {
@@ -441,104 +445,109 @@
           <div class="tab-pane" id="tab2">
           <center><h2>Dokumentasi</h2></center>
           <hr>
-
-            <div class="form-group">
+          <div class="form-group">
+          <div class="row">
+            <div class="col-md-4 .col-sm-4 sideleft">
               <%= f.label :"photo_sketsa", "Photo: Sketsa/Layout" %>
-              <%= f.file_field :photo_sketsa, class: "form-control",:required => true %>
-              
+              <%= f.file_field :photo_sketsa, :required => true %>  
+              <div id="target"></div>
             </div>
-
-            <div class="form-group">
+            <div class="col-md-4 .col-sm-4 sideleft">
               <%= f.label :"image_gedung", "Photo: Site/Gedung" %>
-              <%= f.file_field :image_gedung, class: "form-control",:required => true %>
-              
+              <%= f.file_field :image_gedung, :required => true %>
+              <div id="target2"></div>          
             </div>
-
-             <div class="form-group">
-              <%= f.label :"image_rencana_tempat_perangkat", "Photo: Rencana Tempat Perangkat" %>
-              <%= f.file_field :image_rencana_tempat_perangkat, class: "form-control",:required => true %>
-              
+            <div class="col-md-4 .col-sm-4 sideleft">
+             <%= f.label :"image_rencana_tempat_perangkat", "Photo: Rencana Tempat Perangkat" %>
+              <%= f.file_field :image_rencana_tempat_perangkat, :required => true %>
+              <div id="target3"></div>          
             </div>
-
-             <div class="form-group">
+          </div>
+          </div>  
+            <br><br>
+          <div class="row">  
+            <div class="col-md-4 .col-sm-4 sideleft">
               <%= f.label :"image_genset", "Photo: KWh Mwte/Genset/Solar Cell" %>
-              <%= f.file_field :image_genset, class: "form-control",:required => true %>
-              
+              <%= f.file_field :image_genset, :required => true %>
+              <div id="target4"></div>          
             </div>
+          </div>
 
-            <hr >
+           <hr>
             <center><h2>Foto Panoramic</h2></center>
             <hr>
-
-            <div class="form-group">
+            <div class="row">
+            <div class="col-md-4 .col-sm-4 sideleft">
               <%= f.label :"image_lingkungan_depan", "Photo Lingkungan Depan" %>
-              <%= f.file_field :image_lingkungan_depan, class: "form-control",:required => true %>
-              
+              <%= f.file_field :image_lingkungan_depan, :required => true %>  
+              <div id="target5"></div>
             </div>
-
-            <div class="form-group">
+            <div class="col-md-4 .col-sm-4 sideleft">
               <%= f.label :"image_lingkungan_belakang", "Photo Lingkungan Belakang" %>
-              <%= f.file_field :image_lingkungan_belakang, class: "form-control",:required => true %>
-              
+              <%= f.file_field :image_lingkungan_belakang, :required => true %>
+              <div id="target6"></div>          
             </div>
-
-            <div class="form-group">
-              <%= f.label :"image_lingkungan_kiri", "Photo Lingkungan Sebelah Kiri" %>
-              <%= f.file_field :image_lingkungan_kiri, class: "form-control",:required => true %>
-              <div id="target"></div>
+            <div class="col-md-4 .col-sm-4 sideleft">
+             <%= f.label :"image_lingkungan_kiri", "Photo Lingkungan Sebelah Kiri" %>
+              <%= f.file_field :image_lingkungan_kiri, :required => true %>
+              <div id="target7"></div>          
             </div>
-
-            <div class="form-group">
+            </div>  
+            <br><br>
+          <div class="row">
+            <div class="col-md-4 .col-sm-4 sideleft">
               <%= f.label :"image_lingkungan_kanan", "Photo Lingkungan Sebelah Kanan" %>
-              <%= f.file_field :image_lingkungan_kanan, class: "form-control",:required => true %>
-              <div id="target"></div>
+              <%= f.file_field :image_lingkungan_kanan, :required => true %>
+              <div id="target8"></div>          
             </div>
-
-            <div class="form-group">
+            <div class="col-md-4 .col-sm-4 sideleft">
               <%= f.label :"image_akses_ke_site", "Photo Akses ke Site" %>
-              <%= f.file_field :image_akses_ke_site, class: "form-control",:required => true %>
-              <div id="target"></div>
+              <%= f.file_field :image_akses_ke_site, :required => true %>  
+              <div id="target9"></div>
             </div>
-
-            <div class="form-group">
+            <div class="col-md-4 .col-sm-4 sideleft">
               <%= f.label :"image_akses_ke_site_1", "Photo Akses ke Site" %>
-              <%= f.file_field :image_akses_ke_site_1, class: "form-control",:required => true%>
-              <div id="target"></div>
+              <%= f.file_field :image_akses_ke_site_1, :required => true%>
+              <div id="target10"></div>          
             </div>
-
-            <div class="form-group">
-              <%= f.label :"image_geotagging", "Perangkat Geotagging" %>
-              <%= f.file_field :image_geotagging, class: "form-control",:required => true %>
-              <div id="target"></div>
+            </div>  
+            <br><br>
+          <div class="row">
+            <div class="col-md-4 .col-sm-4 sideleft">
+             <%= f.label :"image_geotagging", "Perangkat Geotagging" %>
+              <%= f.file_field :image_geotagging, :required => true %>
+              <div id="target11"></div>          
             </div>
-
-            <div class="form-group">
+            <div class="col-md-4 .col-sm-4 sideleft">
               <%= f.label :"image_surveyor", "Photo Surveyor di Lokasi" %>
-              <%= f.file_field :image_surveyor, class: "form-control",:required => true %>
-              <div id="target"></div>
+              <%= f.file_field :image_surveyor, :required => true %>
+              <div id="target12"></div>          
             </div>
+          </div>
 
             <hr >
             <center><h2>Photo Tambahan</h2></center>
             <hr>
 
-            <div class="form-group">
+            <div class="row">
+            <div class="col-md-4 .col-sm-4 sideleft">
               <%= f.label :"tambahan_image_1", "Tambahan Photo 1" %>
-              <%= f.file_field :image_tambahan_photo_1, class: "form-control" %>
-              <div id="target"></div>
+              <%= f.file_field :image_tambahan_photo_1 %>  
+              <div id="target13"></div>
             </div>
-
-            <div class="form-group">
+            <div class="col-md-4 .col-sm-4 sideleft">
               <%= f.label :"tambahan_image_2", "Tambahan Photo 2" %>
-              <%= f.file_field :image_tambahan_photo_2, class: "form-control" %>
-              <div id="target"></div>
+              <%= f.file_field :image_tambahan_photo_2 %>
+              <div id="target14"></div>          
             </div>
+            <div class="col-md-4 .col-sm-4 sideleft">
+            <%= f.label :"tambahan_image_3", "Tambahan Photo 3" %>
+              <%= f.file_field :image_tambahan_photo_3%>
+              <div id="target15"></div>          
+            </div>
+          </div>
 
-            <div class="form-group">
-              <%= f.label :"tambahan_image_3", "Tambahan Photo 2" %>
-              <%= f.file_field :image_tambahan_photo_3, class: "form-control" %>
-              <div id="target"></div>
-            </div>
+            <br><br>
 
             <div class="form-group">
               <%= f.label :catatan_tambahan %>
@@ -619,4 +628,327 @@ $("#form-jaringan").slideUp("fast"); //Efek Slide Up (Menghilangkan Form Input)
 }
 });
 });
+</script>
+
+<!-- JAVASCRIPT SHOW PHOTO -->
+<script type="text/javascript">
+  $(function() {
+  $('#survey_form_photo_sketsa').on('change', function(event) {
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+      var img = new Image();
+      img.height = 150;
+      img.width = 200;
+      console.log(file);
+      img.src = file.target.result;
+      $('#target').html(img);
+    }
+    reader.readAsDataURL(image);
+    console.log(files);
+  });
+});
+
+</script>
+
+
+<script type="text/javascript">
+  $(function() {
+  $('#survey_form_image_gedung').on('change', function(event) {
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+      var img = new Image();
+      img.height = 150;
+      img.width = 200;
+      console.log(file);
+      img.src = file.target.result;
+      $('#target2').html(img);
+    }
+    reader.readAsDataURL(image);
+    console.log(files);
+  });
+});
+
+</script>
+
+<script type="text/javascript">
+  $(function() {
+  $('#survey_form_image_rencana_tempat_perangkat').on('change', function(event) {
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+      var img = new Image();
+      img.height = 150;
+      img.width = 200;
+      console.log(file);
+      img.src = file.target.result;
+      $('#target3').html(img);
+    }
+    reader.readAsDataURL(image);
+    console.log(files);
+  });
+});
+
+</script>
+
+
+<script type="text/javascript">
+  $(function() {
+  $('#survey_form_image_genset').on('change', function(event) {
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+      var img = new Image();
+      img.height = 150;
+      img.width = 200;
+      console.log(file);
+      img.src = file.target.result;
+      $('#target4').html(img);
+    }
+    reader.readAsDataURL(image);
+    console.log(files);
+  });
+});
+
+</script>
+
+<script type="text/javascript">
+  $(function() {
+  $('#survey_form_image_lingkungan_depan').on('change', function(event) {
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+      var img = new Image();
+      img.height = 150;
+      img.width = 200;
+      console.log(file);
+      img.src = file.target.result;
+      $('#target5').html(img);
+    }
+    reader.readAsDataURL(image);
+    console.log(files);
+  });
+});
+
+</script>
+
+
+<script type="text/javascript">
+  $(function() {
+  $('#survey_form_image_lingkungan_belakang').on('change', function(event) {
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+      var img = new Image();
+      img.height = 150;
+      img.width = 200;
+      console.log(file);
+      img.src = file.target.result;
+      $('#target6').html(img);
+    }
+    reader.readAsDataURL(image);
+    console.log(files);
+  });
+});
+
+</script>
+
+<script type="text/javascript">
+  $(function() {
+  $('#survey_form_image_lingkungan_kiri').on('change', function(event) {
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+      var img = new Image();
+      img.height = 150;
+      img.width = 200;
+      console.log(file);
+      img.src = file.target.result;
+      $('#target7').html(img);
+    }
+    reader.readAsDataURL(image);
+    console.log(files);
+  });
+});
+
+</script>
+
+
+<script type="text/javascript">
+  $(function() {
+  $('#survey_form_image_lingkungan_kanan').on('change', function(event) {
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+      var img = new Image();
+      img.height = 150;
+      img.width = 200;
+      console.log(file);
+      img.src = file.target.result;
+      $('#target8').html(img);
+    }
+    reader.readAsDataURL(image);
+    console.log(files);
+  });
+});
+
+</script>
+
+<script type="text/javascript">
+  $(function() {
+  $('#survey_form_image_akses_ke_site').on('change', function(event) {
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+      var img = new Image();
+      img.height = 150;
+      img.width = 200;
+      console.log(file);
+      img.src = file.target.result;
+      $('#target9').html(img);
+    }
+    reader.readAsDataURL(image);
+    console.log(files);
+  });
+});
+
+</script>
+
+
+<script type="text/javascript">
+  $(function() {
+  $('#survey_form_image_akses_ke_site_1').on('change', function(event) {
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+      var img = new Image();
+      img.height = 150;
+      img.width = 200;
+      console.log(file);
+      img.src = file.target.result;
+      $('#target10').html(img);
+    }
+    reader.readAsDataURL(image);
+    console.log(files);
+  });
+});
+
+</script>
+
+<script type="text/javascript">
+  $(function() {
+  $('#survey_form_image_geotagging').on('change', function(event) {
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+      var img = new Image();
+      img.height = 150;
+      img.width = 200;
+      console.log(file);
+      img.src = file.target.result;
+      $('#target11').html(img);
+    }
+    reader.readAsDataURL(image);
+    console.log(files);
+  });
+});
+
+</script>
+
+
+<script type="text/javascript">
+  $(function() {
+  $('#survey_form_image_surveyor').on('change', function(event) {
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+      var img = new Image();
+      img.height = 150;
+      img.width = 200;
+      console.log(file);
+      img.src = file.target.result;
+      $('#target12').html(img);
+    }
+    reader.readAsDataURL(image);
+    console.log(files);
+  });
+});
+
+</script>
+
+<script type="text/javascript">
+  $(function() {
+  $('#survey_form_image_tambahan_photo_1').on('change', function(event) {
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+      var img = new Image();
+      img.height = 150;
+      img.width = 200;
+      console.log(file);
+      img.src = file.target.result;
+      $('#target13').html(img);
+    }
+    reader.readAsDataURL(image);
+    console.log(files);
+  });
+});
+
+</script>
+
+
+<script type="text/javascript">
+  $(function() {
+  $('#survey_form_image_tambahan_photo_2').on('change', function(event) {
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+      var img = new Image();
+      img.height = 150;
+      img.width = 200;
+      console.log(file);
+      img.src = file.target.result;
+      $('#target14').html(img);
+    }
+    reader.readAsDataURL(image);
+    console.log(files);
+  });
+});
+
+</script>
+
+<script type="text/javascript">
+  $(function() {
+  $('#survey_form_image_tambahan_photo_3').on('change', function(event) {
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+      var img = new Image();
+      img.height = 150;
+      img.width = 200;
+      console.log(file);
+      img.src = file.target.result;
+      $('#target15').html(img);
+    }
+    reader.readAsDataURL(image);
+    console.log(files);
+  });
+});
+
 </script>

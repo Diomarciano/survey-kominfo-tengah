@@ -23,12 +23,8 @@
               <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">Data Wilayah<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                      <% if current_user %>
+                        <li><a><%= link_to "Data Wilayah Barat", form_barats_path %> </a></li>
                         <li><a><%= link_to "Data Wilayah Tengah", survey_forms_path %> </a></li>
-                      <% else %>
-                          <li><a><%= link_to "Data Wilayah Barat", form_barats_path %> </a></li>
-                      <% end %>
-                      
                     </ul>
               </li>
 
@@ -52,6 +48,14 @@
                           <% end %>
                           <% if current_member %>
                             <a><%= link_to "Logout", destroy_member_session_path || destroy_user_barat_session_path, method: :delete %></a>
+                          <% end %>
+                        </li>
+                        <li>
+                          <% if current_user %>
+                            <a><%= link_to "My Data", wilayah_tengah_mydata_path %></a>
+                          <% end %>
+                          <% if current_member %>
+                            <a><%= link_to "My Data", wilayah_barat_mydata_path %></a>
                           <% end %>
                         </li>
                     </ul>
@@ -87,9 +91,8 @@
               <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">Data Wilayah<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-
-                        <li><a><%= link_to "Wilayah Barat", new_member_session_path %> </a></li>
-                        <li><a> <%= link_to "Wilayah Tengah", new_user_session_path %></a></li>          
+                        <li><a><%= link_to "Data Wilayah Barat", form_barats_path %> </a></li>
+                        <li><a><%= link_to "Data Wilayah Tengah", survey_forms_path %> </a></li>          
                     </ul>
               </li>
 

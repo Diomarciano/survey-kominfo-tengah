@@ -1,6 +1,14 @@
-<%= render 'layouts/navbar' %>
-
-
+<div class="col-md-6 col-md-offset-3">
+<% flash.each do |key, value| %>
+<div class="alert alert-danger alert-dismissable">
+          <a href="#" class="close" data-dismiss = "alert" aria-label="close">x</a>
+      <div class="<%= flash_class(key) %>">
+      
+            <%= value %>
+      </div>
+      </div>
+<% end %>
+</div>
 <section id="login">
     <div class="container">
       <div class="row">
@@ -12,12 +20,12 @@
                   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                     <div class="form-group">
                       <%= f.label :email %><br />
-                      <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control", placeholder:"somebody@example" %>
+                      <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control", placeholder:"somebody@example", required:true %>
                     </div>
 
                     <div class="form-group">
                       <%= f.label :password %><br />
-                      <%= f.password_field :password, autocomplete: "off", ame:"key", id:"key", class:"form-control", placeholder:"password" %>
+                      <%= f.password_field :password, autocomplete: "off", ame:"key", id:"key", class:"form-control", placeholder:"password", required:true %>
                     </div>
 
                     

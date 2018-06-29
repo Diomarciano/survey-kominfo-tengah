@@ -1,5 +1,6 @@
 class SurveyForm < ActiveRecord::Base
 
+  belongs_to :users
 	before_save do
 		self.sumber_listrik.gsub!(/[\[\]\"]/,"") if attribute_present?("sumber_listrik")
 	end

@@ -1,0 +1,143 @@
+<div class="container-fluid">
+  <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h5><i class="fa fa-flag-o red"></i><strong>Pemetaan Internet Wilayah Tengah</strong></h5>
+              </div>
+              <div class="panel-body">
+                <div class= "col-lg-4 col-md-4">
+                <div class="table-responsive">
+                  <table style="width:100%; color: #000">
+                        <tr>
+                           <th style="width:10%; text-align: center;">NO</th>
+                          <th style="width:40%;text-align: center;">Provinsi</th>
+                          <th style="width:25%;text-align: center;">Target Data Masuk</th>
+                          <th style="width:25%;text-align: center;">Jumlah Data Masuk</th> 
+                        </tr>
+                        <tr>
+                          <td style="text-align: center;">1</td>
+                          <td><%= link_to "Gorontalo", wilayah_tengah_gorontalo_path %></td>
+                          <td style="text-align: center;">10</td>
+                          <td style="text-align: center;"><%= @survey_forms.where(provinsi:"Gorontalo").count%></td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: center;">2</td>
+                          <td><%= link_to "Kalimantan Barat", wilayah_tengah_kalimantanbarat_path %></td>
+                          <td style="text-align: center;">10</td>
+                          <td style="text-align: center;"><%= @survey_forms.where(provinsi:"Kalimantan Barat").count%></td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: center;">3</td>
+                          <td><%= link_to "Kalimantan Selatan", wilayah_tengah_kalimantanselatan_path %>
+                          <td style="text-align: center;">10</td>
+                          <td style="text-align: center;"><%= @survey_forms.where(provinsi:"Kalimantan Selatan").count%></td>  
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: center;">4</td>
+                          <td><%= link_to "Kalimantan Timur", wilayah_tengah_kalimantantimur_path %></td>
+                           <td style="text-align: center;">10</td>
+                          <td style="text-align: center;"><%= @survey_forms.where(provinsi:"Kalimantan Timur").count%></td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: center;">5</td>
+                          <td><%= link_to "Kalimantan Utara", wilayah_tengah_kalimantanutara_path %></td>
+                          <td style="text-align: center;">10</td>
+                          <td style="text-align: center;"><%= @survey_forms.where(provinsi:"Kalimantan Utara").count%></td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: center;">6</td>
+                          <td><%= link_to "Nusa Tenggara Timur", wilayah_tengah_nusatenggaratimur_path%>
+                          <td style="text-align: center;">10</td>
+                          <td style="text-align: center;"><%= @survey_forms.where(provinsi:"Nusa Tenggara Timur").count%></td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: center;">7</td>
+                          <td><%= link_to "Nusa Tenggara Barat", wilayah_tengah_nusatenggarabarat_path %>
+                          <td style="text-align: center;">10</td>
+                          <td style="text-align: center;"><%= @survey_forms.where(provinsi:"NUsa Tenggara Barat").count%></td>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: center;">8</td>
+                          <td><%= link_to "Sulawesi Tengah", wilayah_tengah_sulawesitengah_path %></td>
+                          <td style="text-align: center;">10</td>
+                          <td style="text-align: center;"><%= @survey_forms.where(provinsi:"Sulawesi Tengah").count%></td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: center;">9</td>
+                          <td><%= link_to "Sumatera Tenggara", wilayah_tengah_sulawesitenggara_path %></td>
+                          <td style="text-align: center;">10</td>
+                          <td style="text-align: center;"><%= @survey_forms.where(provinsi:"Sumatera Tenggara").count%></td>
+                        </tr>
+                  </table>
+                </div>
+                </div>
+                <div class= "col-lg-7 col-md-7">
+                  
+                    <%= pie_chart SurveyForm.group(:provinsi).count, donut:true, messages: {empty: "No data"} %>
+                  
+                </div>
+             </div>
+            </div>
+        </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h5><i class="fa fa-flag-o red"></i><strong>Pemetaan Internet Wilayah Tengah</strong></h5>  
+            </div>
+            <div class="panel-body">
+              <div class= "col-md-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <%#= line_chart FormBarat.group(:provinsi).count %>
+                  <%= line_chart @survey_forms.group_by_day(:created_at, format: "%B %d, %Y").count, discrete: true, messages: {empty: "No data"} %>;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+        <!-- statics end -->
+  <br>
+  
+  <div class="table-responsive">
+    <div class="col-md-12">          
+      <table class="table table-bordered table-striped table-hover table-mc-light-blue">
+        <thead>
+          <tr>
+            <th style="text-align: center;">Side ID</th>
+            <th style="text-align: center;">Nama Side</th>
+            <th style="text-align: center;">Provinsi</th>
+            <th style="text-align: center;">Kota / Kabupaten</th>
+            <th style="text-align: center;">Kecamatan</th>
+            <th style="text-align: center;">Kelurahan</th>
+            <th style="text-align: center;">Lattide</th>
+            <th style="text-align: center;">Longitude</th>
+            <th style="text-align: center;">Tanggal Input</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @survey_forms.each do |survey_form| %>
+            <tr>
+              <td><%= survey_form.side_id %></td>
+              <td data-title="Nama Side"><%= survey_form.nama_site_id %></td>
+              <td data-title="Provinsi"><%= survey_form.provinsi %></td>
+              <td data-title="Kota/Kabupaten"><%= survey_form.kabupaten %></td>
+              <td data-title="Kecamatan"><%= survey_form.kecamatan %></td>
+              <td data-title="Kelurahan"><%= survey_form.kelurahan %></td>
+              <td data-title="Kelurahan"><%= survey_form.lattide %></td>
+              <td data-title="Kelurahan"><%= survey_form.longitude %></td>
+              <td data-title="Tanggal Input"><%= survey_form.created_at.strftime('%d-%m-%Y') %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+</div>            
+</div>          

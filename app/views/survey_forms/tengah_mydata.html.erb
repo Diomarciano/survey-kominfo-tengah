@@ -1,0 +1,33 @@
+<div class="container">
+<div class="table-responsive">
+<table class="table table-stripted table-hover table-responsive">
+  <thead>
+    <tr>
+      <th>Side ID</th>
+            <th>Nama Side</th>
+            <th>Provinsi</th>
+            <th>Kota / Kabupaten</th>
+            <th>Kecamatan</th>
+            <th>Kelurahan</th>
+            <th>Action</th>
+      
+    </tr>
+  </thead>  
+  <tbody>     
+       <% @users.each do |user| %>
+            <tr>
+              <td><%= user.side_id %></td>
+              <td data-title="Nama Side"><%= user.nama_site_id %></td>
+              <td data-title="Provinsi"><%= user.provinsi %></td>
+              <td data-title="Kota/Kabupaten"><%= user.kabupaten %></td>
+              <td data-title="Kecamatan"><%= user.kecamatan %></td>
+              <td data-title="Kelurahan"><%= user.kelurahan %></td>
+              <td><%= link_to 'Show', user %>
+              <%= link_to 'Edit', edit_survey_form_path(user) %>
+              <%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>  
+            </tr>
+    <% end %>
+      </tbody>
+</table>
+</div>
+</div>

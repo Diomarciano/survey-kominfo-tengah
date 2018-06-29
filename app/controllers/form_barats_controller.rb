@@ -1,6 +1,7 @@
 class FormBaratsController < ApplicationController
   before_action :set_form_barat, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_member!
+  before_action :authenticate_member!, :except => [:index, :show]
+  before_action :job_owner, only: [:edit, :update, :destroy]
 
   # GET /form_barats
   # GET /form_barats.json
@@ -31,12 +32,32 @@ class FormBaratsController < ApplicationController
 
   # GET /form_barats/1/edit
   def edit
+  @form_barat = FormBarat.find(params[:id])
+  @member = current_member
+  form_barats = current_member.form_barats
+  @members = @member.form_barats
+  end
+
+  def job_owner
+     unless @form_barat.member_id == current_member.id
+      flash[:notice] = 'Access denied as you are not owner of this Job'
+      redirect_to wilayah_barat_mydata_path
+     end
+    end
+
+  def barat_mydata
+    @member = current_member
+    form_barats = current_member.form_barats
+    @members = @member.form_barats
+    #@form_barats = FormBarat.all
   end
 
   # POST /form_barats
   # POST /form_barats.json
   def create
-    @form_barat = FormBarat.new(form_barat_params)
+    #@form_barat = FormBarat.new(form_barat_params)
+    @form_barat = current_member.form_barats.create(form_barat_params)
+
 
     respond_to do |format|
       if @form_barat.save
