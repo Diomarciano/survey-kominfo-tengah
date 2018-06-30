@@ -110,26 +110,20 @@
       <table class="table table-bordered table-striped table-hover table-mc-light-blue">
         <thead>
           <tr>
-            <th style="text-align: center;">Side ID</th>
-            <th style="text-align: center;">Nama Side</th>
             <th style="text-align: center;">Provinsi</th>
             <th style="text-align: center;">Kota / Kabupaten</th>
             <th style="text-align: center;">Lattide</th>
             <th style="text-align: center;">Longitude</th>
-            <th style="text-align: center;">Tanggal Input</th>
           </tr>
         </thead>
 
         <tbody>
           <% @form_barats.each do |form_barat| %>
             <tr>
-              <td><%= form_barat.side_id %></td>
-              <td data-title="Nama Side"><%= form_barat.nama_site_id %></td>
               <td data-title="Provinsi"><%= form_barat.provinsi %></td>
               <td data-title="Kota/Kabupaten"><%= form_barat.kabupaten %></td>
               <td data-title="Kelurahan"><%= form_barat.lattide %></td>
               <td data-title="Kelurahan"><%= form_barat.longitude %></td>
-              <td data-title="Tanggal Input"><%= form_barat.created_at.strftime('%d-%m-%Y') %></td>
             </tr>
           <% end %>
         </tbody>

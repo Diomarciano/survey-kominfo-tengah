@@ -26,19 +26,10 @@
     <br/>
     <div class="table-responsive">
       <table class="table" width="100%">
+        
         <tr>
-          <th width="50%">Side:</th>
-          <td width="50%"><%= @form_barat.side_id %></td>
-        </tr>
-
-        <tr>
-          <th>Nama_Side:</th>
-          <td><%= @form_barat.nama_site_id %></td>
-        </tr>
-
-        <tr>
-          <th>Provinsi:</th>
-          <td><%= @form_barat.provinsi %></td>
+          <th width="50%">Provinsi:</th>
+          <td width="50%"><%= @form_barat.provinsi %></td>
         </tr>
         <tr>
           <th>Photo Sketsa/Layout</th>
@@ -88,14 +79,6 @@
         <tr>
           <th>Photo Tambahan 1</th>
           <td><a href="#"><%= image_tag @form_barat.image_tambahan_photo_1.url, style: "width:35%;", class:"img-responsive" %></a></td>
-        </tr>
-        <tr>
-          <th>Photo Tambahan 2</th>
-          <td><a href="#"><%= image_tag @form_barat.image_tambahan_photo_2.url, style: "width:35%;", class:"img-responsive" %></a></td>
-        </tr>
-        <tr>
-          <th>Photo Tambahan 3 </th>
-          <td><a href="#"><%= image_tag @form_barat.image_tambahan_photo_3.url, style: "width:35%;", class:"img-responsive" %></a></td>
         </tr>
 
          <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">

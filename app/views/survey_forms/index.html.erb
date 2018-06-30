@@ -68,36 +68,29 @@
     <button class="btn btn-sm btn-danger" onclick="myFunction()">Print PDF</button>
   </p>
   <div class="table-responsive">
-    <table class="table">
+    <table class="table" width="100%">
         <% @survey_forms.each do |survey_form| %>
           <tr>
-            <th >Side ID</th>
-            <td><%= survey_form.side_id %></td>
-          </tr>
-          <tr>
-            <th>Nama Side</th>
-            <td><%= survey_form.nama_site_id %></td>
-          </tr>
-          <tr>
-            <th >Alamat</th>
-            <td><%= survey_form.alamat %></td>
-          </tr>
-          <tr>
-            <th >Kelurahan</th>
-            <td><%= survey_form.kelurahan %></td>
-          </tr>
-          <tr>
-            <th>Kecamatan</th>
-            <td><%= survey_form.kecamatan %></td>
+            <th width="50%">Provinsi</th>
+            <td width="50%"><%= survey_form.provinsi %></td>
           </tr>
           <tr>
             <th>Kabupaten</th>
             <td><%= survey_form.kabupaten %></td>
           </tr>
           <tr>
-            <th>Provinsi</th>
-            <td><%= survey_form.provinsi %></td>
+            <th>Kecamatan</th>
+            <td><%= survey_form.kecamatan %></td>
           </tr>
+          <tr>
+            <th >Kelurahan</th>
+            <td><%= survey_form.kelurahan %></td>
+          </tr>
+          <tr>
+            <th >Alamat</th>
+            <td><%= survey_form.alamat %></td>
+          </tr>
+          
           <tr>
             <th>Surveyor</th>
             <td><%= survey_form.surveyor %></td>
@@ -189,6 +182,10 @@
           <tr>
             <th>Transportasi menuju lokasi</th>
             <td><%= survey_form.transportasi_menuju_lokasi %></td>
+          </tr>
+          <tr>
+            <th>Keterangan Menuju Lokasi</th>
+            <td><%= survey_form.keterangan_menuju_lokasi %></td>
           </tr>
           <tr>
             <th>Gambaran menuju lokasi</th>

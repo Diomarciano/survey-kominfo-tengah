@@ -38,143 +38,38 @@
           <div class="tab-pane active" id="tab1">
           <center><h1 class="display-4">Form Survey</h1></center>
           <hr >
-          <div class="form-group">
-            <%= f.label :side_id, "Site ID" %><br>
-            <%= f.text_field :side_id, class: "form-control", placeholder: "" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :nama_site_id, "Nama Site" %><br>
-            <%= f.text_field :nama_site_id, class: "form-control", placeholder: "" %>
-          </div>
 
           <div class="form-group">
             <%= f.label :provinsi %><br>
-            <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[provinsi]" id="survey_form_provinsi">
-              <option disabled selected>Select One</option>
-              <option>Nusa Tenggara Timur</option>
-              <option>Nusa Tenggara Barat</option>
-              <option>Kalimantan Selatan</option>
-              <option>Kalimantan Timur</option>
-              <option>Kalimantan Barat</option>
-              <option>Sulawesi Tenggara</option>
-              <option>Sulawesi Tengah</option>
-              <option>Kalimantan Utara</option>
-              <option>Gorontalo</option>
+            <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[provinsi]" id="survey_form_provinsi" onchange="populate(this.id,'survey_form_kabupaten')">
+              <option disabled selected value=""></option>
+              <option value="Gorontalo">Gorontalo</option>
+              <option value="Kalimantan Barat">Kalimantan Barat</option>
+              <option value="Kalimantan Selatan">Kalimantan Selatan</option>
+              <option value="Kalimantan Timur">Kalimantan Timur</option>
+              <option value="Kalimantan Utara">Kalimantan Utara</option>
+              <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+              <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+              <option value="Sulawesi Tengah">Sulawesi Tengah</option>
+              <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+
             </select>
           </div>
 
           <div class="form-group">
             <%= f.label :kabupaten %><br>
             <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[kabupaten]" id="survey_form_kabupaten">
-              <option disabled selected>Select One</option>
-              <option>Malinau</option>
-              <option>Sumba Timur</option>
-              <option>Alor</option>
-              <option>Banggai Kepulauan</option>
-              <option>Gorontalo Utara</option>
-              <option>Manggarai Barat</option>
-              <option>Pohuwato</option>
-              <option>Sumbawa</option>
-              <option>Sumbawa Barat</option>
-              <option>Sumba Tengah</option>
-              <option>Timor Tengah Utara</option>
-              <option>Belu</option>
-              <option>Sambas</option>
-              <option>Bengkayang</option>
-              <option>Morowali Utara</option>
-              <option>Sabu Raijua</option>
-              <option>Konawe Kepulauaan</option>
-              <option>Nagekeo</option>
-              <option>Sigi</option>
-              <option>Ende</option>
-              <option>Tojo Una-una</option>
-              <option>Lembata</option>
-              <option>Banggai Laut</option>
-              <option>Malaka</option>
-              <option>Donggala</option>
-              <option>Tolitoli</option>
-              <option>Rote Ndao</option>
-              <option>Konawe</option>
-              <option>Ketapang</option>
-              <option>Sanggau</option>
-              <option>Kayong Utara</option>
-              <option>Melawi</option>
-              <option>Kapuas Hulu</option>
-              <option>Landak</option>
-              <option>Mahakam Ulu</option>
-              <option>Hulu Sungai Utara</option>
-              <option>Bima</option>
             </select>
           </div>
           
           <div class="form-group">
             <%= f.label :kecamatan %><br>
-            <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[kecamatan]" id="survey_form_kecamatan">
-              <option disabled selected>Select One</option>
-              <option>Mentarang</option>
-              <option>Malinau Selatan Hilir</option>
-              <option>Malinau Selatan</option>
-              <option>Haharu</option>
-              <option>Lewa Tidas</option>
-              <option>Kahaungu Eti</option>
-              <option>Pandawai</option>
-              <option>Ngadu Ngala</option>
-              <option>PinuPahar</option>
-              <option>Rindi</option>
-              <option>Alor Barat Daya</option>
-              <option>Alor Barat Laut</option>
-              <option>Kabola</option>
-              <option>Tinangkung</option>
-              <option>Peling Tengah</option>
-              <option>Kwandang</option>
-              <option>Ponelo Kepulauan</option>
-              <option>Komodo</option>
-              <option>Welak</option>
-              <option>Kuwus</option>
-              <option>Lembor Selatan</option>
-              <option>Ndoso</option>
-              <option>Boleng</option>
-              <option>Mbeliling</option>
-              <option>Buntulia</option>
-              <option>Dengilo</option>
-              <option>Duhiadaa</option>
-              <option>Patilanggio</option>
-              <option>Popayato Barat</option>
-              <option>Popayato</option>
-              <option>Randangan</option>
-              <option>Buer</option>
-              <option>Moyo Utara</option>
-              <option>Lenangguar </option>
-              <option>Alas</option>
-              <option>Taliwang</option>
-              <option>Brang Ene</option>
-              <option>Jereweh</option>
-              <option>Sekongkang</option>
-              <option>Seteluk</option>
-              <option>Pota Tano</option>
-              <option>Taliwang</option>
-              <option>Sungai Boh</option>
-              <option>Kayan Selatan</option>
-              <option>Sungai Tubu</option>
-              <option>Timor Tengah Utara</option>
-              <option>Biboki Tanpah</option>
-              <option>Biboki Feotleu</option>
-              <option>Biboki Utara</option>
-              <option>Biboki Selatan</option>
-            </select>
+            <%= f.text_field :kecamatan, class: "form-control", placeholder: "Kecamatan" %>
           </div>
-          
+
           <div class="form-group">
             <%= f.label :kelurahan %><br>
-            <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[kelurahan]" id="survey_form_kelurahan">
-              <option disabled selected>Select One</option>
-              <option>Desa Paking</option>
-              <option>Desa Mentarang Baru</option>
-              <option>Desa Buntulia Tengah</option>
-              <option>Desa Buntulia Utara</option>
-              <option>Desa Hulawa</option>
-              <option>Jl. Setulang</option>
-            </select>
+            <%= f.text_field :kelurahan, class: "form-control", placeholder: "kelurahan" %>
           </div>
 
           <div class="form-group">
@@ -223,10 +118,10 @@
           <div class="form-group">
             <%= f.label :sumber_listrik %><br />
             <label class="radio-inline">
-              <input type="radio" name="optradio" value="ada" class="detail">Jika Ada
+              <input type="radio" name="optradio" value="ada" class="detail">Ada
             </label>
             <label class="radio-inline">
-              <input type="radio" name="optradio" value="tidak" class="detail">Jika Tidak 
+              <input type="radio" name="optradio" value="tidak" class="detail">Tidak 
             </label>
             <br /><br />
             <div id="form-input">
@@ -238,6 +133,7 @@
 
               <%= label_tag 'sumber_listrik_Genset', 'Genset' %>
               <%= check_box_tag 'survey_form[sumber_listrik][]', 'Genset', checked('Genset'), id: 'sumber_listrik_Genset' %>
+              <br />
               <div class="form-group">
                 <%= f.label :lainnya_listrik, "Sumber Listrik Lainnya" %><br />
                 <%= f.text_field :lainnya_listrik, class: "form-control", placeholder: "ex: Batu Bara" %>
@@ -265,23 +161,22 @@
           <div class="form-group">
             <%= f.label :jenis_koneksi %><br>
             <label class="radio-inline">
-              <input type="radio" name="internet" value="ada" class="detailinternet">Jika Ada
+              <input type="radio" name="internet" value="ada" class="detailinternet">Ada
             </label>
             <label class="radio-inline">
-              <input type="radio" name="internet" value="tidak" class="detailinternet">Jika Tidak
+              <input type="radio" name="internet" value="tidak" class="detailinternet">Tidak
             </label>
             <br /><br />
 
             <div id="form-internet">
-              <label class="radio-inline">
-                <b><input type="radio" name="survey_form[jenis_koneksi]" id="survey_form_jenis_koneksi" value="vsat">VSAT</b>
-              </label><br />
-              <label class="radio-inline">
-                <b><input type="radio" name="survey_form[jenis_koneksi]" id="survey_form_jenis_koneksi" value="radiolink">RadioLink</b>
-              </label><br />
-              <label class="radio-inline">
-                <b><input type="radio" name="survey_form[jenis_koneksi]" id="survey_form_jenis_koneksi" value="fiberoptik">FiberOptik</b>
-              </label>
+             <%= label_tag 'jenis_koneksi_VSAT', 'VSAT' %>
+              <%= check_box_tag 'survey_form[jenis_koneksi][]', 'VSAT', checked2('VSAT'), id: 'jenis_koneksi_VSAT' %> &nbsp;&nbsp;
+
+              <%= label_tag 'jenis_koneksi_RadioLink', 'RadioLink' %>
+              <%= check_box_tag 'survey_form[jenis_koneksi][]', 'RadioLink', checked2('RadioLink'), id: 'jenis_koneksi_RadioLink' %>&nbsp;&nbsp;
+
+              <%= label_tag 'jenis_koneksi_FiberOptik', 'FiberOptik' %>
+              <%= check_box_tag 'survey_form[jenis_koneksi][]', 'FiberOptik', checked2('FiberOptik'), id: 'jenis_koneksi_FiberOptik' %>
               <br /><br />
 
               <div class="form-group">
@@ -292,21 +187,21 @@
                 <%= f.label :kualitas_akses_internet %><br>
                 <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[kualitas_akses_internet]" id="survey_form_kualitas_akses_internet">
                   <option disabled selected>Select One</option>
-                  <option>Sangat Lambat</option>
-                  <option>Lambat</option>
-                  <option>Cepat</option>
-                  <option>Sangat Cepat</option>
+                  <option>0 > 250 Kbps</option>
+                  <option>251 > 500 Kbps</option>
+                  <option>501 > 750 Kbps</option>
+                  <option>751 > 1000 Kbps</option>
+                  <option>Diatas 1000 Kbps</option>
                 </select>
               </div>
               <div class="form-group">
-                <%= f.label :bandwidt_tersedia, "Bandwidt Tersedia (MBPS)" %><br>
-                <%= f.text_field :bandwidt_tersedia, class: "form-control", type: 'number', placeholder: "10" %>
+                <%= f.label :bandwidt_tersedia, "Bandwidth Tersedia (Kbps)" %><br>
+                <%= f.text_field :bandwidt_tersedia, class: "form-control", type: 'number', placeholder: "0", min: "0" %>
               </div>
 
             </div>
           </div>
           
-
            <hr >
           <center><h2>Ketersediaan Akses Jaringan Selular (GSM)</h2></center>
           <hr>
@@ -314,10 +209,10 @@
           <div class="form-group">
             <%= f.label :jenis_koneksi_1, "Jenis Koneksi" %><br>
             <label class="radio-inline">
-              <input type="radio" name="jaringan" value="ada" class="detailjaringan">Jika Ada
+              <input type="radio" name="jaringan" value="ada" class="detailjaringan"> Ada
             </label>
             <label class="radio-inline">
-              <input type="radio" name="jaringan" value="tidak" class="detailjaringan">Jika Tidak
+              <input type="radio" name="jaringan" value="tidak" class="detailjaringan"> Tidak
             </label>
             <br /><br />
 
@@ -337,23 +232,24 @@
                 <%= f.label :nama_operator_seluler %><br>
                 <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[nama_operator_seluler]" id="survey_form_nama_operator_seluler">
                   <option disabled selected>Select One</option>
+                  <option>3 Tri</option>
+                  <option>Axis</option>
+                  <option>Bolt</option>
+                  <option>Indosat</option>
+                  <option>Smartfren</option>
                   <option>Telkomsel</option>
                   <option>XL</option>
-                  <option>Indosat</option>
-                  <option>Axis</option>
-                  <option>Smartfren</option>
-                  <option>Bolt</option>
-                  <option>3 Tri</option>
                 </select>
               </div>
               <div class="form-group">
                 <%= f.label :kualitas_layanan %><br>
                 <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[kualitas_layanan]" id="survey_form_kualitas_layanan">
                   <option disabled selected>Select One</option>
-                  <option>Sangat Lambat</option>
-                  <option>Lambat</option>
-                  <option>Cepat</option>
-                  <option>Sangat Cepat</option>
+                  <option>1 Bar</option>
+                  <option>2 Bar</option>
+                  <option>3 Bar</option>
+                  <option>4 Bar</option>
+                  <option>5 Bar</option>
                 </select>
               </div>
             </div>
@@ -365,7 +261,7 @@
 
           <div class="form-group">
             <%= f.label :jumlah_komputer, "Jumlah Komputer/PC" %><br>
-            <%= f.text_field :jumlah_komputer, class: "form-control", type:"number" %>
+            <%= f.text_field :jumlah_komputer, class: "form-control", type:"number", min: "0" %>
           </div>
           <div class="form-group">
             <div class="row">
@@ -392,20 +288,20 @@
           <hr>
 
           <div class="form-group">
-            <%= f.label :nama_penanggung_jawab_lokasi_1 %><br>
+            <%= f.label :nama_penanggung_jawab_lokasi_1, "Penanggung Jawab 1" %><br>
             <%= f.text_field :nama_penanggung_jawab_lokasi_1, class: "form-control" %>
           </div>
           <div class="form-group">
-            <%= f.label :kontak_penanggung_jawab_lokasi_1 %><br>
-            <%= f.text_field :kontak_penanggung_jawab_lokasi_1, class: "form-control", type: 'number' %>
+            <%= f.label :kontak_penanggung_jawab_lokasi_1, "Kontak Penanggung Jawab 1" %><br>
+            <%= f.text_field :kontak_penanggung_jawab_lokasi_1, class: "form-control", type: 'number', min: "0" %>
           </div>
           <div class="form-group">
-            <%= f.label :nama_penanggung_jawab_lokasi_2 %><br>
+            <%= f.label :nama_penanggung_jawab_lokasi_2, "Penanggung Jawab 2" %><br>
             <%= f.text_field :nama_penanggung_jawab_lokasi_2, class: "form-control" %>
           </div>
           <div class="form-group">
-            <%= f.label :kontak_penanggung_jawab_lokasi_2 %><br>
-            <%= f.text_field :kontak_penanggung_jawab_lokasi_2, class: "form-control", type: 'number' %>
+            <%= f.label :kontak_penanggung_jawab_lokasi_2, "Kontak Penanggung Jawab 2" %><br>
+            <%= f.text_field :kontak_penanggung_jawab_lokasi_2, class: "form-control", type: 'number', min: "0" %>
           </div>
 
           <hr >
@@ -417,14 +313,23 @@
               <div class="col-lg-6 col-md-6 col-xs-6">
                 <%= label_tag :transportasi_menuju_lokasi, 'Transportasi Menuju Lokasi' %> <br />
 
-                <%= label_tag 'transportasi_menuju_lokasi_Darat', 'Darat ' %>&nbsp;&nbsp;
+                <%= label_tag 'transportasi_menuju_lokasi_Darat', 'Darat ' %>&nbsp;&nbsp;&nbsp;&nbsp;
                 <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Darat', checked1('Darat'), id: 'transportasi_menuju_lokasi_Darat' %><br />
 
-                <%= label_tag 'transportasi_menuju_lokasi_Laut', 'Laut' %>&nbsp;&nbsp;&nbsp;&nbsp;
-                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Laut', checked1('Laut'), id: 'transportasi_menuju_lokasi_Laut' %><br />
+                <%= label_tag 'transportasi_menuju_lokasi_Udara', 'Udara ' %>&nbsp;&nbsp;&nbsp;
+                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Udara', checked1('Udara'), id: 'transportasi_menuju_lokasi_udara' %><br />
 
-                <%= label_tag 'transportasi_menuju_lokasi_Udara', 'Udara ' %>&nbsp;
-                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Udara', checked1('Udara'), id: 'transportasi_menuju_lokasi_udara' %>
+                <%= label_tag 'transportasi_menuju_lokasi_Laut', 'Laut ' %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Laut', checked1('Laut'), id: 'transportasi_menuju_lokasi_laut' %><br />
+
+                <%= label_tag 'transportasi_menuju_lokasi_Sungai', 'Sungai' %>&nbsp;&nbsp;
+                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Sungai', checked1('Sungai'), id: 'transportasi_menuju_lokasi_sungai' %><br />
+
+                <%= label_tag 'transportasi_menuju_lokasi_Waduk', 'Waduk ' %>&nbsp;
+                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Waduk', checked1('Waduk'), id: 'transportasi_menuju_lokasi_waduk' %><br />
+
+                <%= label_tag 'transportasi_menuju_lokasi_Danau', 'Danau ' %>&nbsp;&nbsp;
+                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Danau', checked1('Danau'), id: 'transportasi_menuju_lokasi_danau' %><br >
               </div>
               <div class="col-lg-6 col-md-6 col-xs-6">
                 <div class="form-group">
@@ -448,18 +353,21 @@
           <div class="form-group">
           <div class="row">
             <div class="col-md-4 .col-sm-4 sideleft">
-              <%= f.label :"photo_sketsa", "Photo: Sketsa/Layout" %>
-              <%= f.file_field :photo_sketsa, :required => true %>  
+              <%= f.label :"photo_sketsa", "Photo: Sketsa/Layout (maksimal 2 MB)" %>
+              <%= f.file_field :photo_sketsa, :required => true %> 
+              <span style="color: red;font-weight: bold" id="msg"></span> 
               <div id="target"></div>
             </div>
             <div class="col-md-4 .col-sm-4 sideleft">
               <%= f.label :"image_gedung", "Photo: Site/Gedung" %>
               <%= f.file_field :image_gedung, :required => true %>
+              <span style="color: red;font-weight: bold" id="msg2"></span>
               <div id="target2"></div>          
             </div>
             <div class="col-md-4 .col-sm-4 sideleft">
-             <%= f.label :"image_rencana_tempat_perangkat", "Photo: Rencana Tempat Perangkat" %>
+             <%= f.label :"image_rencana_tempat_perangkat", "Photo: Rencana Tempat Perangkat (maksimal 2 MB)" %>
               <%= f.file_field :image_rencana_tempat_perangkat, :required => true %>
+              <span style="color: red;font-weight: bold" id="msg3"></span>
               <div id="target3"></div>          
             </div>
           </div>
@@ -467,8 +375,9 @@
             <br><br>
           <div class="row">  
             <div class="col-md-4 .col-sm-4 sideleft">
-              <%= f.label :"image_genset", "Photo: KWh Mwte/Genset/Solar Cell" %>
+              <%= f.label :"image_genset", "Photo: KWh Mwte/Genset/Solar Cell (maksimal 2 MB)" %>
               <%= f.file_field :image_genset, :required => true %>
+              <span style="color: red;font-weight: bold" id="msg4"></span>
               <div id="target4"></div>          
             </div>
           </div>
@@ -478,79 +387,78 @@
             <hr>
             <div class="row">
             <div class="col-md-4 .col-sm-4 sideleft">
-              <%= f.label :"image_lingkungan_depan", "Photo Lingkungan Depan" %>
-              <%= f.file_field :image_lingkungan_depan, :required => true %>  
+              <%= f.label :"image_lingkungan_depan", "Photo Lingkungan Depan (maksimal 2 MB)" %>
+              <%= f.file_field :image_lingkungan_depan, :required => true %>
+              <span style="color: red;font-weight: bold" id="msg5"></span>  
               <div id="target5"></div>
             </div>
             <div class="col-md-4 .col-sm-4 sideleft">
-              <%= f.label :"image_lingkungan_belakang", "Photo Lingkungan Belakang" %>
+              <%= f.label :"image_lingkungan_belakang", "Photo Lingkungan Belakang (maksimal 2 MB)" %>
               <%= f.file_field :image_lingkungan_belakang, :required => true %>
+              <span style="color: red;font-weight: bold" id="msg6"></span>
               <div id="target6"></div>          
             </div>
             <div class="col-md-4 .col-sm-4 sideleft">
-             <%= f.label :"image_lingkungan_kiri", "Photo Lingkungan Sebelah Kiri" %>
+             <%= f.label :"image_lingkungan_kiri", "Photo Lingkungan Sebelah Kiri (maksimal 2 MB)" %>
               <%= f.file_field :image_lingkungan_kiri, :required => true %>
+              <span style="color: red;font-weight: bold" id="msg7"></span>
               <div id="target7"></div>          
             </div>
             </div>  
             <br><br>
           <div class="row">
             <div class="col-md-4 .col-sm-4 sideleft">
-              <%= f.label :"image_lingkungan_kanan", "Photo Lingkungan Sebelah Kanan" %>
+              <%= f.label :"image_lingkungan_kanan", "Photo Lingkungan Sebelah Kanan (maksimal 2 MB)" %>
               <%= f.file_field :image_lingkungan_kanan, :required => true %>
+              <span style="color: red;font-weight: bold" id="msg8"></span>
               <div id="target8"></div>          
             </div>
             <div class="col-md-4 .col-sm-4 sideleft">
-              <%= f.label :"image_akses_ke_site", "Photo Akses ke Site" %>
-              <%= f.file_field :image_akses_ke_site, :required => true %>  
+              <%= f.label :"image_akses_ke_site", "Photo Akses ke Site (maksimal 2 MB)" %>
+              <%= f.file_field :image_akses_ke_site, :required => true %>
+              <span style="color: red;font-weight: bold" id="msg9"></span>  
               <div id="target9"></div>
             </div>
             <div class="col-md-4 .col-sm-4 sideleft">
-              <%= f.label :"image_akses_ke_site_1", "Photo Akses ke Site" %>
+              <%= f.label :"image_akses_ke_site_1", "Photo Akses ke Site (maksimal 2 MB)" %>
               <%= f.file_field :image_akses_ke_site_1, :required => true%>
+              <span style="color: red;font-weight: bold" id="msg10"></span>
               <div id="target10"></div>          
             </div>
             </div>  
             <br><br>
           <div class="row">
             <div class="col-md-4 .col-sm-4 sideleft">
-             <%= f.label :"image_geotagging", "Perangkat Geotagging" %>
+             <%= f.label :"image_geotagging", "Perangkat Geotagging (maksimal 2 MB)" %>
               <%= f.file_field :image_geotagging, :required => true %>
+              <span style="color: red;font-weight: bold" id="msg11"></span>
               <div id="target11"></div>          
             </div>
             <div class="col-md-4 .col-sm-4 sideleft">
-              <%= f.label :"image_surveyor", "Photo Surveyor di Lokasi" %>
+              <%= f.label :"image_surveyor", "Photo Surveyor di Lokasi (maksimal 2 MB)" %>
               <%= f.file_field :image_surveyor, :required => true %>
+              <span style="color: red;font-weight: bold" id="msg12"></span>
               <div id="target12"></div>          
             </div>
           </div>
 
-            <hr >
+          <hr >
             <center><h2>Photo Tambahan</h2></center>
-            <hr>
+          <hr>
 
             <div class="row">
-            <div class="col-md-4 .col-sm-4 sideleft">
-              <%= f.label :"tambahan_image_1", "Tambahan Photo 1" %>
-              <%= f.file_field :image_tambahan_photo_1 %>  
-              <div id="target13"></div>
+              <div class="col-md-4 .col-sm-4 sideleft">
+                <%= f.label :"tambahan_image_1", "Tambahan Photo (maksimal 2 MB)" %>
+                <%= f.file_field :image_tambahan_photo_1 %>
+                <span style="color: red;font-weight: bold" id="msg13"></span>  
+                <div id="target13"></div>
+              </div>
             </div>
-            <div class="col-md-4 .col-sm-4 sideleft">
-              <%= f.label :"tambahan_image_2", "Tambahan Photo 2" %>
-              <%= f.file_field :image_tambahan_photo_2 %>
-              <div id="target14"></div>          
-            </div>
-            <div class="col-md-4 .col-sm-4 sideleft">
-            <%= f.label :"tambahan_image_3", "Tambahan Photo 3" %>
-              <%= f.file_field :image_tambahan_photo_3%>
-              <div id="target15"></div>          
-            </div>
-          </div>
 
             <br><br>
 
             <div class="form-group">
-              <%= f.label :catatan_tambahan %>
+              <%= f.label :catatan_tambahan,"Catatan Tambahan(Wajib Diisi)" %>
               <%= f.text_area :catatan_tambahan, class: "form-control", rows: 5,:required => true %>
             </div>
             
@@ -951,4 +859,225 @@ $("#form-jaringan").slideUp("fast"); //Efek Slide Up (Menghilangkan Form Input)
   });
 });
 
+</script>
+
+<script>
+var uploadField = document.getElementById("survey_form_photo_sketsa");
+
+uploadField.onchange = function() {
+    if(this.files[0].size > 2097152){
+       document.getElementById("msg").innerHTML = "Ukuran Photo Maksimal 2 MB !";
+       this.value = "";
+
+    } else {
+      document.getElementById("msg").innerHTML = "";
+    };
+};
+</script>
+
+<script>
+var uploadField = document.getElementById("survey_form_image_gedung");
+
+uploadField.onchange = function() {
+    if(this.files[0].size > 2097152){
+       document.getElementById("msg2").innerHTML = "Ukuran Photo Maksimal 2 MB !";
+       this.value = "";
+
+    } else {
+      document.getElementById("msg2").innerHTML = "";
+    };
+};
+</script>
+
+<script>
+var uploadField = document.getElementById("survey_form_image_rencana_tempat_perangkat");
+
+uploadField.onchange = function() {
+    if(this.files[0].size > 2097152){
+       document.getElementById("msg3").innerHTML = "Ukuran Photo Maksimal 2 MB !";
+       this.value = "";
+
+    } else {
+      document.getElementById("msg3").innerHTML = "";
+    };
+};
+</script>
+
+<script>
+var uploadField = document.getElementById("survey_form_image_genset");
+
+uploadField.onchange = function() {
+    if(this.files[0].size > 2097152){
+       document.getElementById("msg4").innerHTML = "Ukuran Photo Maksimal 2 MB !";
+       this.value = "";
+    } else {
+      document.getElementById("msg4").innerHTML = "";
+    };
+};
+</script>
+
+<script>
+var uploadField = document.getElementById("survey_form_image_lingkungan_depan");
+
+uploadField.onchange = function() {
+    if(this.files[0].size > 2097152){
+       document.getElementById("msg5").innerHTML = "Ukuran Photo Maksimal 2 MB !";
+       this.value = "";
+
+    } else {
+      document.getElementById("msg5").innerHTML = "";
+    };
+};
+</script>
+
+<script>
+var uploadField = document.getElementById("survey_form_image_lingkungan_belakang");
+
+uploadField.onchange = function() {
+    if(this.files[0].size > 2097152){
+       document.getElementById("msg6").innerHTML = "Ukuran Photo Maksimal 2 MB !";
+       this.value = "";
+
+    } else {
+      document.getElementById("msg6").innerHTML = "";
+    };
+};
+</script>
+
+<script>
+var uploadField = document.getElementById("survey_form_image_lingkungan_kiri");
+
+uploadField.onchange = function() {
+    if(this.files[0].size > 2097152){
+       document.getElementById("msg7").innerHTML = "Ukuran Photo Maksimal 2 MB !";
+       this.value = "";
+
+    } else {
+      document.getElementById("msg7").innerHTML = "";
+    };
+};
+</script>
+
+<script>
+var uploadField = document.getElementById("survey_form_image_lingkungan_kanan");
+
+uploadField.onchange = function() {
+    if(this.files[0].size > 2097152){
+       document.getElementById("msg8").innerHTML = "Ukuran Photo Maksimal 2 MB !";
+       this.value = "";
+
+    } else {
+      document.getElementById("msg8").innerHTML = "";
+    };
+};
+</script>
+
+<script>
+var uploadField = document.getElementById("survey_form_image_akses_ke_site");
+
+uploadField.onchange = function() {
+    if(this.files[0].size > 2097152){
+       document.getElementById("msg9").innerHTML = "Ukuran Photo Maksimal 2 MB !";
+       this.value = "";
+
+    } else {
+      document.getElementById("msg9").innerHTML = "";
+    };
+};
+</script>
+
+<script>
+var uploadField = document.getElementById("survey_form_image_akses_ke_site_1");
+
+uploadField.onchange = function() {
+    if(this.files[0].size > 2097152){
+       document.getElementById("msg10").innerHTML = "Ukuran Photo Maksimal 2 MB !";
+       this.value = "";
+
+    } else {
+      document.getElementById("msg10").innerHTML = "";
+    };
+};
+</script>
+
+<script>
+var uploadField = document.getElementById("survey_form_image_geotagging");
+
+uploadField.onchange = function() {
+    if(this.files[0].size > 2097152){
+       document.getElementById("msg11").innerHTML = "Ukuran Photo Maksimal 2 MB !";
+       this.value = "";
+
+    } else {
+      document.getElementById("msg11").innerHTML = "";
+    };
+};
+</script>
+
+<script>
+var uploadField = document.getElementById("survey_form_image_surveyor");
+
+uploadField.onchange = function() {
+    if(this.files[0].size > 2097152){
+       document.getElementById("msg12").innerHTML = "Ukuran Photo Maksimal 2 MB !";
+       this.value = "";
+
+    } else {
+      document.getElementById("msg12").innerHTML = "";
+    };
+};
+</script>
+
+<script>
+var uploadField = document.getElementById("survey_form_image_tambahan_photo_1");
+
+uploadField.onchange = function() {
+    if(this.files[0].size > 2097152){
+       document.getElementById("msg13").innerHTML = "Ukuran Photo Maksimal 2 MB !";
+       this.value = "";
+
+    } else {
+      document.getElementById("msg13").innerHTML = "";
+    };
+};
+</script>
+
+<script>
+function populate(survey_form_provinsi,survey_form_kabupaten){
+  var survey_form_provinsi = document.getElementById(survey_form_provinsi);
+  var survey_form_kabupaten = document.getElementById(survey_form_kabupaten);
+  survey_form_kabupaten.innerHTML = "";
+  if(survey_form_provinsi.value == "Kalimantan Barat"){
+    var optionArray = ["|","Bengkayang|Bengkayang","Kapuas Hulu|Kapuas Hulu","Kayong Utara|Kayong Utara","Ketapang|Ketapang","Landak|Landak","Melawi|Melawi","Sambas|Sambas","Sanggau|Sanggau"];
+  } else if(survey_form_provinsi.value == "Kalimantan Selatan"){
+    var optionArray = ["|","Hulu Sungai Utara|Hulu Sungai Utara"];
+  } else if(survey_form_provinsi.value == "Kalimantan Timur"){
+    var optionArray = ["|","Mahakam Ulu|Mahakam Ulu"];
+  }
+    else if(survey_form_provinsi.value == "Kalimantan Utara"){
+    var optionArray = ["|","Malinau|Malinau"];
+  }
+  else if(survey_form_provinsi.value == "Sulawesi Tengah"){
+    var optionArray = ["|","Banggai Kepulauan|Banggai Kepulauan","Banggai Laut|Banggai Laut","Donggala|Donggala","Morowali Utara|Morowali Utara","Sigi|Sigi","Tojo Una-unda|Tojo Una-unda","Tolitoli|Tolitoli"];
+  }
+  else if(survey_form_provinsi.value == "Sulawesi Tenggara"){
+    var optionArray = ["|","Konawe|Konawe","Konawe Kepulauan|Konawe Kepulauan"];
+  }
+  else if(survey_form_provinsi.value == "Gorontalo"){
+    var optionArray = ["|","Gorontalo Utara|Gorontalo Utara","Pohuwato|Pohuwato"];
+  }
+  else if(survey_form_provinsi.value == "Nusa Tenggara Barat"){
+    var optionArray = ["|","Bima|Bima","Sumbawa|Sumbawa","Sumbawa Barat|Sumbawa Barat"];
+  }
+  else if(survey_form_provinsi.value == "Nusa Tenggara Timur"){
+    var optionArray = ["|","Alor|Alor","Belu|Belu","Ende|Ende","Lembata|Lembata","Malaka|Malaka","Manggarai Barat|Manggarai Barat","Nagekeo|Nagekeo","Rote Ndao|Rote Ndao","Sabu Raijua|Sabu Raijua","Sumba Tengah|Sumba Tengah","Sumba Timur|Sumba Timur","Timor Tengah Utara|Timor Tengah Utara"];
+  }
+  for(var option in optionArray){
+    var pair = optionArray[option].split("|");
+    var newOption = document.createElement("option");
+    newOption.value = pair[0];
+    newOption.innerHTML = pair[1];
+    survey_form_kabupaten.options.add(newOption);
+  }
+}
 </script>

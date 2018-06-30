@@ -14,6 +14,34 @@
         </div>
   </div>     
 
+  <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <center><h5><i class="fa fa-flag-o red"></i><strong>Pemetaan Internet Wilayah Tengah Provinsi Aceh Per Kecamatan</strong></h5></center>
+              </div>
+              <div class="panel-body">
+                <div class= "col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <%= pie_chart FormBarat.where(provinsi:"Aceh").group(:kecamatan).count, discrete: true, donut:true, messages: {empty: "No data"} %>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <center><h5><i class="fa fa-flag-o red"></i><strong>Pemetaan Internet Wilayah Barat Provinsi Aceh Per Kelurahan</strong></h5></center>  
+            </div>
+            <div class="panel-body">
+              <div class= "col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <%= pie_chart FormBarat.where(provinsi:"Aceh").group(:kelurahan).count, discrete: true, donut:true, messages: {empty: "No data"} %>
+              </div>
+            </div>
+          </div>  
+        </div>
+  </div>
+
 <!--
  <div class="row">
         <div class="col-lg-6 col-md-6">
@@ -50,13 +78,10 @@
       <table class="table table-bordered table-striped table-hover table-mc-light-blue">
         <thead>
           <tr>
-            <th style="text-align: center;">Side ID</th>
-            <th style="text-align: center;">Nama Side</th>
             <th style="text-align: center;">Provinsi</th>
             <th style="text-align: center;">Kota / Kabupaten</th>
             <th style="text-align: center;">Lattide</th>
             <th style="text-align: center;">Longitude</th>
-            <th style="text-align: center;">Tanggal Input</th>
           </tr>
         </thead>
 
@@ -64,12 +89,9 @@
           <% @form_barats.each do |form_barat| %>
             <tr>
               <td><%= form_barat.side_id %></td>
-              <td data-title="Nama Side"><%= form_barat.nama_site_id %></td>
-              <td data-title="Provinsi"><%= form_barat.provinsi %></td>
               <td data-title="Kota/Kabupaten"><%= form_barat.kabupaten %></td>
               <td data-title="Kecamatan"><%= form_barat.lattide %></td>
               <td data-title="Kelurahan"><%= form_barat.longitude %></td>
-              <td data-title="Tanggal Input"><%= form_barat.created_at.strftime('%d-%m-%Y') %></td>
             </tr>
           <% end %>
         </tbody>

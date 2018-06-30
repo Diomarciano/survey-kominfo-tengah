@@ -49,19 +49,12 @@
     
   </p>
   <div class="table-responsive">
-    <table class="table">
+    <table class="table" width="100%">
         <% @form_barats.each do |form_barat| %>
+          
           <tr>
-            <th >Side ID</th>
-            <td><%= form_barat.side_id %></td>
-          </tr>
-          <tr>
-            <th>Nama Side</th>
-            <td><%= form_barat.nama_site_id %></td>
-          </tr>
-          <tr>
-            <th >Alamat</th>
-            <td><%= form_barat.alamat %></td>
+            <th width="50%">Alamat</th>
+            <td width="50%"><%= form_barat.alamat %></td>
           </tr>
           <tr>
             <th>Provinsi</th>
@@ -70,6 +63,14 @@
           <tr>
             <th>Kabupaten</th>
             <td><%= form_barat.kabupaten %></td>
+          </tr>
+          <tr>
+            <th>Kecamatan</th>
+            <td><%= form_barat.kecamatan %></td>
+          </tr>
+          <tr>
+            <th>Kelurahan</th>
+            <td><%= form_barat.kelurahan %></td>
           </tr>
           
           <tr>
@@ -163,6 +164,11 @@
           <tr>
             <th>Transportasi menuju lokasi</th>
             <td><%= form_barat.transportasi_menuju_lokasi %></td>
+          </tr>
+          <tr>
+          <tr>
+            <th>Keterangan Menuju Lokasi</th>
+            <td><%= form_barat.keterangan_menuju_lokasi %></td>
           </tr>
           <tr>
             <th>Gambaran menuju lokasi</th>

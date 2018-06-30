@@ -47,8 +47,6 @@
       <table class="table table-bordered table-striped table-hover table-mc-light-blue">
         <thead>
           <tr>
-            <th style="text-align: center;">Side ID</th>
-            <th style="text-align: center;">Nama Side</th>
             <th style="text-align: center;">Provinsi</th>
             <th style="text-align: center;">Kota / Kabupaten</th>
             <th style="text-align: center;">Kecamatan</th>
@@ -62,15 +60,12 @@
         <tbody>
           <% @survey_forms.each do |survey_form| %>
             <tr>
-              <td><%= survey_form.side_id %></td>
-              <td data-title="Nama Side"><%= survey_form.nama_site_id %></td>
               <td data-title="Provinsi"><%= survey_form.provinsi %></td>
               <td data-title="Kota/Kabupaten"><%= survey_form.kabupaten %></td>
               <td data-title="Kecamatan"><%= survey_form.kecamatan %></td>
               <td data-title="Kelurahan"><%= survey_form.kelurahan %></td>
               <td data-title="Kelurahan"><%= survey_form.lattide %></td>
               <td data-title="Kelurahan"><%= survey_form.longitude %></td>
-              <td data-title="Tanggal Input"><%= survey_form.created_at.strftime('%d-%m-%Y') %></td>
             </tr>
           <% end %>
         </tbody>

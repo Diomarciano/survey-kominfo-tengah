@@ -3,8 +3,6 @@
 <table class="table table-stripted table-hover table-responsive">
   <thead>
     <tr>
-      <th>Side ID</th>
-            <th>Nama Side</th>
             <th>Provinsi</th>
             <th>Kota / Kabupaten</th>
             <th>Kecamatan</th>
@@ -16,8 +14,6 @@
   <tbody>     
        <% @users.each do |user| %>
             <tr>
-              <td><%= user.side_id %></td>
-              <td data-title="Nama Side"><%= user.nama_site_id %></td>
               <td data-title="Provinsi"><%= user.provinsi %></td>
               <td data-title="Kota/Kabupaten"><%= user.kabupaten %></td>
               <td data-title="Kecamatan"><%= user.kecamatan %></td>
