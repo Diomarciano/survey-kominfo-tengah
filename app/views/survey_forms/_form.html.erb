@@ -5,7 +5,6 @@
     <div class="alert alert-danger alert-dismissable">
           <a href="#" class="close" data-dismiss = "alert" aria-label="close">x</a> 
       <h2><%= pluralize(@survey_form.errors.count, "Upss") %> Data Belum Lengkap:</h2>
-
       <ul>
       <% @survey_form.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -14,7 +13,6 @@
     </div>
     </div>
   <% end %>
-
 
   <style>
     .jumbotron {
