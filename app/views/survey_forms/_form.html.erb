@@ -4,7 +4,7 @@
     <div id="error_explanation">
     <div class="alert alert-danger alert-dismissable">
           <a href="#" class="close" data-dismiss = "alert" aria-label="close">x</a> 
-      <h2><%= pluralize(@survey_form.errors.count, "error") %> Failed saved:</h2>
+      <h2><%= pluralize(@survey_form.errors.count, "Upss") %> Data Belum Lengkap:</h2>
 
       <ul>
       <% @survey_form.errors.full_messages.each do |message| %>
