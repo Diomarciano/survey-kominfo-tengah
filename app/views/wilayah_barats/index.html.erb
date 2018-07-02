@@ -96,7 +96,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <%#= line_chart FormBarat.group(:provinsi).count %>
                   <%#= line_chart @form_barats.group(:provinsi).count, discrete: true %>
-                  <%= line_chart @form_barats.group_by_day(:created_at, format: "%B %d, %Y").count, discrete: true, messages: {empty: "No data"} %>;
+                  <%= line_chart @form_barats.group_by_day(:created_at, format: "%B %d, %Y").count, discrete: true, messages: {empty: "No data"}, xtitle: "Hari", ytitle: "Jumlah Data Masuk" %>;
                 </div>
             </div>
           </div>
