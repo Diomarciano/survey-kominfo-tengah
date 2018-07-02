@@ -51,10 +51,17 @@
   <div class="table-responsive">
     <table class="table" width="100%">
         <% @form_barats.each do |form_barat| %>
-          
           <tr>
-            <th width="50%">Alamat</th>
-            <td width="50%"><%= form_barat.alamat %></td>
+            <th width="50%">Site ID</th>
+            <td width="50%"><%= survey_form.side_id %></td>
+          </tr>
+          <tr>
+            <th>Nama Site</th>
+            <td><%= survey_form.nama_site_id %></td>
+          </tr>
+          <tr>
+            <th>Alamat</th>
+            <td><%= form_barat.alamat %></td>
           </tr>
           <tr>
             <th>Provinsi</th>

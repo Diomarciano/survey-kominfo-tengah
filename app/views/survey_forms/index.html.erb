@@ -71,8 +71,16 @@
     <table class="table" width="100%">
         <% @survey_forms.each do |survey_form| %>
           <tr>
-            <th width="50%">Provinsi</th>
-            <td width="50%"><%= survey_form.provinsi %></td>
+            <th width="50%">Site ID</th>
+            <td width="50%"><%= survey_form.side_id %></td>
+          </tr>
+          <tr>
+            <th>Nama Site</th>
+            <td><%= survey_form.nama_site_id %></td>
+          </tr>
+          <tr>
+            <th>Provinsi</th>
+            <td><%= survey_form.provinsi %></td>
           </tr>
           <tr>
             <th>Kabupaten</th>

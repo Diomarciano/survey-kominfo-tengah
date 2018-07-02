@@ -102,9 +102,9 @@ class FormBaratsController < ApplicationController
     def set_form_barat
       @form_barat = FormBarat.find(params[:id])
     end
-
+ 
     # Never trust parameters from the scary internet, only allow the white list through.
     def form_barat_params
-      params.require(:form_barat).permit(:alamat, :kelurahan, :kecamatan, :kabupaten, :provinsi, :lattide, :longitude, :jam_operasional, :id_pelanggan_listrik, :kapasitas, :lainnya_internet, :bandwidt_tersedia, :jenis_koneksi_1, :nama_operator_seluler, :kualitas_layanan, :jumlah_komputer, :perangkat_pendukung_lainnya, :nama_penanggung_jawab_lokasi_1, :kontak_penanggung_jawab_lokasi_1, :nama_penanggung_jawab_lokasi_2, :kontak_penanggung_jawab_lokasi_2, :keterangan_menuju_lokasi, :catatan_tambahan, :gambaran_menuju_lokasi, :surveyor, :project, :perangkat_lainnya,:kualitas_akses_internet, :photo_sketsa, :image_gedung, :image_rencana_tempat_perangkat, :image_genset, :image_lingkungan_depan, :image_lingkungan_belakang, :image_lingkungan_kiri, :image_lingkungan_kanan, :image_akses_ke_site, :image_akses_ke_site_1, :image_geotagging, :image_surveyor, sumber_listrik:[], jenis_koneksi:[], transportasi_menuju_lokasi:[])
+      params.require(:form_barat).permit(:side_id, :nama_site_id,:alamat, :kelurahan, :kecamatan, :kabupaten, :provinsi, :lattide, :longitude, :jam_operasional, :id_pelanggan_listrik, :kapasitas, :lainnya_internet, :bandwidt_tersedia, :jenis_koneksi_1, :nama_operator_seluler, :kualitas_layanan, :jumlah_komputer, :perangkat_pendukung_lainnya, :nama_penanggung_jawab_lokasi_1, :kontak_penanggung_jawab_lokasi_1, :nama_penanggung_jawab_lokasi_2, :kontak_penanggung_jawab_lokasi_2, :keterangan_menuju_lokasi, :catatan_tambahan, :gambaran_menuju_lokasi, :surveyor, :project, :perangkat_lainnya,:kualitas_akses_internet, :photo_sketsa, :image_gedung, :image_rencana_tempat_perangkat, :image_genset, :image_lingkungan_depan, :image_lingkungan_belakang, :image_lingkungan_kiri, :image_lingkungan_kanan, :image_akses_ke_site, :image_akses_ke_site_1, :image_geotagging, :image_surveyor, sumber_listrik:[], jenis_koneksi:[], transportasi_menuju_lokasi:[])
     end
 end

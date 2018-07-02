@@ -38,6 +38,17 @@
           <hr >
 
           <div class="form-group">
+            <%= f.label :side_id, "Site ID" %><br>
+            <%= f.text_field :side_id, class: "form-control" %>
+          </div>
+
+
+          <div class="form-group">
+            <%= f.label :nama_site_id %><br>
+            <%= f.text_field :nama_site_id, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
             <%= f.label :provinsi %><br>
             <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[provinsi]" id="survey_form_provinsi" onchange="populate(this.id,'survey_form_kabupaten')">
               <option disabled selected value=""></option>
