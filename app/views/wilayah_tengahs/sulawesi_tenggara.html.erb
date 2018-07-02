@@ -14,33 +14,7 @@
         </div>
   </div>     
 
- <div class="row">
-        <div class="col-lg-6 col-md-6">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <center><h5><i class="fa fa-flag-o red"></i><strong>Pemetaan Internet Wilayah Tengah Provinsi Sulawesi Tenggara Per Kecamatan</strong></h5></center>
-              </div>
-              <div class="panel-body">
-                <div class= "col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <%= pie_chart SurveyForm.where(provinsi:"Sulawesi Tenggara").group(:kecamatan).count, discrete: true, donut:true, messages: {empty: "No data"} %>
-                </div>
-              </div>
-            </div>
-        </div>
 
-        <div class="col-lg-6 col-md-6">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h5><i class="fa fa-flag-o red"></i><strong>Pemetaan Internet Wilayah Barat Provinsi Sulawesi Tenggara Per Kelurahan</strong></h5>  
-            </div>
-            <div class="panel-body">
-              <div class= "col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <%= pie_chart SurveyForm.where(provinsi:"Sulawesi Tenggara").group(:kelurahan).count, discrete: true, donut:true, messages: {empty: "No data"} %>
-              </div>
-            </div>
-          </div>  
-        </div>
-  </div>
   <div class="container">
     <div class="table-responsive">
     <div class="col-md-12">          

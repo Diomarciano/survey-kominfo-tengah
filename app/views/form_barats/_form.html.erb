@@ -194,7 +194,14 @@
               </div>
               <div class="form-group">
                 <%= f.label :bandwidt_tersedia, "Bandwidt Tersedia (Kbps)" %><br>
-                <%= f.text_field :bandwidt_tersedia, class: "form-control", type: 'number', placeholder: "0", min: "0" %>
+                <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="form_barat[bandwidt_tersedia]" id="form_barat_bandwidt_tersedia">
+                  <option disabled selected>Select One</option>
+                  <option>0 > 250 Kbps</option>
+                  <option>251 > 500 Kbps</option>
+                  <option>501 > 750 Kbps</option>
+                  <option>751 > 1000 Kbps</option>
+                  <option>Diatas 1000 Kbps</option>
+                </select>
               </div>
             </div>
           </div>
@@ -229,6 +236,7 @@
               <div class="form-group">
                 <%= f.label :nama_operator_seluler %><br>
                 <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="form_barat[nama_operator_seluler]" id="form_barat_nama_operator_seluler">
+                  <option disabled selected>Select One</option>
                   <option>3 Tri</option>
                   <option>Axis</option>
                   <option>Bolt</option>

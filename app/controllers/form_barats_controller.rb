@@ -3,6 +3,7 @@ class FormBaratsController < ApplicationController
   before_action :authenticate_member!, :except => [:index, :show]
   before_action :job_owner, only: [:edit, :update, :destroy]
 
+
   # GET /form_barats
   # GET /form_barats.json
   def index
@@ -19,6 +20,8 @@ class FormBaratsController < ApplicationController
       format.xls { send_data @form_barats.to_csv(col_sep: "\t") }
     end
   end
+
+  
 
   # GET /form_barats/1
   # GET /form_barats/1.json

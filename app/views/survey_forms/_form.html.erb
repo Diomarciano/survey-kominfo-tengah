@@ -185,16 +185,23 @@
                 <%= f.label :kualitas_akses_internet %><br>
                 <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[kualitas_akses_internet]" id="survey_form_kualitas_akses_internet">
                   <option disabled selected>Select One</option>
+                  <option>Sangat Lambat</option>
+                  <option>Lambat</option>
+                  <option>Rata-rata</option>
+                  <option>Cepat</option>
+                  <option>Sangat Cepat</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <%= f.label :bandwidt_tersedia, "Bandwidth Tersedia (Kbps)" %><br>
+                <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="survey_form[bandwidt_tersedia]" id="survey_form_bandwidt_tersedia">
+                  <option disabled selected>Select One</option>
                   <option>0 > 250 Kbps</option>
                   <option>251 > 500 Kbps</option>
                   <option>501 > 750 Kbps</option>
                   <option>751 > 1000 Kbps</option>
                   <option>Diatas 1000 Kbps</option>
                 </select>
-              </div>
-              <div class="form-group">
-                <%= f.label :bandwidt_tersedia, "Bandwidth Tersedia (Kbps)" %><br>
-                <%= f.text_field :bandwidt_tersedia, class: "form-control", type: 'number', placeholder: "0", min: "0" %>
               </div>
 
             </div>
