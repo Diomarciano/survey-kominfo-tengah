@@ -136,13 +136,13 @@
             <br /><br />
             <div id="form-input">
               <%= label_tag 'sumber_listrik_PLN', 'PLN' %>
-              <%= check_box_tag 'form_barat[sumber_listrik][]', 'PLN', checked3('PLN'), id: 'sumber_listrik_PLN' %> &nbsp;&nbsp;
+              <%= check_box_tag 'form_barat[sumber_listrik][]', 'PLN', checked4('PLN'), id: 'sumber_listrik_PLN' %> &nbsp;&nbsp;
 
               <%= label_tag 'sumber_listrik_SolarSel', 'SolarSel' %>
-              <%= check_box_tag 'form_barat[sumber_listrik][]', 'SolarSel', checked3('SolarSel'), id: 'sumber_listrik_SolarSel' %>&nbsp;&nbsp;
+              <%= check_box_tag 'form_barat[sumber_listrik][]', 'SolarSel', checked4('SolarSel'), id: 'sumber_listrik_SolarSel' %>&nbsp;&nbsp;
 
               <%= label_tag 'sumber_listrik_Genset', 'Genset' %>
-              <%= check_box_tag 'form_barat[sumber_listrik][]', 'Genset', checked3('Genset'), id: 'sumber_listrik_Genset' %>
+              <%= check_box_tag 'form_barat[sumber_listrik][]', 'Genset', checked4('Genset'), id: 'sumber_listrik_Genset' %>
               <div class="form-group">
                 <%= f.label :lainnya_listrik, "Sumber Listrik Lainnya" %><br />
                 <%= f.text_field :lainnya_listrik, class: "form-control", placeholder: "ex: Batu Bara" %>
@@ -179,13 +179,13 @@
 
             <div id="form-internet">
               <%= label_tag 'jenis_koneksi_VSAT', 'VSAT' %>
-              <%= check_box_tag 'form_barat[jenis_koneksi][]', 'VSAT', checked4('VSAT'), id: 'jenis_koneksi_VSAT' %> &nbsp;&nbsp;
+              <%= check_box_tag 'form_barat[jenis_koneksi][]', 'VSAT', checked5('VSAT'), id: 'jenis_koneksi_VSAT' %> &nbsp;&nbsp;
 
               <%= label_tag 'jenis_koneksi_RadioLink', 'RadioLink' %>
-              <%= check_box_tag 'form_barat[jenis_koneksi][]', 'RadioLink', checked4('RadioLink'), id: 'jenis_koneksi_RadioLink' %>&nbsp;&nbsp;
+              <%= check_box_tag 'form_barat[jenis_koneksi][]', 'RadioLink', checked5('RadioLink'), id: 'jenis_koneksi_RadioLink' %>&nbsp;&nbsp;
 
               <%= label_tag 'jenis_koneksi_FiberOptik', 'FiberOptik' %>
-              <%= check_box_tag 'form_barat[jenis_koneksi][]', 'FiberOptik', checked4('FiberOptik'), id: 'jenis_koneksi_FiberOptik' %>
+              <%= check_box_tag 'form_barat[jenis_koneksi][]', 'FiberOptik', checked5('FiberOptik'), id: 'jenis_koneksi_FiberOptik' %>
               <br /><br />
 
               <div class="form-group">
@@ -233,15 +233,15 @@
             <br /><br />
 
             <div id="form-jaringan">
-              <label class="radio-inline">
-                <b><input type="radio" name="form_barat[jenis_koneksi_1]" id="form_barat_jenis_koneksi_1" value="4g">4G</b>
-              </label>
-              <label class="radio-inline">
-                <b><input type="radio" name="form_barat[jenis_koneksi_1]" id="form_barat_jenis_koneksi_1" value="3g">3G</b>
-              </label>
-              <label class="radio-inline">
-                <b><input type="radio" name="form_barat[jenis_koneksi_1]" id="form_barat_jenis_koneksi_1" value="2g">2G</b>
-              </label>
+              <%= label_tag 'jenis_koneksi_1_4G', '4G' %>
+              <%= check_box_tag 'form_barat[jenis_koneksi_1][]', '4G', checked6('4G'), id: 'jenis_koneksi_1_4G' %> &nbsp;&nbsp;
+
+              <%= label_tag 'sumber_listrik_3G', '3G' %>
+              <%= check_box_tag 'form_barat[jenis_koneksi_1][]', '3G', checked6('3G'), id: 'sumber_listrik_3G' %>&nbsp;&nbsp;
+
+              <%= label_tag 'sumber_listrik_2G', '2G' %>
+              <%= check_box_tag 'form_barat[jenis_koneksi_1][]', '2G', checked6('2G'), id: 'sumber_listrik_2G' %>
+
               <br /><br />
 
               <div class="form-group">
@@ -331,13 +331,13 @@
                 <%= label_tag :transportasi_menuju_lokasi, 'Transportasi Menuju Lokasi' %> <br />
 
                 <%= label_tag 'transportasi_menuju_lokasi_Darat', 'Darat' %>&nbsp;&nbsp;
-                <%= check_box_tag 'form_barat[transportasi_menuju_lokasi][]', 'Darat', checked5('Darat'), id: 'transportasi_menuju_lokasi_Darat' %><br />
+                <%= check_box_tag 'form_barat[transportasi_menuju_lokasi][]', 'Darat', checked7('Darat'), id: 'transportasi_menuju_lokasi_Darat' %><br />
 
                 <%= label_tag 'transportasi_menuju_lokasi_Laut', 'Laut' %>&nbsp;&nbsp;&nbsp;&nbsp;
-                <%= check_box_tag 'form_barat[transportasi_menuju_lokasi][]', 'Laut', checked5('Laut'), id: 'transportasi_menuju_lokasi_Laut' %><br />
+                <%= check_box_tag 'form_barat[transportasi_menuju_lokasi][]', 'Laut', checked7('Laut'), id: 'transportasi_menuju_lokasi_Laut' %><br />
 
                 <%= label_tag 'transportasi_menuju_lokasi_Udara', 'Udara' %>&nbsp;&nbsp;
-                <%= check_box_tag 'form_barat[transportasi_menuju_lokasi][]', 'Udara', checked5('Udara'), id: 'transportasi_menuju_lokasi_udara' %>
+                <%= check_box_tag 'form_barat[transportasi_menuju_lokasi][]', 'Udara', checked7('Udara'), id: 'transportasi_menuju_lokasi_udara' %>
               </div>
               <div class="col-lg-6 col-md-6 col-xs-6">
                 <div class="form-group">

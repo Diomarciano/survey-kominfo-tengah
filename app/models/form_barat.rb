@@ -14,6 +14,10 @@ class FormBarat < ActiveRecord::Base
     self.jenis_koneksi.gsub!(/[\[\]\"]/,"") if attribute_present?("jenis_koneksi")
   end
 
+  before_save do
+    self.jenis_koneksi_1.gsub!(/[\[\]\"]/,"") if attribute_present?("jenis_koneksi_1")
+  end
+
 	  has_attached_file :image_gedung
   	validates_attachment_content_type :image_gedung, content_type: /\Aimage\/.*\z/
 

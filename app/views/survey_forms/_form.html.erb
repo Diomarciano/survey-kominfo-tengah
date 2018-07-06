@@ -179,13 +179,13 @@
 
             <div id="form-internet">
              <%= label_tag 'jenis_koneksi_VSAT', 'VSAT' %>
-              <%= check_box_tag 'survey_form[jenis_koneksi][]', 'VSAT', checked2('VSAT'), id: 'jenis_koneksi_VSAT' %> &nbsp;&nbsp;
+              <%= check_box_tag 'survey_form[jenis_koneksi][]', 'VSAT', checked1('VSAT'), id: 'jenis_koneksi_VSAT' %> &nbsp;&nbsp;
 
               <%= label_tag 'jenis_koneksi_RadioLink', 'RadioLink' %>
-              <%= check_box_tag 'survey_form[jenis_koneksi][]', 'RadioLink', checked2('RadioLink'), id: 'jenis_koneksi_RadioLink' %>&nbsp;&nbsp;
+              <%= check_box_tag 'survey_form[jenis_koneksi][]', 'RadioLink', checked1('RadioLink'), id: 'jenis_koneksi_RadioLink' %>&nbsp;&nbsp;
 
               <%= label_tag 'jenis_koneksi_FiberOptik', 'FiberOptik' %>
-              <%= check_box_tag 'survey_form[jenis_koneksi][]', 'FiberOptik', checked2('FiberOptik'), id: 'jenis_koneksi_FiberOptik' %>
+              <%= check_box_tag 'survey_form[jenis_koneksi][]', 'FiberOptik', checked1('FiberOptik'), id: 'jenis_koneksi_FiberOptik' %>
               <br /><br />
 
               <div class="form-group">
@@ -233,15 +233,14 @@
             <br /><br />
 
             <div id="form-jaringan">
-              <label class="radio-inline">
-                <b><input type="radio" name="survey_form[jenis_koneksi_1]" id="survey_form_jenis_koneksi_1" value="4g">4G</b>
-              </label>
-              <label class="radio-inline">
-                <b><input type="radio" name="survey_form[jenis_koneksi_1]" id="survey_form_jenis_koneksi_1" value="3g">3G</b>
-              </label>
-              <label class="radio-inline">
-                <b><input type="radio" name="survey_form[jenis_koneksi_1]" id="survey_form_jenis_koneksi_1" value="2g">2G</b>
-              </label>
+              <%= label_tag 'jenis_koneksi_1_4G', '4G' %>
+              <%= check_box_tag 'survey_form[jenis_koneksi_1][]', '4G', checked2('4G'), id: 'jenis_koneksi_1_4G' %> &nbsp;&nbsp;
+
+              <%= label_tag 'jenis_koneksi_1_3G', '3G' %>
+              <%= check_box_tag 'survey_form[jenis_koneksi_1][]', '3G', checked2('3G'), id: 'jenis_koneksi_1_4G' %>&nbsp;&nbsp;
+
+              <%= label_tag 'jenis_koneksi_1_2G', '2G' %>
+              <%= check_box_tag 'survey_form[jenis_koneksi_1][]', '2G', checked2('2G'), id: 'jenis_koneksi_1_2G' %>
               <br /><br />
 
               <div class="form-group">
@@ -331,22 +330,22 @@
                 <%= label_tag :transportasi_menuju_lokasi, 'Transportasi Menuju Lokasi' %> <br />
 
                 <%= label_tag 'transportasi_menuju_lokasi_Darat', 'Darat ' %>&nbsp;&nbsp;&nbsp;&nbsp;
-                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Darat', checked1('Darat'), id: 'transportasi_menuju_lokasi_Darat' %><br />
+                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Darat', checked3('Darat'), id: 'transportasi_menuju_lokasi_Darat' %><br />
 
                 <%= label_tag 'transportasi_menuju_lokasi_Udara', 'Udara ' %>&nbsp;&nbsp;&nbsp;
-                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Udara', checked1('Udara'), id: 'transportasi_menuju_lokasi_udara' %><br />
+                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Udara', checked3('Udara'), id: 'transportasi_menuju_lokasi_udara' %><br />
 
                 <%= label_tag 'transportasi_menuju_lokasi_Laut', 'Laut ' %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Laut', checked1('Laut'), id: 'transportasi_menuju_lokasi_laut' %><br />
+                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Laut', checked3('Laut'), id: 'transportasi_menuju_lokasi_laut' %><br />
 
                 <%= label_tag 'transportasi_menuju_lokasi_Sungai', 'Sungai' %>&nbsp;&nbsp;
-                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Sungai', checked1('Sungai'), id: 'transportasi_menuju_lokasi_sungai' %><br />
+                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Sungai', checked3('Sungai'), id: 'transportasi_menuju_lokasi_sungai' %><br />
 
                 <%= label_tag 'transportasi_menuju_lokasi_Waduk', 'Waduk ' %>&nbsp;
-                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Waduk', checked1('Waduk'), id: 'transportasi_menuju_lokasi_waduk' %><br />
+                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Waduk', checked3('Waduk'), id: 'transportasi_menuju_lokasi_waduk' %><br />
 
                 <%= label_tag 'transportasi_menuju_lokasi_Danau', 'Danau ' %>&nbsp;&nbsp;
-                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Danau', checked1('Danau'), id: 'transportasi_menuju_lokasi_danau' %><br >
+                <%= check_box_tag 'survey_form[transportasi_menuju_lokasi][]', 'Danau', checked3('Danau'), id: 'transportasi_menuju_lokasi_danau' %><br >
               </div>
               <div class="col-lg-6 col-md-6 col-xs-6">
                 <div class="form-group">

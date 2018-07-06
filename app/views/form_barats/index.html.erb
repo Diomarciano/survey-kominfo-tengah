@@ -17,23 +17,16 @@
     <%= form_tag form_barats_path, class: "no_print", :method => 'get' do %>
       <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="search" id="search">
               <option disabled selected>Select Provinsi</option>
-              <option>Aceh Besar</option>
-              <option>Aceh Singkil</option>
-              <option>Nias</option>
-              <option>Nias Selatan</option>
-              <option>Kepulauan Meranti</option>
-              <option>Natuna</option>
-              <option>Bintan</option>
-              <option>Pasaman Barat</option>
-              <option>Solok Selatan</option>
-              <option>Bengkulu Utara</option>
-              <option>Seluma</option>
-              <option>Musi Rawas</option>
-              <option>Musi Rawas Utara</option>
-              <option>Pesisir Barat</option>
-              <option>Lebak</option>
-              <option>Pandeglang</option>
-              <option>Bondowoso</option>
+              <option>Aceh</option>
+              <option>Banten</option>
+              <option>Bengkulu</option>
+              <option>Jawa Timur</option>
+              <option>Kepulauan Riau</option>
+              <option>Lampung</option>
+              <option>Riau</option>
+              <option>Sumatera Barat</option>
+              <option>Sumatera Utara</option>
+              <option>Sumatera Selatan</option>
       </select>
       <br /><br />
       <center><%= submit_tag "Search", class: "btn btn-success"%></center>
@@ -43,11 +36,14 @@
  
 <div class="container-fluid">
 <div class="col-md-12">
+
+<% if current_member %>
   <p class="no_print">
     Download Data:<br />
     <button class="btn btn-sm btn-danger" onclick="myFunction()">Print PDF</button>
-    
   </p>
+<% end %>
+
   <div class="table-responsive">
     <table class="table" width="100%">
         <% @form_barats.each do |form_barat| %>

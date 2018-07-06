@@ -16,44 +16,16 @@
   <div class="col-md-6 col-md-offset-3">
     <%= form_tag survey_forms_path, class: "no_print", :method => 'get' do %>
       <select class="selectpicker form-control" data-show-subtext="true" data-live-search="true" name="search" id="search">
-              <option disabled selected>Pilih Kabupaten</option>
-              <option>Malinau</option>
-              <option>Sumba Timur</option>
-              <option>Alor</option>
-              <option>Banggai Kepulauan</option>
-              <option>Gorontalo Utara</option>
-              <option>Manggarai Barat</option>
-              <option>Pohuwato</option>
-              <option>Sumbawa</option>
-              <option>Sumbawa Barat</option>
-              <option>Sumba Tengah</option>
-              <option>Timor Tengah Utara</option>
-              <option>Belu</option>
-              <option>Sambas</option>
-              <option>Bengkayang</option>
-              <option>Morowali Utara</option>
-              <option>Sabu Raijua</option>
-              <option>Konawe Kepulauaan</option>
-              <option>Nagekeo</option>
-              <option>Sigi</option>
-              <option>Ende</option>
-              <option>Tojo Una-una</option>
-              <option>Lembata</option>
-              <option>Banggai Laut</option>
-              <option>Malaka</option>
-              <option>Donggala</option>
-              <option>Tolitoli</option>
-              <option>Rote Ndao</option>
-              <option>Konawe</option>
-              <option>Ketapang</option>
-              <option>Sanggau</option>
-              <option>Kayong Utara</option>
-              <option>Melawi</option>
-              <option>Kapuas Hulu</option>
-              <option>Landak</option>
-              <option>Mahakam Ulu</option>
-              <option>Hulu Sungai Utara</option>
-              <option>Bima</option>
+              <option disabled selected>Pilih Provinsi</option>
+              <option>Gorontalo</option>
+              <option>Kalimantan Barat</option>
+              <option>Kalimantan Selatan</option>
+              <option>Kalimantan Timur</option>
+              <option>Kalimantan Utara</option>
+              <option>Nusa Tenggara Timur</option>
+              <option>Nusa Tenggara Barat</option>
+              <option>Sulawesi Tengah</option>
+              <option>Sulawesi Tenggara</option>
       </select>
       <br /><br />
       <center><%= submit_tag "Search", class: "btn btn-success"%></center>
@@ -63,10 +35,12 @@
  
 <div class="container-fluid">
 <div class="col-md-12">
+  <% if current_user %>
   <p class="no_print">
     Download Data:<br />
     <button class="btn btn-sm btn-danger" onclick="myFunction()">Print PDF</button>
   </p>
+  <% end %>
   <div class="table-responsive">
     <table class="table" width="100%">
         <% @survey_forms.each do |survey_form| %>

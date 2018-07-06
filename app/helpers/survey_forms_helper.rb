@@ -9,6 +9,10 @@ module SurveyFormsHelper
 	end
 
 	def checked2(area)
+		@survey_form.jenis_koneksi_1.nil? ? false : @survey_form.jenis_koneksi_1.match(area)
+	end
+
+	def checked3(area)
 		@survey_form.transportasi_menuju_lokasi.nil? ? false : @survey_form.transportasi_menuju_lokasi.match(area)
 	end
 end

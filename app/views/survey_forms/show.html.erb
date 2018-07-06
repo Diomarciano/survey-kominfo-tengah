@@ -19,9 +19,11 @@
 
 <div class="container-fluid">
   <div class="col-md-12">
+  <% if current_user %>
   <p class="no_print"> Download Data:<br />
     <button class="btn btn-sm btn-danger" onclick="myFunction()">Print PDF</button>
   </p>
+  <% end %>
   <br />
     <div class="table-responsive">
       <table class="table" width="100%">
