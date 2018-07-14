@@ -114,8 +114,10 @@
             <th style="text-align: center;">Kota / Kabupaten</th>
             <th style="text-align: center;">Kecamatan</th>
             <th style="text-align: center;">Kelurahan</th>
+            <th style="text-align: center;">Nama Lokasi</th>
             <th style="text-align: center;">Lattide</th>
             <th style="text-align: center;">Longitude</th>
+            <th style="text-align: center;">Tanggal Dibuat</th>
           </tr>
         </thead>
 
@@ -126,8 +128,10 @@
               <td data-title="Kota/Kabupaten"><%= survey_form.kabupaten %></td>
               <td data-title="Kecamatan"><%= survey_form.kecamatan %></td>
               <td data-title="Kelurahan"><%= survey_form.kelurahan %></td>
-              <td data-title="Kelurahan"><%= survey_form.lattide %></td>
-              <td data-title="Kelurahan"><%= survey_form.longitude %></td>
+              <td data-title="Nama Lokasi"><%= survey_form.nama_lokasi %></td>
+              <td data-title="Lattide"><%= survey_form.lattide %></td>
+              <td data-title="Longitude"><%= survey_form.longitude %></td>
+              <td data-title="Tanggal Dibuat"><%= survey_form.created_at.strftime '%Y-%m-%d' %></td>
             </tr>
           <% end %>
         </tbody>

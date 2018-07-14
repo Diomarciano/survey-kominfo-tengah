@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180630170309) do
+ActiveRecord::Schema.define(version: 20180714014639) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -234,6 +234,7 @@ ActiveRecord::Schema.define(version: 20180630170309) do
     t.integer  "image_tambahan_photo_3_file_size"
     t.datetime "image_tambahan_photo_3_updated_at"
     t.integer  "user_id"
+    t.string   "nama_lokasi"
   end
 
   add_index "survey_forms", ["user_id"], name: "index_survey_forms_on_user_id", using: :btree
