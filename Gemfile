@@ -26,7 +26,7 @@ gem 'will_paginate-bootstrap'
 
 gem 'chartkick'
 gem 'groupdate'
-
+gem 'gmaps4rails'
 
 gem 'devise'
 
