@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag "style" %>
 <% provide(:title, 'Dashboard Kominfo') %>
 
-<% if current_user || current_member %>
+<% if current_user%>
 <div class="header">
       <div class="header-nav">
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -20,24 +20,13 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Data Wilayah<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                      <% if current_member %>
-                        <li><a><%= link_to "Data Wilayah Barat", form_barats_path %> </a></li>
-                      <% else %>
-                        <li><a><%= link_to "Data Wilayah Tengah", survey_forms_path %> </a></li>
-                      <% end %>
-                    </ul>
-              </li>
+                        <li><%= link_to "Data Wilayah Tengah", survey_forms_path %></li>
 
               <% if current_user %>
                 <li><span class="nav-itemButton"><%= link_to "Form Survey ",new_survey_form_path,class:"btn button-smaller" %></li></span>
               <% end %>
-              <% if current_member %>
-                <li><span class="nav-itemButton"><%= link_to "Form Survey ",new_form_barat_path,class:"btn button-smaller" %></li></span>
-              <% end %>
-              <% if current_user || current_member %>
+
+              <% if current_user %>
             <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -46,21 +35,10 @@
                         <li><a><%#= link_to "My Car ",myproduct_path %></a></li>
                         <li class="divider"></li>
                         <li>
-                          <% if current_user %>
                             <a><%= link_to "My Data", wilayah_tengah_mydata_path %></a>
-                          <% end %>
-                          <% if current_member %>
-                            
-                            <a><%= link_to "My Data", wilayah_barat_mydata_path %></a>
-                          <% end %>
                         </li>
                         <li>
-                          <% if current_user %>
                             <a><%= link_to "Logout", destroy_user_session_path || destroy_user_barat_session_path, method: :delete %></a>
-                          <% end %>
-                          <% if current_member %>
-                            <a><%= link_to "Logout", destroy_member_session_path || destroy_user_barat_session_path, method: :delete %></a>
-                          <% end %>
                         </li>
                     </ul>
                 </li>
@@ -92,13 +70,8 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Login<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a><%= link_to "Wilayah Barat", new_member_session_path %> </a></li>
-                        <li><a> <%= link_to "Wilayah Tengah", new_user_session_path %></a></li>          
-                    </ul>
-              </li>
+                <li><%= link_to "Data Wilayah Tengah", survey_forms_path %></li>
+               <li><span class="nav-itemButton"><%= link_to "Login",new_user_session_path,class:"btn button-smaller" %></li></span>
             </ul>
           </div><!-- /navbar-collapse -->
          </div>

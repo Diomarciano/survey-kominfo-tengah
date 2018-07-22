@@ -56,7 +56,7 @@ class SurveyForm < ActiveRecord::Base
     has_attached_file :image_tambahan_photo_1
     validates_attachment_content_type :image_tambahan_photo_1, content_type: /\Aimage\/.*\z/
 
-    validates_presence_of :alamat, :kelurahan, :kecamatan, :kabupaten, :provinsi, :lattide, :longitude, :jumlah_komputer, :nama_penanggung_jawab_lokasi_1, :kontak_penanggung_jawab_lokasi_1, :nama_penanggung_jawab_lokasi_2, :kontak_penanggung_jawab_lokasi_2, :catatan_tambahan,:gambaran_menuju_lokasi, :surveyor, :project, :transportasi_menuju_lokasi, :message => "Tidak Boleh Kosong" 
+    validates_presence_of :alamat, :kelurahan, :kecamatan, :kabupaten, :provinsi, :lattide, :longitude, :jumlah_komputer, :nama_penanggung_jawab_lokasi_1, :kontak_penanggung_jawab_lokasi_1, :nama_penanggung_jawab_lokasi_2, :kontak_penanggung_jawab_lokasi_2, :keterangan_menuju_lokasi, :catatan_tambahan,:gambaran_menuju_lokasi, :surveyor, :project, :transportasi_menuju_lokasi, :message => "Tidak Boleh Kosong" 
 
     def self.search(search)
       where("lower(kabupaten) LIKE ? OR lower(kecamatan) LIKE ? OR lower(provinsi) LIKE ?", "%#{search.downcase}%", "%#{search.downcase}%", "%#{search.downcase}%") 
