@@ -1,28 +1,29 @@
-== README
+Halo, ini spesifikasi software yg kita pakai
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+What is this repository for?
+Ruby version 2.3
+postgresql 9.5
+Rails 4.2.6
+Learn Markdown
+How do I get set up?
+Summary of set up
 
-Things you may want to cover:
+Configuration
 
-* Ruby version
+Dependencies
 
-* System dependencies
+Database configuration
 
-* Configuration
+How to run tests ketik bundle install setelah ok database di migrasi dgn bundle exec rake db:migrate dan terakhir rails server
 
-* Database creation
+Deployment instructions
 
-* Database initialization
+Contribution guidelines
+Writing tests
+ketika smua sdh selesai ketik rails server
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Code review
+Other guidelines
+Who do I talk to?
+Repo owner or admin
+Other community or team contact
